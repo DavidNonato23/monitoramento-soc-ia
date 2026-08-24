@@ -1,10 +1,4 @@
-Aqui está o seu **`README.md`** completo e atualizado com uma seção **`📸 Preview & Resultados da Aplicação`** dedicada para você inserir as imagens do dashboard!
-
-Ela traz um layout organizado com badges explicativas e espaço para você colocar de 1 a 3 prints do sistema.
-
----
-
-### `README.md`
+Aqui está o seu **`README.md`** completamente atualizado e padronizado. Ele unifica o fluxo visual do sistema com o modelo corporativo de **5 Camadas Enterprise (SOAR Pipeline)**, além de corrigir as URLs de clone e limpar artefatos de formatação do terminal:
 
 ```markdown
 # 🛡️ VanguardSec AI — Global Command SOC
@@ -30,9 +24,60 @@ Confira abaixo a interface do **VanguardSec AI** operando em tempo real com cole
 
 ---
 
-## 🗺️ Topologia e Arquitetura do Sistema
+## 🏛️ Arquitetura em 5 Camadas (Enterprise SOAR Pipeline)
 
-O diagrama abaixo ilustra o fluxo de dados desde a coleta de telemetria no servidor auditado até o processamento pela tripla camada de agentes de IA locais e geração de relatórios de compliance:
+O **VanguardSec AI** é estruturado em uma arquitetura modular de 5 camadas, separando a coleta agentless, o processamento de IA local e a orquestração de resposta (SOAR/ChatOps):
+
+```text
++-----------------------------------------------------------------------+
+|  CAMADA 5: INTERFACE & CHATOPS (Experiência do Usuário & Resposta)   |
+|  - Painel Streamlit (Visão SOC / ROI Executivo)                       |
+|  - Bot Telegram Interativo (Botões de Ação Inline & Alertas)          |
++-----------------------------------------------------------------------+
+                                  ▲
+                                  │  [Ações de Resposta & Métricas]
+                                  ▼
++-----------------------------------------------------------------------+
+|  CAMADA 4: ORQUESTRAÇÃO & SOAR (Motor de Decisão & Playbooks)        |
+|  - Gestor de Políticas (Nível 1: Self-Healing | Nível 2: Botões)      |
+|  - Playbooks Automatizados (Bloqueio UFW, Kill Process, Quarentena)   |
+|  - Matriz de Mitigação & Mapeamento MITRE ATT&CK                      |
++-----------------------------------------------------------------------+
+                                  ▲
+                                  │  [Análise Contextual & Score]
+                                  ▼
++-----------------------------------------------------------------------+
+|  CAMADA 3: PIPELINE MULTIAGENTE DE IA (Processamento Local)           |
+|  - Agente Auditor (Diagnóstico de Ameaças & Anomalias)               |
+|  - Agente Compliance (Mapeamento ISO/IEC 17021 & LGPD)                |
+|  - Agente Remediação (Síntese de Scripts e Respostas)                 |
++-----------------------------------------------------------------------+
+                                  ▲
+                                  │  [Telemetria Normalizada]
+                                  ▼
++-----------------------------------------------------------------------+
+|  CAMADA 2: COLETOR & INGESTÃO AGENTLESS (Telemetria Remota)          |
+|  - Módulo SSH (Linux) / WinRM (Windows)                               |
+|  - Parser de Logs (auth.log, Syslog, Event Viewer)                    |
+|  - Modo Simulação (Dry-Run / Dados Demo para Vendas)                  |
++-----------------------------------------------------------------------+
+                                  ▲
+                                  │  [Conexão Criptografada / Read-Only]
+                                  ▼
++-----------------------------------------------------------------------+
+|  CAMADA 1: INFRAESTRUTURA & SEGUROS (Bases de Dados & Cofre)          |
+|  - Cofre de Credenciais Criptografado (Fernet/AES-256)                 |
+|  - Histórico de Scans & Trilhas de Auditoria (JSON / Database)        |
+|  - Gerador de Relatórios Executivos PDF (Assinado via Hash SHA-256)   |
++-----------------------------------------------------------------------+
+
+```
+
+---
+
+## 🗺️ Topologia de Dados e Execução
+
+O fluxo operacional descreve a jornada do dado desde a extração remota até o despacho de ações de contenção:
 
 ```text
                   +-----------------------------------+
@@ -73,9 +118,9 @@ O diagrama abaixo ilustra o fluxo de dados desde a coleta de telemetria no servi
                                   |
             ┌─────────────────────┼─────────────────────┐
             ▼                     ▼                     ▼
-  [Relatório Executivo]   [Painel Streamlit]    [Integrações SIEM]
-  PDFs gravados em        Metrics, Gauge &      Formato CEF e
-  /relatorios/            Matriz de Riscos      Webhooks Ativos
+  [Relatório Executivo]   [Painel Streamlit]    [Integrações SIEM / Bot]
+  PDFs gravados em        Metrics, Gauge &      Formato CEF & Botões de
+  /relatorios/            Matriz de Riscos      Ação Direta no Telegram
 
 ```
 
@@ -88,24 +133,26 @@ sequenceDiagram
     participant Coletor as Coletor (SSH/WinRM)
     participant SOC as VanguardSec Engine
     participant LLM as Ollama (smollm2:135m)
+    participant Bot as Telegram Bot (ChatOps)
     participant DB as Historico JSON / PDF
 
     Target->>Coletor: Envia Logs de Auth, CPU, RAM, Disco e UFW
     Coletor->>SOC: Telemetria Bruta
     SOC->>LLM: 1. Executa Agente Auditor (Diagnóstico)
     LLM-->>SOC: Retorna Falhas & Vulnerabilidades
-    SOC->>LLM: 2. Executa Agente Compliance (ISO 17021)
+    SOC->>LLM: 2. Executa Agente Compliance (ISO 17021 / LGPD)
     LLM-->>SOC: Retorna Scorecard (Conforme / Alerta / Não Conforme)
     SOC->>LLM: 3. Executa Agente Remediação
     LLM-->>SOC: Retorna Script de Mitigação (.sh / .ps1)
-    SOC->>DB: Salva JSON & Gera PDF na pasta /relatorios/
-    SOC-->>Target: [Opcional] Despacha Script de Contenção
+    SOC->>Bot: Dispara Alerta com Botões de Ação Inline
+    SOC->>DB: Salva JSON & Gera PDF em /relatorios/
+    Bot-->>Target: [Aprovação Humana] Executa Script de Contenção
 
 ```
 
 ---
 
-## 🏛️ Estrutura de Camadas da Aplicação
+## 🏛️ Estrutura do Projeto
 
 ```text
 vanguardsec-ai/
@@ -117,6 +164,7 @@ vanguardsec-ai/
 ├── 🔌 modulos/                  # Camada de Integração e Serviços
 │   ├── coletor_ssh.py           # Conectividade e extração via SSH (Paramiko)
 │   ├── coletor_winrm.py         # Conectividade e extração via WinRM (PyWinRM)
+│   ├── chatops_bot.py           # Bot de resposta interativa para Telegram
 │   ├── gerador_pdf.py           # Compilador de relatórios executivos em PDF
 │   ├── notificador.py           # Despachador de alertas para webhooks SIEM
 │   └── politicas.py             # Mapeamento e parsing da norma ISO/IEC 17021
@@ -148,11 +196,16 @@ ollama pull smollm2:135m
 ### 3. Instalação do Projeto
 
 ```bash
-git clone [https://github.com/DavidNonato23/anguardSec-AI-SOC-aut-nomo-com-IA-local-monitoramento-de-servidores-e-auditoria-de-compliance.git](https://github.com/DavidNonato23/anguardSec-AI-SOC-aut-nomo-com-IA-local-monitoramento-de-servidores-e-auditoria-de-compliance.git)
+git clone [https://github.com/DavidNonato23/vanguardsec-ai.git](https://github.com/DavidNonato23/vanguardsec-ai.git)
 cd vanguardsec-ai
 
 python -m venv venv
-source venv/bin/activate  # No Windows: .\venv\Scripts\Activate.ps1
+
+# No Windows PowerShell:
+.\venv\Scripts\Activate.ps1
+
+# No Linux/Mac:
+source venv/bin/activate
 
 pip install -r requirements.txt
 
@@ -169,14 +222,3 @@ python -m streamlit run app.py
 
 ---
 
-### Passo a Passo para adicionar a imagem:
-
-1. Crie uma pasta chamada **`docs`** no seu projeto.
-2. Salve a print da tela com o nome **`dashboard.png`** dentro dessa pasta (`docs/dashboard.png`).
-3. Suba para o GitHub:
-   ```powershell
-   git add docs/dashboard.png README.md
-   git commit -m "docs: adiciona secao de preview de resultados no README"
-   git push
-
-```

@@ -1,16 +1,20 @@
-import requests
+import json
+import urllib.request
 
-def enviar_alerta_webhook(webhook_url: str, servidor: str, so: str, total_vulnerabilidades: str):
-    """
-    Envia alertas formatados para o Slack ou Discord quando uma varredura é concluída.
-    """
+def enviar_alerta_webhook(webhook_url, host, so, compliance_info):
+    """Envia payload JSON para sistemas externos de monitoramento."""
+    if not webhook_url:
+        return False
+
     payload = {
-        "content": f"🚨 **VanguardSec AI — Alerta de Segurança** 🚨\n"
-                   f"**Servidor:** `{servidor}` ({so})\n"
-                   f"**Status:** Varredura Concluída\n"
-                   f"**Resumo:**\n```{total_vulnerabilidades[:500]}...```"
+        "text": f"🚨 *ALERTA VANGUARDSEC AI SOC*\n\n*Target:* `{host}` ({so})\n*Status Compliance:* {compliance_info}"
     }
+
     try:
-        requests.post(webhook_url, json=payload, timeout=5)
+        data = json.dumps(payload).encode('utf-8')
+        req = urllib.request.Request(webhook_url, data=data, headers={'Content-Type': 'application/json'})
+        with urllib.request.urlopen(req) as response:
+            return response.status == 200
     except Exception as e:
-        print(f"Erro ao enviar webhook: {e}")
+        print(f"Erro Webhook: {e}")
+        return False

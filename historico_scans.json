@@ -470,5 +470,509 @@
         "compliance": "Dados de Auditoria:\n\nUm problem com a atividade de ataque SSH com a porta 59601 como se encontrau um error com a atividade de ataque SSH com a porta 61872 como se encontrau um error com a atividade de ataque SSH com a porta 59601 como se encontrau um error com a atividade de ataque SSH com a porta 61872 como se encontrau um error com a atividade de ataque SSH com a porta 59601 como se encontrau",
         "remediacao": "Um problem com a atividade de ataque SSH com a porta 59601 como se encontrau um error com a atividade de ataque SSH com a porta 61872 como se encontrau um error com a atividade de ataque SSH com a porta 59601 como se encontrau um error com a atividade de ataque SSH com a porta",
         "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-50-35.pdf"
+    },
+    {
+        "data": "2026-08-24 19:05:39",
+        "host": "192.168.1.100 (PDV-Demo)",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "92.4%",
+            "ram": "88.1%",
+            "disk": "74.5%"
+        },
+        "auditoria": "🚨 **INCIDENTE CRÍTICO DETECTADO:**\n\n- **Ataque de Força Bruta SSH:** Identificadas 142 tentativas de autenticação inválidas originadas do IP `185.220.101.5` nas últimas 3 horas.\n- **Consumo Anômalo de CPU (92.4%):** Processo suspeito `kswapd0` consumindo recursos fora do padrão operacional.\n- **Exposição de Banco de Dados:** Porta MySQL (3306) aberta para conexões externas sem restrição de rede no UFW.",
+        "compliance": "⚖️ **SCORECARD DE COMPLIANCE (ISO/IEC 17021 & LGPD):**\n\n- **ISO 17021 A.8.2.1:** NÃO CONFORME — Controle de acesso frágil a porta SSH.\n- **ISO 17021 A.12.6.1:** ALERTA — Vulnerabilidade em porta MySQL aberta publicamente.\n- **LGPD Art. 46:** NÃO CONFORME — Ausência de bloqueio preventivo de IP invasor em banco de dados.",
+        "remediacao": "#!/bin/bash\n# Playbook de Remediação Automática - VanguardSec AI\n\n# 1. Bloquear IP Atacante no UFW Firewall\nsudo ufw deny from 185.220.101.5 to any\n\n# 2. Limitar Tentativas SSH (Fail2Ban Rule)\nsudo ufw limit ssh/tcp\n\n# 3. Fechar Porta MySQL Externa\nsudo ufw deny 3306/tcp\n\n# 4. Finalizar Processo Suspeito\nsudo killall -9 kswapd0\n\necho '✅ Hardening e Contenção Concluídos com Sucesso!'",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.1.100 (PDV-Demo)_2026-08-24_19-05-39.pdf"
+    },
+    {
+        "data": "2026-08-24 19:05:44",
+        "host": "192.168.1.100 (PDV-Demo)",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "92.4%",
+            "ram": "88.1%",
+            "disk": "74.5%"
+        },
+        "auditoria": "🚨 **INCIDENTE CRÍTICO DETECTADO:**\n\n- **Ataque de Força Bruta SSH:** Identificadas 142 tentativas de autenticação inválidas originadas do IP `185.220.101.5` nas últimas 3 horas.\n- **Consumo Anômalo de CPU (92.4%):** Processo suspeito `kswapd0` consumindo recursos fora do padrão operacional.\n- **Exposição de Banco de Dados:** Porta MySQL (3306) aberta para conexões externas sem restrição de rede no UFW.",
+        "compliance": "⚖️ **SCORECARD DE COMPLIANCE (ISO/IEC 17021 & LGPD):**\n\n- **ISO 17021 A.8.2.1:** NÃO CONFORME — Controle de acesso frágil a porta SSH.\n- **ISO 17021 A.12.6.1:** ALERTA — Vulnerabilidade em porta MySQL aberta publicamente.\n- **LGPD Art. 46:** NÃO CONFORME — Ausência de bloqueio preventivo de IP invasor em banco de dados.",
+        "remediacao": "#!/bin/bash\n# Playbook de Remediação Automática - VanguardSec AI\n\n# 1. Bloquear IP Atacante no UFW Firewall\nsudo ufw deny from 185.220.101.5 to any\n\n# 2. Limitar Tentativas SSH (Fail2Ban Rule)\nsudo ufw limit ssh/tcp\n\n# 3. Fechar Porta MySQL Externa\nsudo ufw deny 3306/tcp\n\n# 4. Finalizar Processo Suspeito\nsudo killall -9 kswapd0\n\necho '✅ Hardening e Contenção Concluídos com Sucesso!'",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.1.100 (PDV-Demo)_2026-08-24_19-05-44.pdf"
+    },
+    {
+        "data": "2026-08-24 19:05:57",
+        "host": "192.168.1.100 (PDV-Demo)",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "92.4%",
+            "ram": "88.1%",
+            "disk": "74.5%"
+        },
+        "auditoria": "🚨 **INCIDENTE CRÍTICO DETECTADO:**\n\n- **Ataque de Força Bruta SSH:** Identificadas 142 tentativas de autenticação inválidas originadas do IP `185.220.101.5` nas últimas 3 horas.\n- **Consumo Anômalo de CPU (92.4%):** Processo suspeito `kswapd0` consumindo recursos fora do padrão operacional.\n- **Exposição de Banco de Dados:** Porta MySQL (3306) aberta para conexões externas sem restrição de rede no UFW.",
+        "compliance": "⚖️ **SCORECARD DE COMPLIANCE (ISO/IEC 17021 & LGPD):**\n\n- **ISO 17021 A.8.2.1:** NÃO CONFORME — Controle de acesso frágil a porta SSH.\n- **ISO 17021 A.12.6.1:** ALERTA — Vulnerabilidade em porta MySQL aberta publicamente.\n- **LGPD Art. 46:** NÃO CONFORME — Ausência de bloqueio preventivo de IP invasor em banco de dados.",
+        "remediacao": "#!/bin/bash\n# Playbook de Remediação Automática - VanguardSec AI\n\n# 1. Bloquear IP Atacante no UFW Firewall\nsudo ufw deny from 185.220.101.5 to any\n\n# 2. Limitar Tentativas SSH (Fail2Ban Rule)\nsudo ufw limit ssh/tcp\n\n# 3. Fechar Porta MySQL Externa\nsudo ufw deny 3306/tcp\n\n# 4. Finalizar Processo Suspeito\nsudo killall -9 kswapd0\n\necho '✅ Hardening e Contenção Concluídos com Sucesso!'",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.1.100 (PDV-Demo)_2026-08-24_19-05-57.pdf"
+    },
+    {
+        "data": "2026-08-24 19:05:57",
+        "host": "192.168.1.100 (PDV-Demo)",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "92.4%",
+            "ram": "88.1%",
+            "disk": "74.5%"
+        },
+        "auditoria": "🚨 **INCIDENTE CRÍTICO DETECTADO:**\n\n- **Ataque de Força Bruta SSH:** Identificadas 142 tentativas de autenticação inválidas originadas do IP `185.220.101.5` nas últimas 3 horas.\n- **Consumo Anômalo de CPU (92.4%):** Processo suspeito `kswapd0` consumindo recursos fora do padrão operacional.\n- **Exposição de Banco de Dados:** Porta MySQL (3306) aberta para conexões externas sem restrição de rede no UFW.",
+        "compliance": "⚖️ **SCORECARD DE COMPLIANCE (ISO/IEC 17021 & LGPD):**\n\n- **ISO 17021 A.8.2.1:** NÃO CONFORME — Controle de acesso frágil a porta SSH.\n- **ISO 17021 A.12.6.1:** ALERTA — Vulnerabilidade em porta MySQL aberta publicamente.\n- **LGPD Art. 46:** NÃO CONFORME — Ausência de bloqueio preventivo de IP invasor em banco de dados.",
+        "remediacao": "#!/bin/bash\n# Playbook de Remediação Automática - VanguardSec AI\n\n# 1. Bloquear IP Atacante no UFW Firewall\nsudo ufw deny from 185.220.101.5 to any\n\n# 2. Limitar Tentativas SSH (Fail2Ban Rule)\nsudo ufw limit ssh/tcp\n\n# 3. Fechar Porta MySQL Externa\nsudo ufw deny 3306/tcp\n\n# 4. Finalizar Processo Suspeito\nsudo killall -9 kswapd0\n\necho '✅ Hardening e Contenção Concluídos com Sucesso!'",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.1.100 (PDV-Demo)_2026-08-24_19-05-57.pdf"
+    },
+    {
+        "data": "2026-08-24 19:06:08",
+        "host": "192.168.1.100 (PDV-Demo)",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "92.4%",
+            "ram": "88.1%",
+            "disk": "74.5%"
+        },
+        "auditoria": "🚨 **INCIDENTE CRÍTICO DETECTADO:**\n\n- **Ataque de Força Bruta SSH:** Identificadas 142 tentativas de autenticação inválidas originadas do IP `185.220.101.5` nas últimas 3 horas.\n- **Consumo Anômalo de CPU (92.4%):** Processo suspeito `kswapd0` consumindo recursos fora do padrão operacional.\n- **Exposição de Banco de Dados:** Porta MySQL (3306) aberta para conexões externas sem restrição de rede no UFW.",
+        "compliance": "⚖️ **SCORECARD DE COMPLIANCE (ISO/IEC 17021 & LGPD):**\n\n- **ISO 17021 A.8.2.1:** NÃO CONFORME — Controle de acesso frágil a porta SSH.\n- **ISO 17021 A.12.6.1:** ALERTA — Vulnerabilidade em porta MySQL aberta publicamente.\n- **LGPD Art. 46:** NÃO CONFORME — Ausência de bloqueio preventivo de IP invasor em banco de dados.",
+        "remediacao": "#!/bin/bash\n# Playbook de Remediação Automática - VanguardSec AI\n\n# 1. Bloquear IP Atacante no UFW Firewall\nsudo ufw deny from 185.220.101.5 to any\n\n# 2. Limitar Tentativas SSH (Fail2Ban Rule)\nsudo ufw limit ssh/tcp\n\n# 3. Fechar Porta MySQL Externa\nsudo ufw deny 3306/tcp\n\n# 4. Finalizar Processo Suspeito\nsudo killall -9 kswapd0\n\necho '✅ Hardening e Contenção Concluídos com Sucesso!'",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.1.100 (PDV-Demo)_2026-08-24_19-06-08.pdf"
+    },
+    {
+        "data": "2026-08-24 19:06:09",
+        "host": "192.168.1.100 (PDV-Demo)",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "92.4%",
+            "ram": "88.1%",
+            "disk": "74.5%"
+        },
+        "auditoria": "🚨 **INCIDENTE CRÍTICO DETECTADO:**\n\n- **Ataque de Força Bruta SSH:** Identificadas 142 tentativas de autenticação inválidas originadas do IP `185.220.101.5` nas últimas 3 horas.\n- **Consumo Anômalo de CPU (92.4%):** Processo suspeito `kswapd0` consumindo recursos fora do padrão operacional.\n- **Exposição de Banco de Dados:** Porta MySQL (3306) aberta para conexões externas sem restrição de rede no UFW.",
+        "compliance": "⚖️ **SCORECARD DE COMPLIANCE (ISO/IEC 17021 & LGPD):**\n\n- **ISO 17021 A.8.2.1:** NÃO CONFORME — Controle de acesso frágil a porta SSH.\n- **ISO 17021 A.12.6.1:** ALERTA — Vulnerabilidade em porta MySQL aberta publicamente.\n- **LGPD Art. 46:** NÃO CONFORME — Ausência de bloqueio preventivo de IP invasor em banco de dados.",
+        "remediacao": "#!/bin/bash\n# Playbook de Remediação Automática - VanguardSec AI\n\n# 1. Bloquear IP Atacante no UFW Firewall\nsudo ufw deny from 185.220.101.5 to any\n\n# 2. Limitar Tentativas SSH (Fail2Ban Rule)\nsudo ufw limit ssh/tcp\n\n# 3. Fechar Porta MySQL Externa\nsudo ufw deny 3306/tcp\n\n# 4. Finalizar Processo Suspeito\nsudo killall -9 kswapd0\n\necho '✅ Hardening e Contenção Concluídos com Sucesso!'",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.1.100 (PDV-Demo)_2026-08-24_19-06-09.pdf"
+    },
+    {
+        "data": "2026-08-24 19:31:17",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "23.02%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n",
+        "compliance": "\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n",
+        "remediacao": "```bash\n#!/bin/bash\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n#",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-31-17.pdf"
+    },
+    {
+        "data": "2026-08-24 19:31:29",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "25.40%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n",
+        "compliance": "\nDados de Auditoria:\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n",
+        "remediacao": "```bash\n#!/bin/bash\n\n# Check if the SSH server is running\nif [ $# -ne 1 ]; then\n    echo \"Error: SSH server is not running\"\n    exit 1\nfi\n\n# Check if the UFW firewall is running\nif [ $# -ne 1 ]; then\n    echo \"Error: UFW firewall is not running\"\n    exit 1\nfi\n\n# Check if the SSH server is running\nif [",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-31-29.pdf"
+    },
+    {
+        "data": "2026-08-24 19:31:49",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "23.57%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n",
+        "compliance": "\nDados de Auditoria:\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n",
+        "remediacao": "```bash\n#!/bin/bash\n\n# Check if the SSH server is running\nif [ $# -ne 1 ]; then\n    echo \"Error: SSH server is not running\"\n    exit 1\nfi\n\n# Check if the UFW firewall is running\nif [ $# -ne 1 ]; then\n    echo \"Error: UFW firewall is not running\"\n    exit 1\nfi\n\n# Check if the SSH server is running\nif [",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-31-49.pdf"
+    },
+    {
+        "data": "2026-08-24 19:32:02",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "22.35%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n22.35%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\nUso de CPU:\n0\n\nUso de RAM:\n22.35%\n\nUso de Disco:\n15%\n\nUso de RAM:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n1",
+        "remediacao": "Uso de CPU:\n0\n\nUso de RAM:\n22.35%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-32-02.pdf"
+    },
+    {
+        "data": "2026-08-24 19:32:18",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "5%",
+            "ram": "23.93%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n5\n\n--- [ Uso de RAM ] ---\n23.93%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\nNúmero de registros: 5\n\nUso de CPU: 50.00%\n\nUso de RAM: 23.93%\n\nUso de Disco: 15%\n\nUso de RAM: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de",
+        "remediacao": "Uso de CPU:\n\n- 5%\n- 23.93%\n- 15%\n- 15%\n- 0%\n\nUso de RAM:\n\n- 23.93%\n- 15%\n- 15%\n- 0%\n\nUso de Disco:\n\n- 15%\n- 15%\n- 0%\n- ",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-32-18.pdf"
+    },
+    {
+        "data": "2026-08-24 19:32:33",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "23.57%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n23.57%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\nUso de CPU:\n0\n\nUso de RAM:\n23.57%\n\nUso de Disco:\n15%\n\nUso de RAM:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n1",
+        "remediacao": "Uso de CPU:\n0\n\nUso de RAM:\n23.57%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-32-33.pdf"
+    },
+    {
+        "data": "2026-08-24 19:32:49",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "23.51%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n=== DADOS DO SERVIDOR LINUX: 192.168.15.2 ===\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n23.51%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ]",
+        "compliance": "==\n\n=== DADOS DO SERVIDOR LINUX: 192.168.15.2 ===\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n23.51%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ]",
+        "remediacao": "==\n\n==\n\n=== DADOS DO SERVIDOR LINUX: 192.168.15.2 ===\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n23.51%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-32-49.pdf"
+    },
+    {
+        "data": "2026-08-24 19:33:06",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "23.14%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n23.14%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\n- [Uso de CPU ] ---\n0\n\n- [Uso de RAM ] ---\n23.14%\n\n- [Uso de Disco ] ---\n15%\n\n- [Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n- [Atualizações de Segurança Pendentes ] ---\n0\n\n- [Usuários Sudo ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n- [Portas Abertas ] ---\nNetid State  Recv-Q Send-Q: A",
+        "remediacao": "Uso de CPU:\n0\n\nUso de RAM:\n23.14%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-33-06.pdf"
+    },
+    {
+        "data": "2026-08-24 19:33:36",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "10%",
+            "ram": "23.20%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n10\n\n--- [ Uso de RAM ] ---\n23.20%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-",
+        "compliance": "Dados de Auditoria:\n\n==\n\nUso de CPU:\n10\n\nUso de RAM:\n23.20%\n\nUso de Disco:\n15%\n\nUso de RAM:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n",
+        "remediacao": "==\n\nUso de CPU:\n10\n\nUso de RAM:\n23.20%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nU",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-33-36.pdf"
+    },
+    {
+        "data": "2026-08-24 19:34:37",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "9%",
+            "ram": "23.26%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n9\n\n--- [ Uso de RAM ] ---\n23.26%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\nNúmero de registros: 9\n\nUso de CPU: 90.00%\n\nUso de RAM: 23.26%\n\nUso de Disco: 15%\n\nUso de RAM: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de",
+        "remediacao": "==\n\n--- [ Uso de CPU ] ---\n9\n\n--- [ Uso de RAM ] ---\n23.26%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sud",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-34-37.pdf"
+    },
+    {
+        "data": "2026-08-24 19:35:10",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "5%",
+            "ram": "24.18%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n5\n\n--- [ Uso de RAM ] ---\n24.18%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\nNúmero de registros: 5\n\nUso de CPU: 50.00%\n\nUso de RAM: 24.18%\n\nUso de Disco: 15%\n\nUso de RAM: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de",
+        "remediacao": "Uso de CPU:\n\n- 5%\n- 24.18%\n- 15%\n- 0%\n\nUso de RAM:\n\n- 15%\n- 15%\n- 0%\n\nUso de Disco:\n\n- 15%\n- 15%\n- 0%\n\nUso de RAM:\n\n- 15%\n- 1",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-35-10.pdf"
+    },
+    {
+        "data": "2026-08-24 19:35:26",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "9.6%",
+            "ram": "23.14%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n9.6\n\n--- [ Uso de RAM ] ---\n23.14%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send",
+        "compliance": "Dados de Auditoria:\n\n==\n\n--- [ Uso de CPU ] ---\n9.6\n\n--- [ Uso de RAM ] ---\n23.14%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou sudo: A terminal",
+        "remediacao": "==\n\nUso de CPU:\n9.6\n\nUso de RAM:\n23.14%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\n",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-35-26.pdf"
+    },
+    {
+        "data": "2026-08-24 19:35:27",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "56.2%",
+            "ram": "25.82%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n56.2\n\n--- [ Uso de RAM ] ---\n25.82%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\n--- [ Uso de CPU ] ---\n56.2\n\n--- [ Uso de RAM ] ---\n25.82%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q",
+        "remediacao": "Uso de CPU:\n\n- 56.2%\n- 25.82%\n- 15%\n- 0%\n\nUso de RAM:\n\n- 25.82%\n- 15%\n- 0%\n\nUso de Disco:\n\n- 15%\n- 0%\n- 0%\n\nUso de RAM:\n\n- 15",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-35-27.pdf"
+    },
+    {
+        "data": "2026-08-24 19:35:39",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "5%",
+            "ram": "23.02%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n5\n\n--- [ Uso de RAM ] ---\n23.02%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\n--- [ Uso de CPU ] ---\n5\n\n--- [ Uso de RAM ] ---\n23.02%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou sudo: A terminal is required",
+        "remediacao": "Uso de CPU:\n\n- 5%\n- 23.02%\n- 15%\n- 0\n\nUso de RAM:\n\n- 15%\n- 15%\n- 0\n\nUso de Disco:\n\n- 15%\n- 15%\n- 0\n\nUso de RAM:\n\n- 15%\n- 15%\n",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-35-39.pdf"
+    },
+    {
+        "data": "2026-08-24 19:35:56",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "5.3%",
+            "ram": "22.96%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n5.3\n\n--- [ Uso de RAM ] ---\n22.96%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send",
+        "compliance": "Dados de Auditoria:\n\n==\n\n--- [ Uso de CPU ] ---\n5.3\n\n--- [ Uso de RAM ] ---\n22.96%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou sudo: A terminal",
+        "remediacao": "Uso de CPU:\n\n- 5.3\n\n- 22.96%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-35-56.pdf"
+    },
+    {
+        "data": "2026-08-24 19:36:14",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "22.47%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n22.47%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\n- [Uso de CPU ] ---\n0\n\n- [Uso de RAM ] ---\n22.47%\n\n- [Uso de Disco ] ---\n15%\n\n- [Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n- [Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n- [Atualizações de Segurança Pendentes ] ---\n0\n\n- [Usuários Sudo ] ---\nSem registros ou sudo: A terminal is required",
+        "remediacao": "Uso de CPU:\n0\n\nUso de RAM:\n22.47%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-36-14.pdf"
+    },
+    {
+        "data": "2026-08-24 19:36:29",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "22.23%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n22.23%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\nUso de CPU:\n0\n\nUso de RAM:\n22.23%\n\nUso de Disco:\n15%\n\nUso de RAM:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n1",
+        "remediacao": "Uso de CPU:\n0\n\nUso de RAM:\n22.23%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-36-29.pdf"
+    },
+    {
+        "data": "2026-08-24 19:36:45",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "5%",
+            "ram": "22.35%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n5\n\n--- [ Uso de RAM ] ---\n22.35%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\nUso de CPU:\n5\n\nUso de RAM:\n22.35%\n\nUso de Disco:\n15%\n\nUso de RAM:\n15%\n\nUso de Disco:\n0\n\nUso de Disco:\n0\n\nUso de Disco:\n0\n\nUso de Disco:\n0\n\nUso de Disco:\n0\n\nUso de Disco:\n0\n\nUso de Disco:\n0\n\nUso de Disco:\n0\n\nUso de Disco:\n0\n\nUso",
+        "remediacao": "Uso de CPU:\n\n- 5%\n- 22.35%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n-",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-36-45.pdf"
+    },
+    {
+        "data": "2026-08-24 19:37:02",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "9.6%",
+            "ram": "22.35%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n9.6\n\n--- [ Uso de RAM ] ---\n22.35%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send",
+        "compliance": "Dados de Auditoria:\n\n==\n\nNúmero de registros: 9\n\nUso de CPU: 9.6\n\nUso de RAM: 22.35%\n\nUso de Disco: 15%\n\nUso de RAM: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco:",
+        "remediacao": "==\n\n--- [ Uso de CPU ] ---\n9.6\n\n--- [ Uso de RAM ] ---\n22.35%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuári",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-37-02.pdf"
+    },
+    {
+        "data": "2026-08-24 19:40:29",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "62.6%",
+            "ram": "23.63%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n62.6\n\n--- [ Uso de RAM ] ---\n23.63%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\n--- [ Uso de CPU ] ---\n62.6\n\n--- [ Uso de RAM ] ---\n23.63%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q",
+        "remediacao": "Uso de CPU: 62.6%\nUso de RAM: 23.63%\nUso de Disco: 15%\nUso de Disco: 15%\nUso de Disco: 15%\nUso de Disco: 15%\nUso de Disco: 15%\nUso de Disco: 15%\nUso de Disco: 15",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-40-29.pdf"
+    },
+    {
+        "data": "2026-08-24 19:40:34",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "55.5%",
+            "ram": "23.63%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n55.5\n\n--- [ Uso de RAM ] ---\n23.63%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\n--- [ Uso de CPU ] ---\n55.5\n\n--- [ Uso de RAM ] ---\n23.63%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q",
+        "remediacao": "Uso de CPU:\n\n- 55.5%\n- 23.63%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15%\n- 15",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-40-34.pdf"
+    },
+    {
+        "data": "2026-08-24 19:40:36",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "52.9%",
+            "ram": "26.19%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n52.9\n\n--- [ Uso de RAM ] ---\n26.19%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\nUso de CPU:\n52.9%\n\nUso de RAM:\n26.19%\n\nUso de Disco:\n15%\n\nUso de RAM:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Dis",
+        "remediacao": "Uso de CPU: 52.9%\nUso de RAM: 26.19%\nUso de Disco: 15%\nUso de Disco: 15%\nUso de Disco: 15%\nUso de Disco: 15%\nUso de Disco: 15%\nUso de Disco: 15%\nUso de Disco: 15",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-40-36.pdf"
+    },
+    {
+        "data": "2026-08-24 19:40:48",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "23.08%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n=== DADOS DO SERVIDOR LINUX: 192.168.15.2 ===\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n23.08%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ]",
+        "compliance": "Dados de Auditoria:\n\n==\n\n=== DADOS DO SERVIDOR LINUX: 192.168.15.2 ===\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n23.08%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ]",
+        "remediacao": "==\n\n=== DADOS DO SERVIDOR LINUX: 192.168.15.2 ===\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n23.08%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n---",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-40-48.pdf"
+    },
+    {
+        "data": "2026-08-24 19:40:57",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "22.29%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n22.29%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\n- [Uso de CPU ] ---\n0\n\n- [Uso de RAM ] ---\n22.29%\n\n- [Uso de Disco ] ---\n15%\n\n- [Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n- [Atualizações de Segurança Pendentes ] ---\n0\n\n- [Usuários Sudo ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n- [Portas Abertas ] ---\nNetid State  Recv-Q Send-Q: A",
+        "remediacao": "Uso de CPU:\n0\n\nUso de RAM:\n22.29%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-40-57.pdf"
+    },
+    {
+        "data": "2026-08-24 19:41:26",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "9.6%",
+            "ram": "24.36%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n",
+        "compliance": "\nDados de Auditoria:\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n\n==\n",
+        "remediacao": "```bash\n#!/bin/bash\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n# Replace the following with your own command\n\n#",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-41-26.pdf"
+    },
+    {
+        "data": "2026-08-24 19:41:55",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "5%",
+            "ram": "23.02%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n5\n\n--- [ Uso de RAM ] ---\n23.02%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\nUso de CPU:\n5\n\nUso de RAM:\n23.02%\n\nUso de Disco:\n15%\n\nUso de RAM:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n1",
+        "remediacao": "Uso de CPU:\n\n- 5%\n- 23.02%\n\nUso de RAM:\n\n- 15%\n- 15%\n\nUso de Disco:\n\n- 15%\n- 15%\n\nUso de Disco:\n\n- 15%\n- 15%\n\nUso de Disco:\n\n- 15%\n- ",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-41-55.pdf"
+    },
+    {
+        "data": "2026-08-24 19:42:24",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "23.08%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n23.08%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\nDados de Auditoria:\n\nUso de CPU:\n0\n\nUso de RAM:\n23.08%\n\nUso de Disco:\n15%\n\nUso de RAM:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n",
+        "remediacao": "Uso de CPU:\n0\n\nUso de RAM:\n23.08%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-42-24.pdf"
+    },
+    {
+        "data": "2026-08-24 19:42:56",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "24.24%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n0\n\n--- [ Uso de RAM ] ---\n24.24%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\nNúmero de registros: 24.24%\n\nUso de CPU: 0\n\nUso de RAM: 24.24%\n\nUso de Disco: 15%\n\nUso de RAM: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de",
+        "remediacao": "Uso de CPU:\n0\n\nUso de RAM:\n24.24%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco:\n15%\n\nUso de Disco",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-42-56.pdf"
+    },
+    {
+        "data": "2026-08-24 19:43:25",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "5%",
+            "ram": "22.96%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n5\n\n--- [ Uso de RAM ] ---\n22.96%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\n- [Uso de CPU ] ---\n5\n\n- [Uso de RAM ] ---\n22.96%\n\n- [Uso de Disco ] ---\n15%\n\n- [Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n- [Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n- [Atualizações de Segurança Pendentes ] ---\n0\n\n- [Usuários Sudo ] ---\nSem registros ou sudo: A terminal is required",
+        "remediacao": "Uso de CPU:\n\n- 50%\n\n- 22.96%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n\n- 15%\n",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-43-25.pdf"
+    },
+    {
+        "data": "2026-08-24 19:43:55",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "5%",
+            "ram": "21.74%",
+            "disk": "15%"
+        },
+        "auditoria": "==\n\n--- [ Uso de CPU ] ---\n5\n\n--- [ Uso de RAM ] ---\n21.74%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou \n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ] ---\n0\n\n--- [ Usuários Sudo ] ---\nSem registros ou \n\n--- [ Portas Abertas ] ---\nNetid State  Recv-Q Send-Q",
+        "compliance": "Dados de Auditoria:\n\n==\n\nNúmero de registros: 5\n\nUso de CPU: 50.00%\n\nUso de RAM: 21.74%\n\nUso de Disco: 15%\n\nUso de RAM: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de",
+        "remediacao": "Uso de CPU:\n\nUso de RAM:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-43-55.pdf"
     }
 ]

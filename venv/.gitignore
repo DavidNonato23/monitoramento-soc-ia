@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+relatorios/*.pdf
+venv/
+.venv/
+.vscode/
+chroma_db/

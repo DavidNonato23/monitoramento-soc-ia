@@ -1,13 +1,8 @@
-# Módulo de Políticas e Frameworks de Conformidade
-# Convertido a partir da ABNT NBR ISO/IEC 17021
-
-POLITICA_ISO_17021 = """
-NORMA ISO/IEC 17021 (AUDITORIA E REGISTRO):
-1. EVIDENCIA OBJETIVA: Auditorias devem se basear em dados reais de logs e metricas sem pressuposicoes.
-2. RASTREABILIDADE E CONFIDENCIALIDADE: Registros de acessos e alteracoes devem ser salvos com seguranca.
-3. IDENTIFICACAO DE NAO-CONFORMIDADES: Falhas de seguranca, acessos nao autorizados e portas expostas devem ser classificadas como nao-conformidades.
-4. ACAO CORRETIVA: Scripts de mitigacao devem eliminar a causa raiz das falhas apontadas.
-"""
-
 def obter_politica_ativa():
-    return POLITICA_ISO_17021
+    """Retorna a norma ativa utilizada para auditoria dos Agentes de IA."""
+    return (
+        "NORMA REGULATÓRIA: ISO/IEC 17021 & LGPD Artigo 46\n"
+        "- Controle A.8.2.1: Toda senha de acesso administrativo deve ser forte e protegida contra força bruta.\n"
+        "- Controle A.12.6.1: Portas de bancos de dados não devem ficar expostas publicamente sem firewall.\n"
+        "- LGPD Art. 46: Adotar medidas de segurança técnicas para proteger dados pessoais de acessos não autorizados."
+    )

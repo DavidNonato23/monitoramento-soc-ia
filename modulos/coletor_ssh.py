@@ -1,39 +1,62 @@
 import paramiko
 
-def coletar_dados_servidor(hostname, username, password=None, key_filename=None, port=22):
-    comandos = {
-        "Uso de CPU": "top -bn1 | grep 'Cpu(s)' | awk '{print $2 + $4}'",
-        "Uso de RAM": "free -m | awk 'NR==2{printf \"%.2f%%\", $3*100/$2 }'",
-        "Uso de Disco": "df -h / | awk 'NR==2{print $5}'",
-        "Configuração SSH": "cat /etc/ssh/sshd_config | grep -E '^(PermitRootLogin|PasswordAuthentication|Port)'",
-        "Status do Firewall (UFW)": "sudo ufw status | head -n 5",
-        "Atualizações de Segurança Pendentes": "apt-get -s upgrade | grep -i security | wc -l",
-        "Usuários Sudo": "grep -Po '^sudo:\\x3a.*$' /etc/group",
-        "Portas Abertas": "ss -tulpn | head -n 6",
-        "Tentativas de Ataque SSH": "grep -a 'Failed password' /var/log/auth.log | tail -n 5 || journalctl -u ssh.service -n 5 --grep='Failed password'"
-    }
-
-    dados_coletados = f"=== DADOS DO SERVIDOR LINUX: {hostname} ===\n\n"
-
+def coletar_dados_servidor(hostname, username, password=None, key_filename=None):
+    """Conecta ao servidor Linux via SSH e extrai telemetria bruta."""
     try:
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         
         if key_filename:
-            client.connect(hostname=hostname, port=port, username=username, key_filename=key_filename, timeout=5)
+            client.connect(hostname=hostname, username=username, key_filename=key_filename, timeout=10)
         else:
-            client.connect(hostname=hostname, port=port, username=username, password=password, timeout=5)
+            client.connect(hostname=hostname, username=username, password=password, timeout=10)
 
-        for nome_teste, comando in comandos.items():
-            stdin, stdout, stderr = client.exec_command(comando, timeout=5)
-            saida = stdout.read().decode('utf-8', errors='ignore').strip()
-            erro = stderr.read().decode('utf-8', errors='ignore').strip()
-            
-            dados_coletados += f"--- [ {nome_teste} ] ---\n"
-            dados_coletados += f"{saida if saida else 'Sem registros ou ' + erro}\n\n"
+        cmd_cpu = "top -bn1 | grep 'Cpu(s)'"
+        cmd_ram = "free -m"
+        cmd_disk = "df -h /"
+        cmd_auth = "tail -n 20 /var/log/auth.log 2>/dev/null || tail -n 20 /var/log/syslog"
+
+        _, stdout_cpu, _ = client.exec_command(cmd_cpu)
+        _, stdout_ram, _ = client.exec_command(cmd_ram)
+        _, stdout_disk, _ = client.exec_command(cmd_disk)
+        _, stdout_auth, _ = client.exec_command(cmd_auth)
+
+        telemetria = (
+            f"--- [ Uso de CPU ] ---\n{stdout_cpu.read().decode('utf-8')}\n"
+            f"--- [ Uso de RAM ] ---\n{stdout_ram.read().decode('utf-8')}\n"
+            f"--- [ Uso de Disco ] ---\n{stdout_disk.read().decode('utf-8')}\n"
+            f"--- [ Logs de Autenticação / Auth Log ] ---\n{stdout_auth.read().decode('utf-8')}\n"
+        )
 
         client.close()
-        return dados_coletados
+        return telemetria
 
     except Exception as e:
-        return f"Erro ao conectar ao servidor {hostname} via SSH: {str(e)}"
+        return f"Erro ao conectar via SSH: {str(e)}"
+
+
+def aplicar_remediacao_linux(hostname, username, password=None, key_file=None, script=""):
+    """Executa comandos de hardening/bloqueio diretamente no servidor remoto."""
+    try:
+        client = paramiko.SSHClient()
+        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        
+        if key_file:
+            client.connect(hostname=hostname, username=username, key_filename=key_file, timeout=10)
+        else:
+            client.connect(hostname=hostname, username=username, password=password, timeout=10)
+
+        linhas = [c.strip() for c in script.split('\n') if c.strip() and not c.strip().startswith('#')]
+        logs = []
+        
+        for cmd in linhas:
+            stdin, stdout, stderr = client.exec_command(cmd)
+            out = stdout.read().decode('utf-8').strip()
+            err = stderr.read().decode('utf-8').strip()
+            logs.append(f"$ {cmd}\nOutput: {out if out else err}")
+
+        client.close()
+        return True, "\n".join(logs)
+
+    except Exception as e:
+        return False, f"Erro SSH na remediação: {str(e)}"
