@@ -1,0 +1,474 @@
+[
+    {
+        "data": "2026-08-24 10:51:46",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "21.56%",
+            "disk": "15%"
+        },
+        "auditoria": "1. Ununtu Linux instalável está criado e instalada em Ubuntu-Linux.com.\n2. Este dados são desejados como uma açao do sistema de ataque bruto e segurança.\n3. Seu porta acesso é desejado até seu terminal.\n4. Seu ativo é desejado até verificar que se estiver atentado à atividade de ataque brute force.\n5. Seu uso da atividade de ataque brute force é desejado até verificar se ele não estiver atentado à atividade de ataque brute force.\n6. Seu sistema de ataque bruto e segurança é desejado até verificar se ele estiver atentado à atividade de ataque brute force.\n7. Seu ativo acessado até verificar se ele estiver atentado à atividade de ataque brute force é desejado até verificar se é seu at",
+        "compliance": "Verdadeiramente, Você está criado e instalada em Ubuntu-Linux.com. Este dados são desejados como uma açao do sistema de ataque bruto e segurança. O ativo está desejado até verificar se ele não estiver atentado à atividade de ataque brute force. Seu ativo acessado até verificar se ele estiver atentado à atividade de ataque brute force é desejado até verificar se ele não estiver atentado à atividade de ataque brute force. Seu sistema de ataque bruto e segurança é desejado até verificar se ele estiver atentado à atividade de ataque brute force. Seu uso da atividade de ataque brute force é desejado até verificar se ele estiver atentado à atividade de ataque brute force. Seu ativo acessado até verificar se ele estiver atentado à atividade de ataque brute",
+        "remediacao": "Verdadeiramente, Você está criado e instalada em Ubuntu-Linux. Este dados são desejados como uma açao do sistema de ataque bruto e segurança. O ativo está desejado até verificar se ele estiver atentado à atividade de ataque brute force. Seu ativo acessado até verificar se ele estiver atentado à atividade de ataque brute force é desejado até verificar se ele estiver atentado à atividade de ataque brute force. Seu sistema de ataque bruto e segurança é desejado até verificar se ele estiver atentado à atividade de ataque brute force. Seu uso da atividade de ataque brute force é desejado até verificar se ele estiver atentado à atividade de ataque brute force. Seu ativo acessado até verificar se ele estiver atentado à atividade de ataque brute force é desejado"
+    },
+    {
+        "data": "2026-08-24 10:52:06",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "21.74%",
+            "disk": "15%"
+        },
+        "auditoria": "Um usuário pode ajudar com a atividade brute-force.\n\nAcesso de usuário:\n172.30.0.168:10000\nPorta: 3018\nProcess: 0\nSaida:\n127.0.0.1:10000\nProcess: 0\nSaida:\n127.0.0.1:10000\nProcess: 0\nSaida:\n127.0.0.1:10000\nProcess: 0\nSaida:\n127.0.0.1:10000\nProcess: 0\nSaida:\n127.0.0.1:10000\nProcess: 0\nSaida:\n127.0.0.1:10000\nProcess: 0\nSaida:\n127.0.0.1:10000\nProcess: 0\nSaida:\n127.0.0.1:1",
+        "compliance": "Relatório de Auditoria:\nUm usuário pode ajudar com a atividade brute-force.\n\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0\nProcess: 0",
+        "remediacao": "Ubuntu Linux é essencialmente usado para acessar a atividade brute-force.\n\nPara usar a atividade através da ubuntu Linux, é necessário instalar a versão Ubuntu Linux 14.04 com o controle de usuário (Ubuntu Linux 14.04).\n\nEncontra-se o controle de usuário inicial no código de Ubuntu Linux: [Ubuntu Linux 14.04](https://www.ubuntu-project.org/wiki/User_Accounting)\n\nVerifique que o controle de usuário está instalado como seu usuario.\n\nFornecessemos a atividade através de processos inicial, processos de atividade, processos de atividade de usuário, código de usuário de atividade, processos de usuário de atividade, processos de usuário e usuário de atividade, código de usuário de"
+    },
+    {
+        "data": "2026-08-24 10:52:26",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "20.77%",
+            "disk": "15%"
+        },
+        "auditoria": "Dados de sucesso:\n0\n\n--- [ Uso de CPU ] ---\nResultado:\n0\n\n--- [ Uso de RAM ] ---\nResultado:\n20.77%\n\n--- [ Uso de Disco ] ---\nResultado:\n\n\n--- [ Usuários com Acesso Sudo ] ---\nResultado:\n\n\n--- [ Portas e Serviços Abertos ] ---\nResultado:\nNetid State  Recv-Q Send-Q       Local Address:Port Peer Address:PortProcess\nudp   UNCONN 0      0               127.0.0.54:53        0.0.0.0          \nudp   UNCONN 0      0               127.0.0.53%lo:53        0.0.0.0          \nudp   UNCONN 0      0                127.0.0.1:323       0.0.0.0          \nudp   UNCONN 0      0                    [::]:22           [::]:*          \ntcp   LISTEN 0      ",
+        "compliance": "Usuários com acesso acesso:\n\nUsuário:\n0\n\n--- [ Uso de CPU ] ---\nResultado:\n0\n\n--- [ Uso de RAM ] ---\nResultado:\n20.77%\n\n--- [ Uso de Disco ] ---\nResultado:\n\n\n--- [ Usuários com Acesso Sudo ] ---\nResultado:\n\n\n--- [ Portas e Serviços Abertos ] ---\nResultado:\nNetid State  Recv-Q Send-Q       Local Address:Port Peer Address:PortProcess\nudp   UNCONN 0      0               127.0.0.54:53        0.0.0.0          \nudp   UNCONN 0      0               127.0.0.1:323       0.0.0.0          \nudp   UNCONN 0      0                    [::]:22           [::]:*          \ntcp   LISTEN 0      ",
+        "remediacao": "Ubuntu Linux 18.04:\n\n- 0.2.1: Unfertilised\n- 0.2.2: Unfertilised\n- 0.2.3: Unfertilised\n- 0.2.4: Unfertilised\n- 0.2.5: Unfertilised\n- 0.2.6: Unfertilised\n- 0.2.7: Unfertilised\n- 0.2.8: Unfertilised\n- 0.2.9: Unfertilised\n- 0.2.10: Unfertilised\n- 0.2.11: Unfertilised\n- 0.2.12: Unfertilised\n- 0.2.13: Unfertilised\n- 0.2.14: Unfertilised\n- 0.2.15: Unfertilised\n- 0.2.16: Unfertilised\n- 0.2.17: Unfertilised\n- 0.2.18: Unfertilised\n"
+    },
+    {
+        "data": "2026-08-24 10:53:01",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "4.6%",
+            "ram": "22.35%",
+            "disk": "15%"
+        },
+        "auditoria": "Uso de CPU:\n0.0.0.0:53\n\nUso de RAM:\n22.35%\n\nUso de Disco:\n15%\n\nUso de Segurança Pendentes:\n17%\n\nUso de Portas e Serviços Abertos:\n22.35%\n\nPortas e Serviços Abertos:\n4096     [::]:22\n127.0.0.1:53: [::]:*\n127.0.0.1:323: [::]:*\n127.0.0.1:53: [::]:*\n\nPortas e Serviços Abertos:\n4096     [::]:22\n127.0.0.1:53: [::]:*\n127.0.0.1:323: [::]:*\n127.0.0.1:53: [::]:*\n\nAcesso Sudo:\n0.0.0.0",
+        "compliance": "\"0.0.0.0:53:10: [::]:22\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53: [::]:*\n0.0.0.0:53:",
+        "remediacao": "Um problem com o computador desenvolvido Ubuntu Linux. Este mais seguintos estão como:\n\n* Uso de CPU: 0.0.0.0:53\n* Uso de RAM: 22.35%\n* Uso de Disco: 15%\n* Uso de Segurança Pendentes: 17%\n\nOportunidades:\n1. Acesso Sudo no serviço: Passos: 2\n2. Validação de portas e serviços abertos: Passos: 4\n3. Portas e Serviços Abertos: Passos: 4096\n4. Portas e Serviços Abertos: Passos: 4\n\nAcesso Sudo no serviço: Passos: 2\n\nAcesso Sudo no serviço: Passos: 2\n\nAcesso Sudo no serviço: Passos: 2\n\nAcesso Sudo no serviço: Passos: 2\n\nA"
+    },
+    {
+        "data": "2026-08-24 10:58:16",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "4.2%",
+            "ram": "22.84%",
+            "disk": "15%"
+        },
+        "auditoria": "Um dado:\n4.2\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm d",
+        "compliance": "Um dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm dado:\n15%\n\nUm d",
+        "remediacao": "$sudo apt-get update && apt-add-node -y && pip install --user ubuntu\n$ sudo apt-get install -y python3-dev\n$ python3-dev --version\n$ python3-dev --version\n$ python3-dev python3-dev-version\n\n# Replace `--user` with your username\n\n```\n\nThis process requires you to run the command `sudo apt-get update --user`. It will install the latest versions of packages you need to run Ubuntu. If you have any additional packages or configurations you need, you can run the command again to update them.\n\nMake sure to run `sudo apt-get update` after you install the latest version to ensure you don't accidentally upgrade a package that wasn't installed by default.",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_10-58-16.pdf"
+    },
+    {
+        "data": "2026-08-24 10:58:37",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "3.2%",
+            "ram": "21.62%",
+            "disk": "15%"
+        },
+        "auditoria": "Ubuntu Linux 17.10 - P2P:\n1.0\n2.1\n3.2\n4.2\n5.0\n6.0\n7.1\n8.1\n9.1\n10.1\n11.1\n12.1\n13.1\n14.1\n15.1\n16.1\n17.1\n18.1\n19.1\n20.1\n21.1\n22.1\n23.1\n24.1\n25.1\n26.1\n27.1\n28.1\n29.1\n30.1\n31.1\n32.1\n33.1\n34.1\n35.1\n36.1\n37.1\n38.1\n39.1\n40.1\n41.1\n42.1\n43.1\n44.1\n45.1\n46.1\n47.1\n48.1\n49.1\n50.1",
+        "compliance": "Após o 20 de setembro de 2018, o Linux Ubuntu Linux Pro 17.10, portado com núcleo P2P, foi deve ser adaptado para cálculo de Auditoria. O código de Teste do Linux Ubuntu Linux Pro 17.10: Ubuntu Linux 17.10 P2P com a Auditoria:\n\nUbuntu Linux 17.10 - P2P:\n1.0\n2.1\n3.2\n4.2\n5.0\n6.0\n7.1\n8.1\n9.1\n10.1\n11.1\n12.1\n13.1\n14.1\n15.1\n16.1\n17.1\n18.1\n19.1\n20.1\n21.1\n22.1\n23.1\n24.1\n25.1\n26.1\n27.1\n28.1\n29.1\n30.1\n3",
+        "remediacao": "Após o 20 de setembro de 2018, o Linux Ubuntu Linux Pro 17.10, portado com núcleo P2P, foi deve ser adaptado para cálculo de Auditoria. O código de Teste do Linux Ubuntu Linux Pro 17.10: Ubuntu Linux 17.10 P2P com a Auditoria:\n\nUbuntu Linux 17.10 - P2P:\n1.0\n2.1\n3.2\n4.2\n5.0\n6.0\n7.1\n8.1\n9.1\n10.1\n11.1\n12.1\n13.1\n14.1\n15.1\n16.1\n17.1\n18.1\n19.1\n20.1\n21.1\n22.1\n23.1\n24.1\n25.1\n26.1\n27.1\n28.1\n29.1\n30.1\n3",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_10-58-37.pdf"
+    },
+    {
+        "data": "2026-08-24 10:58:51",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "9.1%",
+            "ram": "23.20%",
+            "disk": "15%"
+        },
+        "auditoria": "O modulo de servidor Ubuntu Linux for teste de atividores e serviços brutais de acesso de uma ubuntu Linux no cachorro do servidor do Amazon Linux com acesso ao servidor no banco de dados da Amazon EC2 com 4096 IP IPS (4096 IPs):\n\n*Ubuntu Linux\n*Ubuntu-17-current\n*Ubuntu-16.10\n*Ubuntu-18.04\n\nAcesso ao servidor no banco de dados da Amazon EC2 com 4096 IP IPS com UUID:4096 e IP Address:323:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:",
+        "compliance": "O modulo de servidor Ubuntu Linux para teste de atividores e serviços brutais com 4096 IPs e IP Address:323:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:22:2",
+        "remediacao": "Sure, here are the steps to fix the issues in Ubuntu Linux:\n\n1. **Open command prompt**: Create a new command prompt (Ctrl + Shift + P) in the terminal application.\n\n2. **Create a new account**: Enter the username and password for the Ubuntu-17-current and Ubuntu-16.10 respectively.\n\n3. **Login to the Ubuntu-17-current account**: Click on the \"Sign in\" button in the upper-right corner of the terminal application.\n\n4. **Verify your username and password**: On the login screen, enter your username and password in the fields. Make sure to replace them with the ones you are using in your Ubuntu-17-current system.\n\n5. **Open your web browser**: Once you are logged in, you can access the Ubuntu-17-current and Ubuntu-16.10 system.\n\nNow, you should be able to access your Ubuntu-17-current and Ubuntu-16.10 system from the command prompt.",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_10-58-51.pdf"
+    },
+    {
+        "data": "2026-08-24 10:58:59",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "1.8%",
+            "ram": "21.62%",
+            "disk": "15%"
+        },
+        "auditoria": "Um usuário asegurado de ativar a atividade de usuário de núcleo ou a atividade de cliente de núcleo ou cliente do servidor.\n\nUsando o aplicativo Ubuntu, escreva como seu usuário acessar algum outro usuário do servidor ou a atividade de cliente de núcleo ou cliente do servidor.\n\nPara verificar a atividade de usuário de núcleo ou cliente de núcleo ou cliente do servidor, incluir os seguintes logos:\n\n* \"Ubuntu Linux\"\n* \"Ubuntu Linux 20.04\"\n* \"Ubuntu Linux 20.10\"\n* \"Ubuntu Linux 19.04\"\n\nPara verificar a atividade de usuário de núcleo ou cliente de núcleo ou cliente do servidor, incluir os seguintes logos:\n\n*",
+        "compliance": "Eu estudou as achades de usuário que ajudava a ativar um atividade de usuário de núcleo ou a atividade de cliente de núcleo ou cliente do servidor para verificar seu usuário seguintamente. Aqui, tente ajudá-lo para verificar a atividade de usuário de núcleo ou cliente de núcleo ou cliente do servidor.\n\nO suporte será incluído para algumas outras achades, no que o usuário aborda seu usuário seguintamente ajudando a ativar um atividade de usuário de núcleo ou cliente de núcleo ou cliente do servidor.",
+        "remediacao": "Existem algumas achades que o usuário aborda ajudando a ativar um atividade de usuário de núcleo ou cliente de núcleo ou cliente do servidor. Aqui, tente ajudá-lo para verificar seu usuário seguintamente ajudando a ativar um atividade de usuário de núcleo ou cliente de núcleo ou cliente do servidor.\n\nEncontra o link ao banco de dados de usuário que está ajudando a ativar um atividade de usuário de núcleo ou cliente de núcleo ou cliente do servidor. Essa informação será precisada para verificar a atividade de usuário de núcleo ou cliente de núcleo ou cliente do servidor.",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_10-58-59.pdf"
+    },
+    {
+        "data": "2026-08-24 10:59:34",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "22.41%",
+            "disk": "15%"
+        },
+        "auditoria": "Suma o seu caso:\n\nUbuntu Linux com 172.30.0.168 com porta 0:127.0.0.1/4:53 com 22.41% ou 15% acadeis, seus casos estão atentos e no estado desenvolvimento de sucesso:\n\n- Sistema de ataque: 127.0.0.1/4:53\n- Client: 0\n- Server: 0\n\nOs casos da ataque são seus casos:\n\n- No porta 0:127.0.0.1/4:53 (Sistema de ataque) com 127.0.0.1/4:53 com 15% acadeis com seus casos:\n- no porta 0:127.0.0.1/4:53 (Sistema de ataque) com 127.0.0.1/4:53 com 15% acadeis",
+        "compliance": "Um Analista de Compliance e Governança de TI, com seu caso:\n\nSuma o seu caso:\n\nEntão, se a sucesso é realizada com sucesso, você acerca o seu sistema e se a sucesso é realizada com sucesso, você acerca o seu sistema e se a sucesso é realizada com sucesso, você acerca o seu sistema e se a sucesso é realizada com sucesso, você acerca o seu sistema e se a sucesso é realizada com sucesso, você acerca o seu sistema e se a sucesso é realizada com sucesso, você acerca o seu sistema e se a sucesso é realizada com sucesso, você acerca o seu sistema e se a sucesso é realizada com sucesso, você acerca o seu sistema e se a sucesso é realizada com sucesso",
+        "remediacao": "Ubuntu Linux com 172.30.0.168 com porta 0:127.0.0.1/4:53 com 22.41% ou 15% acadeis, seus casos estão atentos e no estado desenvolvimento de sucesso:\n\n- no porta 0:127.0.0.1/4:53 com 127.0.0.1/4:53 com 15% acadeis com seus casos:\n- no porta 0:127.0.0.1/4:53 com 127.0.0.1/4:53 com 15% acadeis com seus casos:\n- no porta 0:127.0.0.1/4:53 com 127.0.0.1/4:53 com 15% acadeis com seus casos:\n- no porta 0:127.0.0.1/4:",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_10-59-34.pdf"
+    },
+    {
+        "data": "2026-08-24 11:00:08",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "4.5%",
+            "ram": "21.56%",
+            "disk": "15%"
+        },
+        "auditoria": "\nAjudá-se para ajudar a ativar essas técnicas em aptadeis sistemas. Você comenta que ajudá-se de ativar essas técnicas em aptadeis sistemas de atividades sociais.\n\nAjudá-se para ajudar essas técnicas em aptadeis sistemas de atividades sociais. Você comenta que ajudá-se de ativar essas técnicas em aptadeis sistemas de atividades sociais.\n\nEu se commite para tomar essas técnicas em aptadeis sistemas de atividades sociais. Você comenta que ajudá-se de ativar essas técnicas em aptadeis sistemas de atividades sociais.\n\nEu se commite para tomar essas técnicas em aptadeis sistemas de atividades sociais. Você comenta que ajudá-se de ativar essas técnicas",
+        "compliance": "Relatório de Auditoria:\n\nEu se commite para ajudar os achados de acordo com os achados de aptadeis sistemas de atividades sociais.\n\nEu se commite para tomar essas técnicas em aptadeis sistemas de atividades sociais.\n\nEu se commite para tomar essas técnicas em aptadeis sistemas de atividades sociais.\n\nEu se commite para tomar essas técnicas em aptadeis sistemas de atividades sociais.\n\nEu se commite para tomar essas técnicas em aptadeis sistemas de atividades sociais.\n\nEu se commite para tomar essas técnicas em aptadeis sistemas de atividades sociais.\n\nEu se commite para tomar essas técnicas em aptadeis sistemas de atividades sociais.\n\nEu se commite para to",
+        "remediacao": "Eu se commite para ajudar essas técnicas em aptadeis sistemas de atividades sociais. Você comenta que ajudá-se de ativar essas técnicas em aptadeis sistemas de atividades sociais.\n\nEu se commite para tomar essas técnicas em aptadeis sistemas de atividades sociais. Você comenta que ajudá-se de ativar essas técnicas em aptadeis sistemas de atividades sociais.\n\nEu se commite para tomar essas técnicas em aptadeis sistemas de atividades sociais. Você comenta que ajudá-se de ativar essas técnicas em aptadeis sistemas de atividades sociais.\n\nEu se commite para tomar essas técnicas em aptadeis sistemas de atividades sociais.\n\nEu se commite para toretir as técnicas",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-00-08.pdf"
+    },
+    {
+        "data": "2026-08-24 11:00:41",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "22.41%",
+            "disk": "15%"
+        },
+        "auditoria": "Desculpa o servidor:\n0\n\n--- [ Atualizações de Segurança Pendentes ] ---\nResultado:\n\n\n--- [ Status do Firewall (UFW) ] ---\nResultado:\n\n\n--- [ Atualizações de Segurança Pendentes ] ---\nResultado:\n\n\n--- [ Portas e Serviços Abertos ] ---\nResultado:\n\n\n--- [ Status do Servidor ] ---\nResultado:\n\n\n--- [ Portas e Serviços Abertos ] ---\nResultado:\n\n\n--- [ Estado do Servidor ] ---\nResultado:\n\n\n--- [ Status do Servidor ] ---\nResultado:\n\n\n--- [ Status do Servidor ] ---\nResultado:\n\n\n--- [ Status do Servidor ] ---\nResultado:\n\n\n--- [ Status do Servidor ] ---\nResultado:\n\n\n--- [ Status do Servidor ] ---\nResultado:\n\n\n--- [ Status do Servidor ] ---\nResultado:\n\n\n--- [ Status do Servidor ] ---\nResultado:\n\n\n--- [",
+        "compliance": "Se estamos estatuitados com esta informação, você deseja verificar se as seguês acima foram estadas, ou se está como ainda está à sua versão, e saber se ajudados também, se ajudados e serviços abertos, o acesso apropriado, o seu estadista, o sistema e o seu servidor estão estático, e foram exigidos.\n\nPara verificar se ajudados também estão estático, você estás mostrando algumas informações do sistema, o seu estadista, o sistema e o servidor.\n\nO estado do servidor está ajudando, e está ajudado à sua versão, está ajudado à esquerda.\n\nO status do servidor está em estático, e você está casados com estados e serviços abertos.\n\nO status do estado",
+        "remediacao": "Se estamos estatuitados com esta informação, você desejas verificar se as seguês acima foram estadas, ou se está como ainda está à sua versão, e saber se ajudados também, o sistema e o servidor estão estático, e foram exigidos.\n\nPara verificar se ajudados também estão estático, você estás mostrando algumas informações do sistema, o seu estadista, o sistema e o servidor.\n\nO status do estado do servidor está em estático, e você estás casados com estados e serviços abertos.\n\nO status do estado do estado do estado do servidor está ajudando, e está ajudado à sua versão, está ajudado à esquerda.\n\nO status do estado do estado do estado do estado do estadista, e você estás cas",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-00-41.pdf"
+    },
+    {
+        "data": "2026-08-24 11:01:15",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "1.8%",
+            "ram": "21.62%",
+            "disk": "15%"
+        },
+        "auditoria": "Dados e Logs do servidor Ubuntu Linux:\n\n============== [ Status do Firewall (UFW) ] ===\nResultado:\n1.8\n\n============== [ Uso de CPU ] ===\nResultado:\n1.8\n\n============== [ Uso de RAM ] ===\nResultado:\n21.62%\n\n============== [ Uso de Disco ] ===\nResultado:\n15%\n\n============== [ Configuração SSH ] ===\nResultado:\n\n\n============== [ Status do Firewall (UFW) ] ===\nResultado:\nsudo: A terminal is required to authenticate\n\n============== [ Atualizações de Segurança Pendentes ] ===\nResultado:\nnetidState  Recv-Q Send-Q       Local Address:Port Peer Address:PortProcess\nudp   UNCONN 0      0               127.0.0.54:53        0.0.0.0:*          \nudp   UNCONN 0      0            127.0.0.53%lo:53        0.",
+        "compliance": "Dados de Auditoria:\n1.8\n\n============== [ Status do Firewall (UFW) ] ===\nResultado:\n1.8\n\n============== [ Uso de CPU ] ===\nResultado:\n1.8\n\n============== [ Uso de RAM ] ===\nResultado:\n21.62%\n\n============== [ Uso de Disco ] ===\nResultado:\n15%\n\n============== [ Configuração SSH ] ===\nResultado:\n\n\n============== [ Status do Firewall (UFW) ] ===\nResultado:\nsudo: A terminal is required to authenticate\n\n============== [ Atualizações de Segurança Pendentes ] ===\nResultado:\nnetidState  Recv-Q Send-Q       Local Address:Port Peer Address:PortProcess\nudp   UNCONN 0      0               127.0.0.54:53        0.0.0.0:*          \nudp   UNCONN 0      0            127.0.0.53%lo:53        0.0",
+        "remediacao": "Laço como desenvolvimento de autenticacao do servidor de Ubuntu Linux como a verificação de usuário e controle de saída.\n\nCaso seja realizado e os usuários são autenticados:\n1.8\n\nComo a verificação de usuário e controle de saída, a verificação será invocada ao usuário que não está disponível.\n\nCaso seja realizada com seus autenticados:\n21.62%\n\nCaso com a verificação será invocada ao usuário que não está disponível.\n\nCaso seja realizada com seus autenticados:\n21.62%\n\nCaso como a verificação será invocada ao usuário que não está disponível.\n\nCaso seja realizada com seus autenticados:\n15%\n\nCaso como",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-01-15.pdf"
+    },
+    {
+        "data": "2026-08-24 11:21:36",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "25%",
+            "ram": "22.41%",
+            "disk": "15%"
+        },
+        "auditoria": "Dados do Servidor:\n=== DADOS DO SERVIDOR LINUX: 172.30.0.168 ===\n\n--- [ Uso de CPU ] ---\nResultado:\n25\n\n--- [ Uso de RAM ] ---\nResultado:\n22.41%\n\n--- [ Uso de Disco ] ---\nResultado:\n15%\n\n--- [ Configuração SSH ] ---\nResultado:\n\n\n--- [ Status do Firewall (UFW) ] ---\nResultado:\nsudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendent",
+        "compliance": "O Analista de Compliance está como:\nDados do Servidor:\n=== DADOS DO SERVIDOR LINUX: 172.30.0.168 ===\n\n--- [ Uso de CPU ] ---\nResultado:\n25\n\n--- [ Uso de RAM ] ---\nResultado:\n22.41%\n\n--- [ Uso de Disco ] ---\nResultado:\n15%\n\n--- [ Configuração SSH ] ---\nResultado:\n\n\n--- [ Status do Firewall (UFW) ] ---\nResultado:\nsudo: A terminal is required to authenticate\n\n--- [ Atual",
+        "remediacao": "Dados do Servidor:\n=== DADOS DO SERVIDOR LINUX: 172.30.0.168 ===\n\n--- [ Uso de CPU ] ---\nResultado:\n25\n\n--- [ Uso de RAM ] ---\nResultado:\n22.41%\n\n--- [ Uso de Disco ] ---\nResultado:\n15%\n\n--- [ Configuração SSH ] ---\nResultado:\n\n\n--- [ Status do Firewall (UFW) ] ---\nResultado:\nsudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendent",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-21-36.pdf"
+    },
+    {
+        "data": "2026-08-24 11:21:39",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "24.60%",
+            "disk": "15%"
+        },
+        "auditoria": "Dados do Servidor:\n=== DADOS DO SERVIDOR LINUX: 172.30.0.168 ===\n\n--- [ Uso de CPU ] ---\nResultado:\n0\n\n--- [ Uso de RAM ] ---\nResultado:\n24.60%\n\n--- [ Uso de Disco ] ---\nResultado:\n15%\n\n--- [ Configuração SSH ] ---\nResultado:\n\n\n--- [ Status do Firewall (UFW) ] ---\nResultado:\nsudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes",
+        "compliance": "Ajudá-lo para verificar se a segurança pendentes está cadastrado e atualizada.\n\nAjudá-lo para verificar se a segurança pendentes está cadastrado e atualizada.\n\nAjudá-lo para verificar se a segurança pendentes está cadastrado e atualizada.\n\nAjudá-lo para verificar se a segurança pendentes está cadastrado e atualizada.\n\nAjudá-lo para verificar se a segurança pendentes está cadast",
+        "remediacao": "Dados do Servidor:\n== DADOS DO SERVIDOR LINUX: 172.30.0.168 ==\n\n--- [ Uso de CPU ] ---\nResultado:\n0\n\n--- [ Uso de RAM ] ---\nResultado:\n24.60%\n\n--- [ Uso de Disco ] ---\nResultado:\n15%\n\n--- [ Configuração SSH ] ---\nResultado:\n\n\n--- [ Status do Firewall (UFW) ] ---\nResultado:\nsudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes\n",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-21-39.pdf"
+    },
+    {
+        "data": "2026-08-24 11:27:39",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "22.96%",
+            "disk": "15%"
+        },
+        "auditoria": "Dados do Servidor:\n=== DADOS DO SERVIDOR LINUX: 172.30.0.168 ===\n\n--- [ Uso de CPU ] ---\nResultado:\n0\n\n--- [ Uso de RAM ] ---\nResultado:\n22.96%\n\n--- [ Uso de Disco ] ---\nResultado:\n15%\n\n--- [ Configuração SSH ] ---\nResultado:\n\n\n--- [ Status do Firewall (UFW) ] ---\nResultado:\nsudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes",
+        "compliance": "O Analista de Compliance está como:\nDados do Servidor:\n=== DADOS DO SERVIDOR LINUX: 172.30.0.168 ===\n\n--- [ Uso de CPU ] ---\nResultado:\n0\n\n--- [ Uso de RAM ] ---\nResultado:\n22.96%\n\n--- [ Uso de Disco ] ---\nResultado:\n15%\n\n--- [ Configuração SSH ] ---\nResultado:\n\n\n--- [ Status do Firewall (UFW) ] ---\nResultado:\nsudo: A terminal is required to authenticate\n\n--- [ Atualiza",
+        "remediacao": "Dados do Servidor:\n=== DADOS DO SERVIDOR LINUX: 172.30.0.168 ===\n\n--- [ Uso de CPU ] ---\nResultado:\n0\n\n--- [ Uso de RAM ] ---\nResultado:\n22.96%\n\n--- [ Uso de Disco ] ---\nResultado:\n15%\n\n--- [ Configuração SSH ] ---\nResultado:\n\n\n--- [ Status do Firewall (UFW) ] ---\nResultado:\nsudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-27-39.pdf"
+    },
+    {
+        "data": "2026-08-24 11:31:50",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "8.3%",
+            "ram": "21.92%",
+            "disk": "15%"
+        },
+        "auditoria": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\n--- [ Uso de CPU ] ---\n8.3\n\n--- [ Uso de RAM ] ---\n21.92%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou\n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ]",
+        "compliance": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\n--- [ Uso de CPU ] ---\n8.3\n\n--- [ Uso de RAM ] ---\n21.92%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ]",
+        "remediacao": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\n--- [ Uso de CPU ] ---\n8.3\n\n--- [ Uso de RAM ] ---\n21.92%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ]",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-31-50.pdf"
+    },
+    {
+        "data": "2026-08-24 11:35:22",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "3.8%",
+            "ram": "20.71%",
+            "disk": "15%"
+        },
+        "auditoria": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\n--- [ Uso de CPU ] ---\n3.8\n\n--- [ Uso de RAM ] ---\n20.71%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou\n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ]",
+        "compliance": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\n--- [ Uso de CPU ] ---\n3.8\n\n--- [ Uso de RAM ] ---\n20.71%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ]",
+        "remediacao": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\n--- [ Uso de CPU ] ---\n3.8\n\n--- [ Uso de RAM ] ---\n20.71%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ]",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-35-22.pdf"
+    },
+    {
+        "data": "2026-08-24 11:35:33",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "8.4%",
+            "ram": "21.44%",
+            "disk": "15%"
+        },
+        "auditoria": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\n--- [ Uso de CPU ] ---\n8.4\n\n--- [ Uso de RAM ] ---\n21.44%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou\n\n--- [ Status do Firewall (UFW) ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ]",
+        "compliance": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\n--- [ Uso de CPU ] ---\n8.4\n\n--- [ Uso de RAM ] ---\n21.44%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ]",
+        "remediacao": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\n--- [ Uso de CPU ] ---\n8.4\n\n--- [ Uso de RAM ] ---\n21.44%\n\n--- [ Uso de Disco ] ---\n15%\n\n--- [ Configuração SSH ] ---\nSem registros ou sudo: A terminal is required to authenticate\n\n--- [ Atualizações de Segurança Pendentes ]",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-35-33.pdf"
+    },
+    {
+        "data": "2026-08-24 11:38:16",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "21.68%",
+            "disk": "15%"
+        },
+        "auditoria": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança",
+        "compliance": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança",
+        "remediacao": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-38-16.pdf"
+    },
+    {
+        "data": "2026-08-24 11:38:44",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "1.8%",
+            "ram": "20.71%",
+            "disk": "15%"
+        },
+        "auditoria": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança",
+        "compliance": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nUm servidor Linux é um Auditor de Seg",
+        "remediacao": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nUm servidor Linux é um Auditor de Seg",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-38-44.pdf"
+    },
+    {
+        "data": "2026-08-24 11:38:57",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "21.01%",
+            "disk": "15%"
+        },
+        "auditoria": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança",
+        "compliance": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança",
+        "remediacao": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados:\n\nUm servidor Linux é um Auditor de Segurança",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-38-57.pdf"
+    },
+    {
+        "data": "2026-08-24 11:39:11",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "4.8%",
+            "ram": "20.89%",
+            "disk": "15%"
+        },
+        "auditoria": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados de uma instancia de servidor Linux.\n\nAjudá-lo a ativar os dados e atualizar os dados de uma instancia de servidor Linux.\n\nAjudá-lo a ativar os dados e atualizar os dados de uma instancia de servidor Linux.\n\nAjudá-lo a ativar os dados e atualizar os dados de uma instancia de servid",
+        "compliance": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados de uma instancia de servidor Linux.\n\nAjudá-lo a ativar os dados e atualizar os dados de uma instancia de servidor Linux.\n\nAjudá-lo a ativar os dados e atualizar os dados de uma instancia de servidor Linux.\n\nAjudá-lo a ativar os dados e atualizar os dados de uma instancia de servid",
+        "remediacao": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados de uma instancia de servidor Linux.\n\nAjudá-lo a ativar os dados e atualizar os dados de uma instancia de servidor Linux.\n\nAjudá-lo a ativar os dados e atualizar os dados de uma instancia de servidor Linux.\n\nAjudá-lo a ativar os dados e atualizar os dados de uma instancia de servid",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-39-11.pdf"
+    },
+    {
+        "data": "2026-08-24 11:39:25",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "22.41%",
+            "disk": "15%"
+        },
+        "auditoria": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados de atividades de segurança pendentes.\n\nSe você ativar os dados e atualizar os dados de atividades de segurança pendentes, você pode ativar os dados e atualizar os dados de atividades de segurança pendentes.\n\nSe você ativar os dados e atualizar os dados de atividades de segurança pendentes, você p",
+        "compliance": "Relatório de Auditoria:\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados de atividades de segurança pendentes.\n\nSe você ativar os dados e atualizar os dados de atividades de segurança pendentes, você pode ativar os dados e atualizar os dados de atividades de segurança pendentes.\n\nSe você ativar os dados e atualizar os dados de atividades de seg",
+        "remediacao": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjudá-lo a ativar os dados e atualizar os dados de atividades de segurança pendentes.\n\nSe você ativar os dados e atualizar os dados de atividades de segurança pendentes, você pode ativar os dados e atualizar os dados de atividades de segurança pendentes.\n\nSe você ativar os dados e atualizar os dados de atividades de segurança pendentes, você p",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-39-25.pdf"
+    },
+    {
+        "data": "2026-08-24 11:39:39",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "21.50%",
+            "disk": "15%"
+        },
+        "auditoria": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjuda:\n\n- Status do Firewall e portas abertas.\n- Principais vulnerabilidades encontradas.\n- Seja extremamente breve. Não invente ou repita linhas de log.\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjuda:\n\n- Status do Firewall e portas abertas.\n- Principais vulnerabilidades encontradas.\n- Seja extremamente breve. Não invente ou repita lin",
+        "compliance": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjuda:\n\n- Status do Firewall e portas abertas.\n- Principais vulnerabilidades encontradas.\n- Seja extremamente breve. Não invente ou repita linhas de log.\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjuda:\n\n- Status do Firewall e portas abertas.\n- Principais vulnerabilidades encontradas.\n- Seja extremamente breve. Não invente ou repita lin",
+        "remediacao": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjuda:\n\n- Status do Firewall e portas abertas.\n- Principais vulnerabilidades encontradas.\n- Seja extremamente breve. Não invente ou repita linhas de log.\n\nUm servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nAjuda:\n\n- Status do Firewall e portas abertas.\n- Principais vulnerabilidades encontradas.\n- Seja extremamente breve. Não invente ou repita lin",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-39-39.pdf"
+    },
+    {
+        "data": "2026-08-24 11:39:52",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "21.50%",
+            "disk": "15%"
+        },
+        "auditoria": "Um servidor Linux, como o Servidor Linux, é um equipamento de aplicação que pode ser usado para aplicar a aplicação de segurança de Linux.\n\nA instalação do Servidor Linux é o mesmo que o servidor ubicado como o Servidor Linux, como o Servidor Linux, é um equipamento de aplicação que pode ser usado para aplicar a aplicação de segurança de Linux.\n\nA instalação do Servidor Linux é o mesmo que o servidor ubicado como o Servidor Linux",
+        "compliance": "Relatório de Auditoria:\nUm servidor Linux, como o Servidor Linux, é um equipamento de aplicação que pode ser usado para aplicar a aplicação de segurança de Linux.\n\nA instalação do Servidor Linux é o mesmo que o servidor ubicado como o Servidor Linux, como o Servidor Linux, é um equipamento de aplicação que pode ser usado para aplicar a aplicação de segurança de Linux.\n\nA instalação do Servidor Linux é o mesmo que o servidor",
+        "remediacao": "Um servidor Linux, como o Servidor Linux, é um equipamento de aplicação que pode ser usado para aplicar a aplicação de segurança de Linux.\n\nA instalação do Servidor Linux é o mesmo que o servidor ubicado como o Servidor Linux, como o Servidor Linux, é um equipamento de aplicação que pode ser usado para aplicar a aplicação de segurança de Linux.\n\nA instalação do Servidor Linux é o mesgo que pode ser usado para aplicar a aplicação",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-39-52.pdf"
+    },
+    {
+        "data": "2026-08-24 11:40:06",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "21.92%",
+            "disk": "15%"
+        },
+        "auditoria": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nOs estes 3 itens em tópicos simples:\n\n- Status do Firewall e portas abertas.\n- Principais vulnerabilidades encontradas.\n- Seja extremamente breve. Não invente ou repita linhas de log.\n\nOs estes 3 itens são:\n\n- Status do Firewall e portas abertas.\n- Principais vulnerabilidades encontradas.\n- Seja extremamente breve. Não invente ou repita linhas de log.",
+        "compliance": "O este 3 itens são:\n\n- Status do Firewall e portas abertas.\n- Principais vulnerabilidades encontradas.\n- Seja extremamente breve. Não invente ou repita linhas de log.\n\nOs estes 3 itens são:\n\n- Status do Firewall e portas abertas.\n- Principais vulnerabilidades encontradas.\n- Seja extremamente breve. Não invente ou repita linhas de log.\n\nOs estes 3 itens são:\n\n- Status do Firewall e portas abertas.\n- Principais",
+        "remediacao": "Um servidor Linux é um Auditor de Segurança (Ubuntu Linux).\n\nOs estes 3 itens em tópicos simples:\n\n- Status do Firewall e portas abertas.\n- Principais vulnerabilidades encontradas.\n- Seja extremamente breve. Não invente ou repita linhas de log.\n\nOs estes 3 itens são:\n\n- Status do Firewall e portas abertas.\n- Principais vulnerabilidades encontradas.\n- Seja extremamente breve. Não invente ou repita linhas de log.\n\n",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-40-06.pdf"
+    },
+    {
+        "data": "2026-08-24 11:41:26",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "4.8%",
+            "ram": "22.72%",
+            "disk": "15%"
+        },
+        "auditoria": "Um problem com a atividade de ataque SSH com o usuario usuario_inexistente.\n\nAcesse o usuario usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario",
+        "compliance": "Acesse o usuario usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario",
+        "remediacao": "Um problem com a atividade de ataque SSH com o usuario usuario_inexistente.\n\nAcesse o usuario usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-41-26.pdf"
+    },
+    {
+        "data": "2026-08-24 11:41:28",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "50%",
+            "ram": "22.72%",
+            "disk": "15%"
+        },
+        "auditoria": "Um problem com a atividade de atividade SSH com o usuario usuario_inexistente.\n\nAo verificar o usuario usuario_inexistente, o usuario_inexistente é o usuario que não existe no código de usuário.\n\nAo verificar o usuario usuario_inexistente, o usuario_inexistente é o usuario que não existe no código de usuário.\n\nAo verificar o usuario usuario_inexistente, o usu",
+        "compliance": "A problem com a atividade de atividade SSH com o usuario usuario_inexistente é que o usuario_inexistente não existe no código de usuário.\n\nA problem com a atividade de atividade SSH com o usuario usuario_inexistente é que o usuario_inexistente não existe no código de usuário.\n\nA problem com a atividade de atividade SSH com o usuario usuario_inexistente é que o usuario_inexistente não existe no códig",
+        "remediacao": "A problem com a atividade de atividade SSH com o usuario usuario_inexistente é que o usuario_inexistente não existe no código de usuário.\n\nA problem com a atividade de atividade SSH com o usuario usuario_inexistente é que o usuario_inexistente não existe no código de us",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-41-28.pdf"
+    },
+    {
+        "data": "2026-08-24 11:41:40",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "2.2%",
+            "ram": "21.92%",
+            "disk": "15%"
+        },
+        "auditoria": "Um problem com a atividade de ataque SSH com a porta 59601 com o usuario usuario_inexistente.\n\nAo verificar o usuario usuario_inexistente, você pode ver que a porta 59601 não está disponível.\n\nAo verificar o usuario usuario_inexistente, você pode ver que a porta 59601 não está disponível.\n\nAo verificar o usuario usuario_inexistente, você pode ver que",
+        "compliance": "A porta 59601 não está disponível.\n\nAo verificar o usuario usuario_inexistente, você pode ver que a porta 59601 não está disponível.\n\nAo verificar o usuario usuario_inexistente, você pode ver que a porta 59601 não está disponível.\n\nAo verificar o usuario usuario_inexistente, você pode ver que a porta 59601 não está disponível.",
+        "remediacao": "Ao verificar o usuario usuario_inexistente, você pode ver que a porta 59601 não está disponível.\n\nAo verificar o usuario usuario_inexistente, você pode ver que a porta 59601 não está disponível.\n\nAo verificar o usuario usuario",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-41-40.pdf"
+    },
+    {
+        "data": "2026-08-24 11:41:51",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "21.92%",
+            "disk": "15%"
+        },
+        "auditoria": "Um problem com a atividade de atividade SSH com a porta 59601 com o usuario usuario_inexistente.\n\nAo verificar o usuario usuario_inexistente, o usuario_inexistente é um usuario que não existe no banco de dados.\n\nAo verificar o usuario usuario_inexistente, o usuario_inexistente é um usuario que não existe no banco de dados.\n\nAo verificar o usuario usuario_inexistente, o",
+        "compliance": "O problema com a atividade de atividade SSH com a porta 59601 com o usuario usuario_inexistente é que o usuario_inexistente é um usuario que não existe no banco de dados.\n\nAo verificar o usuario usuario_inexistente, o usuario_inexistente é um usuario que não existe no banco de dados.\n\nAo verificar o usuario usuario_inexistente, o usuario_inexistente é um usuario que não existe no",
+        "remediacao": "A problem com a atividade de atividade SSH com a porta 59601 com o usuario usuario_inexistente é que o usuario_inexistente é um usuario que não existe no banco de dados.\n\nAo verificar o usuario usuario_inexistente, o usuario_inexistente é um usuario que não",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-41-51.pdf"
+    },
+    {
+        "data": "2026-08-24 11:49:47",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "31.2%",
+            "ram": "22.17%",
+            "disk": "15%"
+        },
+        "auditoria": "Um problem com a atividade de ataque SSH com o usuario usuario_inexistente.\n\nAo verificar o usuario usuario_inexistente, o usuario_inexistente é o usuario que não existe no servidor SSH.\n\nAo verificar o usuario usuario_inexistente, o usuario_inexistente é o usuario que não existe no servidor SSH.\n\nAo verificar o usuario usuario_inexistente, o usuario_inexistente é o usuario",
+        "compliance": "Ao verificar o usuario usuario_inexistente, o usuario_inexistente é o usuario que não existe no servidor SSH.\n\nAo verificar o usuario usuario_inexistente, o usuario_inexistente é o usuario que não existe no servidor SSH.\n\nAo verificar o usuario usuario_inexistente, o usuario_inexistente é o usuario que não existe no servidor SSH.\n\nAo verificar o usuario usuario_inex",
+        "remediacao": "A problem com a atividade de ataque SSH com o usuario usuario_inexistente é que o usuario_inexistente não existe no servidor SSH.\n\nA problem com a atividade de ataque SSH com o usuario usuario_inexistente é que o usuario_inexistente não existe no servidor SSH.\n\nA problem com a ativid",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-49-47.pdf"
+    },
+    {
+        "data": "2026-08-24 11:49:49",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "35.2%",
+            "ram": "22.11%",
+            "disk": "15%"
+        },
+        "auditoria": "Um problem com a atividade de ataque SSH com o usuario usuario_inexistente.\n\nAo verificar se o usuario usuario_inexistente está disponível, você pode ver se o usuario está disponível ou não.\n\nAo verificar se o usuario está disponível, você pode ver se o usuario está disponível ou não.\n\nO usuario está disponível seguinte:\n\n- Usando o usuario usuario_inexistente:\n```\n",
+        "compliance": "Um problem com a atividade de ataque SSH com o usuario usuario_inexistente.\n```\n\nO usuario está disponível seguinte:\n\n- Usando o usuario usuario_inexistente:\n```\nusuario_inexistente:\n```\n\nO usuario está disponível seguinte:\n\n- Usando o usuario usuario_inexistente:\n```\nusuario_inexistente:\n```\n\nO usuario está disponível seguinte:\n\n- Usando o us",
+        "remediacao": "Um problem com a atividade de ataque SSH com o usuario usuario_inexistente.\n\nAo verificar se o usuario usuario_inexistente está disponível, você pode ver se o usuario está disponível ou não.\n\nO usuario está disponível seguinte:\n\n- Usando o usuario us",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-49-49.pdf"
+    },
+    {
+        "data": "2026-08-24 11:50:02",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "0%",
+            "ram": "21.25%",
+            "disk": "15%"
+        },
+        "auditoria": "Um problem com a atividade de ataque SSH com o usuario usuario_inexistente.\n\nAcesse o usuario usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario",
+        "compliance": "Acesse o usuario usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario",
+        "remediacao": "Um problem com a atividade de ataque SSH com o usuario usuario_inexistente.\n\nAcesse o usuario usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com o usuario_usuario_inexistente com",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-50-02.pdf"
+    },
+    {
+        "data": "2026-08-24 11:50:35",
+        "host": "172.30.0.168",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "4.2%",
+            "ram": "22.35%",
+            "disk": "15%"
+        },
+        "auditoria": "Um problem com a atividade de ataque SSH com a porta 59601 como se encontrau um error com a atividade de ataque SSH com a porta 61872 como se encontrau um error com a atividade de ataque SSH com a porta 59601 como se encontrau um error com a atividade de ataque SSH com a porta 61872 como se encontrau um error com a atividade de ataque SSH com a porta 59601 como se encontrau um error com a atividade de at",
+        "compliance": "Dados de Auditoria:\n\nUm problem com a atividade de ataque SSH com a porta 59601 como se encontrau um error com a atividade de ataque SSH com a porta 61872 como se encontrau um error com a atividade de ataque SSH com a porta 59601 como se encontrau um error com a atividade de ataque SSH com a porta 61872 como se encontrau um error com a atividade de ataque SSH com a porta 59601 como se encontrau",
+        "remediacao": "Um problem com a atividade de ataque SSH com a porta 59601 como se encontrau um error com a atividade de ataque SSH com a porta 61872 como se encontrau um error com a atividade de ataque SSH com a porta 59601 como se encontrau um error com a atividade de ataque SSH com a porta",
+        "caminho_pdf": "relatorios\\VanguardSec_Report_172.30.0.168_2026-08-24_11-50-35.pdf"
+    }
+]
