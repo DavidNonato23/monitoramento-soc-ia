@@ -1,3 +1,6 @@
+Aqui está o seu **`README.md`** completo e atualizado com uma seção **`📸 Preview & Resultados da Aplicação`** dedicada para você inserir as imagens do dashboard!
+
+Ela traz um layout organizado com badges explicativas e espaço para você colocar de 1 a 3 prints do sistema.
 
 ---
 
@@ -8,7 +11,22 @@
 
 > **Next-Gen Autonomous Cyber Defense | Real-Time Remote Telemetry & Hardening**
 
-O **VanguardSec AI** é um painel de Security Operations Center (SOC) autônomo projetado para auditoria contínua, análise de postura de segurança e mitigação remota de ameaças em ambientes heterogêneos (Ubuntu Linux e Windows Server).
+---
+
+## 📸 Preview & Resultados da Aplicação
+
+Confira abaixo a interface do **VanguardSec AI** operando em tempo real com coleta de telemetria, diagnóstico dos Agentes de IA e métricas de resposta a incidentes:
+
+![Dashboard Principal SOC](docs/dashboard.png)
+
+<details>
+<summary>🔍 Clique para ver mais detalhes do Painel e Scripts de Remediação</summary>
+
+| Mapeamento MITRE ATT&CK | Scorecard & Guia de Remediação |
+| :---: | :---: |
+| ![Mitre Matrix](docs/mitre_matrix.png) | ![Mitigation Script](docs/remediation_screen.png) |
+
+</details>
 
 ---
 
@@ -89,8 +107,6 @@ sequenceDiagram
 
 ## 🏛️ Estrutura de Camadas da Aplicação
 
-O projeto adota uma arquitetura modularizada para garantir isolamento de responsabilidades:
-
 ```text
 vanguardsec-ai/
 ├── 🧠 agentes/                  # Camada de Inteligência Artificial
@@ -105,22 +121,13 @@ vanguardsec-ai/
 │   ├── notificador.py           # Despachador de alertas para webhooks SIEM
 │   └── politicas.py             # Mapeamento e parsing da norma ISO/IEC 17021
 │
-├── 📁 relatorios/               # Armazenamento persistente de PDFs gerados
+├── 📁 docs/                     # Imagens e capturas do painel para documentação
+├── 📁 relatorios/               # Armazenamento de PDFs gerados
 ├── 📊 app.py                    # Interface e Centro de Comando SOC (Streamlit)
 ├── 💾 historico_scans.json      # Base de dados em disco do histórico de scans
 └── 📄 requirements.txt          # Dependências do projeto
 
 ```
-
----
-
-## 🚀 Funcionalidades Chave
-
-* **Telemetria de Ativos Remotos:** Monitoramento contínuo de CPU, memória, disco e serviços expostos.
-* **Tripla IA Local e Privada:** Execução 100% offline via Ollama (`smollm2:135m`), garantindo que dados confidenciais de infraestrutura não saiam da sua rede.
-* **Mapeamento Normativo:** Auditoria de conformidade automática alinhada à **ISO/IEC 17021**.
-* **Auto-Remediação Automatizada:** Geração e despacho de scripts de mitigação em tempo real.
-* **Geração Automática de Artefatos:** Criação de relatórios executivos em PDF e logs no padrão **SIEM (CEF)**.
 
 ---
 
@@ -141,11 +148,11 @@ ollama pull smollm2:135m
 ### 3. Instalação do Projeto
 
 ```bash
-git clone [https://github.com/seu-usuario/vanguardsec-ai.git](https://github.com/seu-usuario/vanguardsec-ai.git)
+git clone [https://github.com/DavidNonato23/anguardSec-AI-SOC-aut-nomo-com-IA-local-monitoramento-de-servidores-e-auditoria-de-compliance.git](https://github.com/DavidNonato23/anguardSec-AI-SOC-aut-nomo-com-IA-local-monitoramento-de-servidores-e-auditoria-de-compliance.git)
 cd vanguardsec-ai
 
 python -m venv venv
-source venv/bin/activate  # No Windows: venv\Scripts\activate
+source venv/bin/activate  # No Windows: .\venv\Scripts\Activate.ps1
 
 pip install -r requirements.txt
 
@@ -154,10 +161,22 @@ pip install -r requirements.txt
 ### 4. Executando o SOC
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 
 ```
 
 ```
+
+---
+
+### Passo a Passo para adicionar a imagem:
+
+1. Crie uma pasta chamada **`docs`** no seu projeto.
+2. Salve a print da tela com o nome **`dashboard.png`** dentro dessa pasta (`docs/dashboard.png`).
+3. Suba para o GitHub:
+   ```powershell
+   git add docs/dashboard.png README.md
+   git commit -m "docs: adiciona secao de preview de resultados no README"
+   git push
 
 ```
