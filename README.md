@@ -17,9 +17,122 @@ Plataforma autônoma de SecOps, Threat Intelligence e Resposta a Incidentes alim
 
 ## 🗺️ Topologia e Arquitetura do Sistema
 
+<p align="center">
+  <img src="./topologia.svg" alt="Topologia de rede do VanguardSec AI" width="900"/>
+</p>
+
 A topologia do VanguardSec AI adota um modelo **agentless** (sem agentes instalados nos servidores monitorados).
 
 A comunicação ocorre de forma centralizada entre a engine de IA local (Ollama), os coletores telemétricos de infraestrutura, a interface executiva em Streamlit e os canais de resposta automatizada SOAR/ChatOps no Telegram.
+
+```mermaid
+flowchart TD
+    classDef infra fill:#1a1a2e,stroke:#e94560,color:#f5f5f5,stroke-width:2px
+    classDef engine fill:#16213e,stroke:#00d9ff,color:#f5f5f5,stroke-width:2px
+    classDef ai fill:#0f3460,stroke:#00ff9d,color:#f5f5f5,stroke-width:2px
+    classDef dash fill:#1a1a2e,stroke:#00ff9d,color:#f5f5f5,stroke-width:2px
+    classDef persist fill:#16213e,stroke:#ffd166,color:#f5f5f5,stroke-width:2px
+    classDef chatops fill:#16213e,stroke:#a06cd5,color:#f5f5f5,stroke-width:2px
+    classDef sectionTitle fill:#0d0d17,stroke:#e94560,color:#e94560,font-weight:bold
+
+    subgraph INFRA["🖥️ 1 · INFRAESTRUTURA ALVO (AGENTLESS)"]
+        direction LR
+        LINUX["🐧 Servidor Linux Target
+━━━━━━━━━━━━━━━━━
+• Auth Logs (/var/log/auth.log)
+• Daemon SSH (porta 22)
+• UFW Firewall & IPTables"]
+        WIN["🪟 Servidor Windows Target
+━━━━━━━━━━━━━━━━━
+• Event Viewer (Security Logs)
+• Conexão WinRM (porta 5985)
+• Serviços e Processos Ativos"]
+        HOST["📡 Telemetria de Host Local
+━━━━━━━━━━━━━━━━━
+• Métricas via psutil (CPU/RAM/Disco)
+• Conexões de Rede Ativas (LISTEN)
+• Firewall do Sistema Operacional"]
+    end
+
+    subgraph ENGINE["⚙️ 2 · VANGUARDSEC AI ENGINE (CORE)"]
+        direction TB
+        COLETOR["📥 Módulos Coletores Telemétricos
+coletor_ssh.py (Paramiko) · coletor_winrm.py (pywinrm)"]
+
+        subgraph AIPIPE["🧠 ESTEIRA MULTI-TIER DE INTELIGÊNCIA ARTIFICIAL"]
+            direction TB
+            T1["🔍 Tier 1 — Analista SOC
+agente_auditor.py
+→ Análise tática & superfície de ataque"]
+            T2["⚖️ Tier 2 — Compliance LGPD
+agente_compliance.py
+→ Mapeamento legal & risco de dados"]
+            T3["🛠️ Tier 3 — Engenheiro SOAR
+agente_remediacao.py
+→ Playbooks e fixes em Bash"]
+            T1 --> T2 --> T3
+        end
+
+        OLLAMA[["🦙 Ollama Engine
+Modelo: qwen2.5:1.5b
+100% On-Premise · Privacidade Total"]]
+
+        COLETOR -->|Dados brutos extraídos| AIPIPE
+        OLLAMA -.->|processa| AIPIPE
+    end
+
+    subgraph DASH["📊 3 · PAINEL DE CONTROLE & DASHBOARD SOC (app.py)"]
+        direction LR
+        D1["📈 Dashboard Executivo"]
+        D2["🔬 Esteira Multi-Tier"]
+        D3["🌐 Monitoramento Infra"]
+        D4["🛡️ Playbooks SOAR"]
+        D5["📱 Painel ChatOps"]
+        D6["📄 Centro de Relatórios"]
+    end
+
+    subgraph PERSIST["💾 4 · PERSISTÊNCIA & DOCUMENTAÇÃO"]
+        direction TB
+        HIST["📜 historico_scans.json
+Histórico de scans, métricas e análises de IA"]
+        PDF["📕 gerador_pdf.py
+Laudos executivos para diretoria/SOC"]
+        POL["📋 politicas.py
+Engine de regras e conformidade legal"]
+    end
+
+    subgraph TELE["📲 5 · CHATOPS & AUTOMAÇÕES (TELEGRAM)"]
+        direction TB
+        BOT["🤖 chatops_bot.py
+60 automações SOAR via chat"]
+        BTN["🔘 Botões Inline
+Bloqueio imediato de IP"]
+        NOTIF["🔔 notificador.py
+Webhooks → Discord/SIEM"]
+    end
+
+    LINUX -->|SSH / Paramiko| COLETOR
+    WIN -->|WinRM / pywinrm| COLETOR
+    HOST -->|psutil| COLETOR
+
+    ENGINE -->|Diagnósticos, laudos legais<br/>e comandos de contenção| DASH
+
+    DASH --> PERSIST
+    DASH --> TELE
+
+    TELE -->|Playbooks de mitigação| LINUX
+    TELE -->|Playbooks de mitigação| WIN
+
+    class LINUX,WIN,HOST infra
+    class COLETOR,OLLAMA engine
+    class T1,T2,T3 ai
+    class D1,D2,D3,D4,D5,D6 dash
+    class HIST,PDF,POL persist
+    class BOT,BTN,NOTIF chatops
+```
+
+<details>
+<summary>📄 Ver diagrama original em ASCII (fallback)</summary>
 
 ```
 ===================================================================================================================
@@ -66,10 +179,10 @@ A comunicação ocorre de forma centralizada entre a engine de IA local (Ollama)
   |   [ Interface Web Streamlit — app.py ]                                                                      |
   |   • 📊 Dashboard Executivo  : Telemetria em tempo real (CPU, RAM, Disco) e histograma de histórico          |
   |   • 🔍 Esteira Multi-Tier   : Visualização paralela dos diagnósticos das 3 camadas de IA                    |
-  |   • 🌐 Monitoramento Infra  : Leitura viva de portas LISTEN e regras de firewall UFW                        |
+  |   • 🌐 Monitoramento Infra  : Leitura viva de portas LISTEN e regras de firewall UFW                         |
   |   • 🛡️ Playbooks SOAR       : Botões de contenção rápida (Bloqueio UFW, Restart SSH, Kill-Switch)           |
   |   • 📱 Painel ChatOps       : Configuração de credenciais do Bot Telegram em tempo de execução              |
-  |   • 📄 Centro de Relatórios  : Emissão automatizada de laudos executivos em PDF                             |
+  |   • 📄 Centro de Relatórios  : Emissão automatizada de laudos executivos em PDF                            |
   +------------------------------------------------------+------------------------------------------------------+
                                                          |
                    +-------------------------------------+-------------------------------------+
@@ -81,10 +194,12 @@ A comunicação ocorre de forma centralizada entre a engine de IA local (Ollama)
   | • Histórico de Scans : historico_scans.json          |   | • Módulo Principal : modulos/chatops_bot.py      |
   |   (Registra data, host, métricas e análises de IA)   |   | • 60 Automações    : Comandos SOAR via chat      |
   | • Gerador de PDF     : modulos/gerador_pdf.py        |   | • Botões Inline    : Bloqueio imediato de IP     |
-  |   (Gera laudos estruturados para diretoria e SOC)    |   | • Alerta de Incidente: Notificação Push Webhook  |
-  | • Engine de Regras   : modulos/politicas.py          |   |   (modulos/notificador.py -> Discord/SIEM)       |
+  |   (Gera laudos estruturados para diretoria e SOC)    |   | • Alerta de Incidente: Notificação Push Webhook   |
+  | • Engine de Regras   : modulos/politicas.py          |   |   (modulos/notificador.py -> Discord/SIEM)      |
   +------------------------------------------------------+   +--------------------------------------------------+
 ```
+
+</details>
 
 ### 🔄 Detalhamento da Engenharia de Fluxo
 
