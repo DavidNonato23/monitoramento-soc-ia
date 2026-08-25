@@ -1,224 +1,204 @@
-Aqui está o seu **`README.md`** completamente atualizado e padronizado. Ele unifica o fluxo visual do sistema com o modelo corporativo de **5 Camadas Enterprise (SOAR Pipeline)**, além de corrigir as URLs de clone e limpar artefatos de formatação do terminal:
+Aqui está o **`README.md`** completo e atualizado, agora com a seção de autoria e os créditos do desenvolvedor **David Nonato (`@DavidNonato23`)**:
 
 ```markdown
-# 🛡️ VanguardSec AI — Global Command SOC
+# 🛡️ VanguardSec AI — Global Command SOC & SOAR (v1.0)
 
-> **Next-Gen Autonomous Cyber Defense | Real-Time Remote Telemetry & Hardening**
-
----
-
-## 📸 Preview & Resultados da Aplicação
-
-Confira abaixo a interface do **VanguardSec AI** operando em tempo real com coleta de telemetria, diagnóstico dos Agentes de IA e métricas de resposta a incidentes:
-
-![Dashboard Principal SOC](docs/dashboard.png)
-
-<details>
-<summary>🔍 Clique para ver mais detalhes do Painel e Scripts de Remediação</summary>
-
-| Mapeamento MITRE ATT&CK | Scorecard & Guia de Remediação |
-| :---: | :---: |
-| ![Mitre Matrix](docs/mitre_matrix.png) | ![Mitigation Script](docs/remediation_screen.png) |
-
-</details>
+> **Next-Gen Autonomous Cyber Defense Platform**  
+> Plataforma autônoma de SecOps, Threat Intelligence e Resposta a Incidentes alimentada por Inteligência Artificial local via Ollama.
 
 ---
 
-## 🏛️ Arquitetura em 5 Camadas (Enterprise SOAR Pipeline)
+## 👨‍💻 Autor e Desenvolvedor
 
-O **VanguardSec AI** é estruturado em uma arquitetura modular de 5 camadas, separando a coleta agentless, o processamento de IA local e a orquestração de resposta (SOAR/ChatOps):
+* **Idealização, Arquitetura & Engenharia:** [David Nonato](https://github.com/DavidNonato23)
+* **GitHub:** [@DavidNonato23](https://github.com/DavidNonato23)
+* **Projeto:** VanguardSec AI — Global Command SOC & SOAR v1.0
+
+---
+
+## 🗺️ Topologia e Arquitetura do Sistema
+
+A topologia do **VanguardSec AI** adota um modelo *agentless* (sem agentes instalados nos servidores monitorados). A comunicação ocorre de forma centralizada entre a engine de IA local, os coletores de telemetria remota, a interface executiva e os canais de resposta automática (SOAR / ChatOps).
 
 ```text
-+-----------------------------------------------------------------------+
-|  CAMADA 5: INTERFACE & CHATOPS (Experiência do Usuário & Resposta)   |
-|  - Painel Streamlit (Visão SOC / ROI Executivo)                       |
-|  - Bot Telegram Interativo (Botões de Ação Inline & Alertas)          |
-+-----------------------------------------------------------------------+
-                                  ▲
-                                  │  [Ações de Resposta & Métricas]
-                                  ▼
-+-----------------------------------------------------------------------+
-|  CAMADA 4: ORQUESTRAÇÃO & SOAR (Motor de Decisão & Playbooks)        |
-|  - Gestor de Políticas (Nível 1: Self-Healing | Nível 2: Botões)      |
-|  - Playbooks Automatizados (Bloqueio UFW, Kill Process, Quarentena)   |
-|  - Matriz de Mitigação & Mapeamento MITRE ATT&CK                      |
-+-----------------------------------------------------------------------+
-                                  ▲
-                                  │  [Análise Contextual & Score]
-                                  ▼
-+-----------------------------------------------------------------------+
-|  CAMADA 3: PIPELINE MULTIAGENTE DE IA (Processamento Local)           |
-|  - Agente Auditor (Diagnóstico de Ameaças & Anomalias)               |
-|  - Agente Compliance (Mapeamento ISO/IEC 17021 & LGPD)                |
-|  - Agente Remediação (Síntese de Scripts e Respostas)                 |
-+-----------------------------------------------------------------------+
-                                  ▲
-                                  │  [Telemetria Normalizada]
-                                  ▼
-+-----------------------------------------------------------------------+
-|  CAMADA 2: COLETOR & INGESTÃO AGENTLESS (Telemetria Remota)          |
-|  - Módulo SSH (Linux) / WinRM (Windows)                               |
-|  - Parser de Logs (auth.log, Syslog, Event Viewer)                    |
-|  - Modo Simulação (Dry-Run / Dados Demo para Vendas)                  |
-+-----------------------------------------------------------------------+
-                                  ▲
-                                  │  [Conexão Criptografada / Read-Only]
-                                  ▼
-+-----------------------------------------------------------------------+
-|  CAMADA 1: INFRAESTRUTURA & SEGUROS (Bases de Dados & Cofre)          |
-|  - Cofre de Credenciais Criptografado (Fernet/AES-256)                 |
-|  - Histórico de Scans & Trilhas de Auditoria (JSON / Database)        |
-|  - Gerador de Relatórios Executivos PDF (Assinado via Hash SHA-256)   |
-+-----------------------------------------------------------------------+
+               +-------------------------------------------------+
+               |            INFRAESTRUTURA ALVO                  |
+               |                                                 |
+               |  [ Servidor Linux / Windows ]                   |
+               |  • Auth Logs / Open Ports / TCP Connections     |
+               |  • UFW Firewall / Windows Firewall              |
+               +-----------------------+-------------------------+
+                                       ^
+                                       | (Coleta Agentless via SSH/WinRM
+                                       |  e Injeção de Fixes SOAR)
+                                       v
+               +-----------------------+-------------------------+
+               |            VANGUARDSEC AI ENGINE                |
+               |                                                 |
+               |  +-------------------------------------------+  |
+               |  |        Coletores Telemétricos             |  |
+               |  |      (Paramiko / WinRM Modules)           |  |
+               |  +---------------------+---------------------+  |
+               |                        |                        |
+               |                        v                        |
+               |  +-------------------------------------------+  |
+               |  |   Pipeline Multi-Tier IA (Ollama Local)   |  |
+               |  |                                           |  |
+               |  |  • Tier 1: Analista (qwen2.5-coder:7b)   |  |
+               |  |  • Tier 2: Compliance (qwen2.5:3b)       |  |
+               |  |  • Tier 3: Engenheiro SOAR (qwen2.5-coder)|  |
+               |  +---------------------+---------------------+  |
+               +-----------------------+-------------------------+
+                                       |
+                   +-------------------+-------------------+
+                   |                                       |
+                   v                                       v
++------------------+------------------+  +------------------+------------------+
+|      DASHBOARD EXECUTIVE (Streamlit) |  |   CHATOPS & NOTIFICADORES (External) |
+|                                     |  |                                     |
+| • Card de Status Visual (Red/Green) |  | • Telegram Bot (Ações Inline)       |
+| • Diagnóstico Simplificado LGPD     |  | • Webhooks (Slack / Discord / SIEM) |
+| • Botão de Bloqueio Instantâneo     |  | • Relatórios Executivos PDF         |
++-------------------------------------+  +-------------------------------------+
 
 ```
 
+### 🔄 Fluxo de Comunicação e Dados
+
+1. **Sondagem Telemétrica (Inbound):** O módulo coletor realiza conexões remotas seguras (SSH/WinRM) para obter dados de conexões ativas (`TCP ESTABLISHED`), serviços escutando portas (`LISTEN`) e logs de tentativas de autenticação (`auth.log`).
+2. **Processamento Multi-Tier (Local LLM):** A telemetria passa pelo pipeline de IA no Ollama local:
+* **Tier 1 (Analista):** Extrai IoCs (IPs atacantes, porta-alvo e contagem de investidas).
+* **Tier 2 (Compliance):** Classifica a severidade do risco sob as normas LGPD e ISO 27001.
+* **Tier 3 (Engenheiro SOAR):** Compila o Playbook de contenção executável (`sudo ufw deny`).
+
+
+3. **Apresentação e Disparo de Alertas (Outbound):** Os resultados alimentam a interface *Glassmorphism* do Streamlit, geram o relatório em PDF e despacham alertas interativos para o aplicativo do Telegram.
+4. **Remediação Bidirecional (SOAR Action):** Ao acionar o bloqueio (seja pelo botão do Dashboard ou do Telegram), o comando de firewall é injetado diretamente na infraestrutura alvo para isolar a ameaça em tempo real.
+
 ---
 
-## 🗺️ Topologia de Dados e Execução
+## 📌 Visão Geral do Projeto
 
-O fluxo operacional descreve a jornada do dado desde a extração remota até o despacho de ações de contenção:
+O **VanguardSec AI** é uma solução completa de segurança cibernética criada para fechar a lacuna entre a complexidade técnica dos logs de segurança e a tomada de decisão executiva.
+
+---
+
+## 🎨 Principais Destaques
+
+* **Dashboard Executivo Glassmorphism:** Interface visual intuitiva, limpa e mastigada para diretores e clientes não técnicos, acompanhada de aba dedicada para engenharia de TI.
+* **Esteira Multi-Tier de IA (Ollama):**
+* **Tier 1 — Analista SOC (`qwen2.5-coder:7b`):** Triagem inicial e extração de Indicadores de Comprometimento (IoCs).
+* **Tier 2 — Especialista em Riscos (`qwen2.5:3b`):** Avaliação de impacto regulatório e conformidade com LGPD/ISO 27001.
+* **Tier 3 — Engenheiro SOAR (`qwen2.5-coder:7b`):** Construção de Playbooks executáveis de contenção (UFW / PowerShell).
+
+
+* **Automação ChatOps Bidirecional:** Alertas instantâneos no Telegram com botões *inline* que permitem bloquear IPs invasores com apenas 1 clique no celular.
+* **Relatórios & Logs SIEM:** Geração automática de relatórios executivos em PDF e exportação de logs de auditoria no padrão CEF (Common Event Format).
+
+---
+
+## 📂 Estrutura do Repositório
 
 ```text
-                  +-----------------------------------+
-                  |   SERVIDOR ALVO (Target Asset)   |
-                  |  (172.30.0.168 - Ubuntu/Windows)  |
-                  +-----------------+-----------------+
-                                    |
-                                    | [Telemetria via SSH / WinRM]
-                                    | - /var/log/auth.log
-                                    | - Uso de CPU, RAM, Disco
-                                    | - Regras UFW / Portas Abertas
-                                    v
-+-----------------------------------------------------------------------+
-|                         VANGUARDSEC AI SOC                            |
-|                                                                       |
-|  [Coletor Remoto] ──> [Normalizador de Métricas & Parser de Logs]     |
-|                                 │                                     |
-|                                 ▼                                     |
-|           +-------------------------------------------+               |
-|           |       PIPELINE DE AGENTES DE IA           |               |
-|           |           (Ollama Engine)                 |               |
-|           +---------------------+---------------------+               |
-|                                 |                                     |
-|          ┌──────────────────────┼──────────────────────┐              |
-|          │                      │                      │              |
-|          ▼                      ▼                      ▼              |
-|  [Agente Auditor]    [Agente Compliance]    [Agente Remediacao]       |
-|   Diagnóstico de      Scorecard de Regras      Geração de Scripts     |
-|   Vulnerabilidades       (ISO/IEC 17021)        Bash / PowerShell     |
-|          │                      │                      │              |
-|          └──────────────────────┼──────────────────────┘              |
-|                                 │                                     |
-|                                 ▼                                     |
-|              +-------------------------------------+                  |
-|              |     MOTOR DE PERSISTÊNCIA & SOC     |                  |
-|              +------------------+------------------+                  |
-+---------------------------------|-------------------------------------+
-                                  |
-            ┌─────────────────────┼─────────────────────┐
-            ▼                     ▼                     ▼
-  [Relatório Executivo]   [Painel Streamlit]    [Integrações SIEM / Bot]
-  PDFs gravados em        Metrics, Gauge &      Formato CEF & Botões de
-  /relatorios/            Matriz de Riscos      Ação Direta no Telegram
-
-```
-
-### 🧬 Diagrama de Sequência e Decisão (Mermaid)
-
-```mermaid
-sequenceDiagram
-    autonumber
-    participant Target as Servidor Alvo
-    participant Coletor as Coletor (SSH/WinRM)
-    participant SOC as VanguardSec Engine
-    participant LLM as Ollama (smollm2:135m)
-    participant Bot as Telegram Bot (ChatOps)
-    participant DB as Historico JSON / PDF
-
-    Target->>Coletor: Envia Logs de Auth, CPU, RAM, Disco e UFW
-    Coletor->>SOC: Telemetria Bruta
-    SOC->>LLM: 1. Executa Agente Auditor (Diagnóstico)
-    LLM-->>SOC: Retorna Falhas & Vulnerabilidades
-    SOC->>LLM: 2. Executa Agente Compliance (ISO 17021 / LGPD)
-    LLM-->>SOC: Retorna Scorecard (Conforme / Alerta / Não Conforme)
-    SOC->>LLM: 3. Executa Agente Remediação
-    LLM-->>SOC: Retorna Script de Mitigação (.sh / .ps1)
-    SOC->>Bot: Dispara Alerta com Botões de Ação Inline
-    SOC->>DB: Salva JSON & Gera PDF em /relatorios/
-    Bot-->>Target: [Aprovação Humana] Executa Script de Contenção
+VanguardSec-AI/
+├── agentes/
+│   ├── agente_auditor.py       # Tier 1: Analista de SOC (Triagem & IoCs)
+│   ├── agente_compliance.py    # Tier 2: Especialista em Riscos e Compliance
+│   └── agente_remediacao.py    # Tier 3: Engenheiro SOAR (Playbooks de Contenção)
+├── modulos/
+│   ├── coletor_ssh.py          # Coleta de telemetria remota Linux via Paramiko
+│   ├── coletor_winrm.py        # Coleta de telemetria remota Windows
+│   ├── gerador_pdf.py          # Geração de relatórios executivos em PDF
+│   ├── chatops_bot.py          # Bot do Telegram e callbacks de bloqueio
+│   ├── notificador.py          # Webhooks (Slack / Discord / SIEM)
+│   └── politicas.py            # Módulo de políticas ativas e normas
+├── relatorios/                 # Diretório de relatórios PDF gerados
+├── app.py                      # Aplicação principal Streamlit
+├── historico_scans.json        # Base de dados local em formato JSON
+├── requirements.txt            # Dependências Python
+└── README.md                   # Documentação do projeto
 
 ```
 
 ---
 
-## 🏛️ Estrutura do Projeto
+## 🛠️ Pré-requisitos
 
-```text
-vanguardsec-ai/
-├── 🧠 agentes/                  # Camada de Inteligência Artificial
-│   ├── agente_auditor.py        # Análise de vulnerabilidades e logs brutos
-│   ├── agente_compliance.py     # Auditoria baseada em frameworks normativos
-│   └── agente_remediacao.py     # Síntese de scripts executáveis de mitigação
-│
-├── 🔌 modulos/                  # Camada de Integração e Serviços
-│   ├── coletor_ssh.py           # Conectividade e extração via SSH (Paramiko)
-│   ├── coletor_winrm.py         # Conectividade e extração via WinRM (PyWinRM)
-│   ├── chatops_bot.py           # Bot de resposta interativa para Telegram
-│   ├── gerador_pdf.py           # Compilador de relatórios executivos em PDF
-│   ├── notificador.py           # Despachador de alertas para webhooks SIEM
-│   └── politicas.py             # Mapeamento e parsing da norma ISO/IEC 17021
-│
-├── 📁 docs/                     # Imagens e capturas do painel para documentação
-├── 📁 relatorios/               # Armazenamento de PDFs gerados
-├── 📊 app.py                    # Interface e Centro de Comando SOC (Streamlit)
-├── 💾 historico_scans.json      # Base de dados em disco do histórico de scans
-└── 📄 requirements.txt          # Dependências do projeto
+* **Python:** Versão 3.10 ou superior.
+* **Ollama Engine:** Instalado e em execução na porta local padrão (`http://localhost:11434`).
+* **Modelos LLM:**
+* `qwen2.5-coder:7b`
+* `qwen2.5:3b`
 
-```
+
+* **Acesso Remoto:** SSH ativado no servidor alvo (Linux) ou WinRM habilitado (Windows).
 
 ---
 
-## 🛠️ Requisitos e Instalação
+## 🚀 Guia de Instalação e Execução
 
-### 1. Pré-requisitos
-
-* Python 3.10+
-* Ollama Engine instalado na máquina host.
-
-### 2. Baixar o Modelo de IA
-
-```bash
-ollama pull smollm2:135m
-
-```
-
-### 3. Instalação do Projeto
+### 1. Clonar o Repositório e Configurar o Ambiente
 
 ```bash
 git clone [https://github.com/DavidNonato23/vanguardsec-ai.git](https://github.com/DavidNonato23/vanguardsec-ai.git)
 cd vanguardsec-ai
 
+# Criar e ativar o ambiente virtual
 python -m venv venv
 
-# No Windows PowerShell:
-.\venv\Scripts\Activate.ps1
+# Windows (PowerShell)
+.\venv\Scripts\activate
 
-# No Linux/Mac:
+# Linux / macOS
 source venv/bin/activate
 
+# Instalar dependências
 pip install -r requirements.txt
 
 ```
 
-### 4. Executando o SOC
+### 2. Baixar os Modelos no Ollama
+
+Abra o terminal e execute o download das IAs utilizadas pelos agentes:
 
 ```bash
-python -m streamlit run app.py
+ollama pull qwen2.5-coder:7b
+ollama pull qwen2.5:3b
 
 ```
 
+### 3. Iniciar o Dashboard
+
+```bash
+streamlit run app.py
+
 ```
+
+Acesse o painel executivo pelo navegador através do endereço: `http://localhost:8501`
 
 ---
 
+## 📱 Configuração do ChatOps Telegram (Opcional)
+
+Para receber alertas de incidentes e acionar o bloqueio pelo celular:
+
+1. Defina as variáveis de ambiente ou preencha diretamente na barra lateral do aplicativo:
+* `TELEGRAM_BOT_TOKEN`: Token obtido através do `@BotFather`.
+* `TELEGRAM_ALLOWED_USER_ID`: Seu ID de usuário no Telegram (obtenha via `@userinfobot`).
+
+
+2. Quando um ataque for detectado, o sistema enviará um card com o botão **🔥 Bloquear IP Agora**, que executará o script de firewall diretamente no servidor remoto via SSH.
+
+---
+
+## 📄 Licença e Uso
+
+Este projeto foi desenvolvido como uma solução de defesa cibernética enterprise autônoma. Sinta-se à vontade para utilizar, personalizar e expandir.
+
+---
+
+*VanguardSec AI v1.0 — Developed by [David Nonato*](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/DavidNonato23)
+
+```
+
+```

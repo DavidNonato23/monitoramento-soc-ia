@@ -1,7 +1,8 @@
 import paramiko
+import re
 
 def coletar_dados_servidor(hostname, username, password=None, key_filename=None):
-    """Conecta ao servidor Linux via SSH e extrai telemetria bruta."""
+    """Conecta ao servidor Linux via SSH e extrai telemetria focada em Segurança e Rede (SOC)."""
     try:
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -11,21 +12,28 @@ def coletar_dados_servidor(hostname, username, password=None, key_filename=None)
         else:
             client.connect(hostname=hostname, username=username, password=password, timeout=10)
 
-        cmd_cpu = "top -bn1 | grep 'Cpu(s)'"
-        cmd_ram = "free -m"
-        cmd_disk = "df -h /"
-        cmd_auth = "tail -n 20 /var/log/auth.log 2>/dev/null || tail -n 20 /var/log/syslog"
+        # Comandos focados em Anomalias de Rede, Sessões e Autenticação
+        cmd_tx_rx = "ip -s link | grep -A 1 -E 'eth0|enp|wlan0|lo' | grep -v 'valid_lft'"
+        cmd_connections = "ss -tuln"
+        cmd_established = "ss -ta state established"
+        cmd_active_users = "who"
+        cmd_failed_logins = "grep -c 'Failed password' /var/log/auth.log 2>/dev/null || echo 0"
+        cmd_auth_tail = "tail -n 25 /var/log/auth.log 2>/dev/null || tail -n 25 /var/log/syslog"
 
-        _, stdout_cpu, _ = client.exec_command(cmd_cpu)
-        _, stdout_ram, _ = client.exec_command(cmd_ram)
-        _, stdout_disk, _ = client.exec_command(cmd_disk)
-        _, stdout_auth, _ = client.exec_command(cmd_auth)
+        _, stdout_tx_rx, _ = client.exec_command(cmd_tx_rx)
+        _, stdout_conn, _ = client.exec_command(cmd_connections)
+        _, stdout_estab, _ = client.exec_command(cmd_established)
+        _, stdout_users, _ = client.exec_command(cmd_active_users)
+        _, stdout_failed, _ = client.exec_command(cmd_failed_logins)
+        _, stdout_auth, _ = client.exec_command(cmd_auth_tail)
 
         telemetria = (
-            f"--- [ Uso de CPU ] ---\n{stdout_cpu.read().decode('utf-8')}\n"
-            f"--- [ Uso de RAM ] ---\n{stdout_ram.read().decode('utf-8')}\n"
-            f"--- [ Uso de Disco ] ---\n{stdout_disk.read().decode('utf-8')}\n"
-            f"--- [ Logs de Autenticação / Auth Log ] ---\n{stdout_auth.read().decode('utf-8')}\n"
+            f"--- [ Tráfego de Interface TX/RX ] ---\n{stdout_tx_rx.read().decode('utf-8')}\n"
+            f"--- [ Portas Abertas / Listening ] ---\n{stdout_conn.read().decode('utf-8')}\n"
+            f"--- [ Conexões Estabelecidas ] ---\n{stdout_estab.read().decode('utf-8')}\n"
+            f"--- [ Sessões SSH / Usuários Ativos ] ---\n{stdout_users.read().decode('utf-8')}\n"
+            f"--- [ Total de Logins Falhos ] ---\n{stdout_failed.read().decode('utf-8').strip()}\n"
+            f"--- [ Logs do Auth Log ] ---\n{stdout_auth.read().decode('utf-8')}\n"
         )
 
         client.close()

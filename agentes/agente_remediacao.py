@@ -1,15 +1,38 @@
-import ollama
+import os
+import requests
 
-def executar_agente_remediacao(relatorio_auditoria: str, relatorio_compliance: str, so_alvo: str = "Ubuntu Linux") -> str:
+MODELO_OLLAMA = os.getenv("OLLAMA_MODEL", "qwen2.5-coder:7b")
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/generate")
+
+def executar_agente_remediacao(diagnostico_analista, parecer_especialista, so_alvo="Ubuntu Linux"):
+    """Tier 3 - Engenheiro SOAR: Construção do Playbook de Contenção em Código."""
+    sintaxe = "Bash" if so_alvo == "Ubuntu Linux" else "PowerShell"
+    
+    prompt = f"""
+Escreva um script simples em {sintaxe} para bloquear o IP invasor citado no diagnóstico.
+
+Diagnóstico:
+{diagnostico_analista}
+
+REGRAS RÍGIDAS:
+- Retorne APENAS comandos limpos de firewall executáveis, como:
+sudo ufw deny from <IP> to any
+sudo ufw limit ssh/tcp
+sudo ufw reload
+- NÃO use comandos awk, sed ou pipelines complexos.
+- NÃO escreva explicações fora do código.
+"""
     try:
-        response = ollama.chat(
-            model='smollm2:135m',
-            messages=[
-                {'role': 'system', 'content': 'Escreva apenas comandos bash para corrigir falhas de SSH e ativar o UFW firewall no Ubuntu. Nao escreva texto.'},
-                {'role': 'user', 'content': relatorio_auditoria}
-            ],
-            options={'num_predict': 100, 'temperature': 0.1}
-        )
-        return response['message']['content']
+        payload = {
+            "model": MODELO_OLLAMA, 
+            "prompt": prompt, 
+            "stream": False,
+            "options": {"num_predict": 150}
+        }
+        response = requests.post(OLLAMA_URL, json=payload, timeout=60)
+        if response.status_code == 200:
+            script_gerado = response.json().get("response", "")
+            return script_gerado.replace("```bash", "").replace("```powershell", "").replace("```", "").strip()
+        return "# Erro na geração do script de bloqueio"
     except Exception as e:
-        return f"# Erro ao gerar script: {str(e)}"
+        return f"# Erro no script de remediação: {str(e)}"

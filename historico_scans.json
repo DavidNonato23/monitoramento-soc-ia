@@ -974,5 +974,317 @@
         "compliance": "Dados de Auditoria:\n\n==\n\nNúmero de registros: 5\n\nUso de CPU: 50.00%\n\nUso de RAM: 21.74%\n\nUso de Disco: 15%\n\nUso de RAM: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de Disco: 15%\n\nUso de",
         "remediacao": "Uso de CPU:\n\nUso de RAM:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:\n\nUso de Disco:",
         "caminho_pdf": "relatorios\\VanguardSec_Report_192.168.15.2_2026-08-24_19-43-55.pdf"
+    },
+    {
+        "data": "2026-08-24 19:59:16",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "11.1%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The following logs show the login attempts for the user \"servidor\" on the server \"192.168.15.7\" on port 22147:\n\n```\n2026-08-24T22:43:12.088121+00:00 servidor sshd-session[4683]: pam_unix(sshd:session): session closed for user servidor\n2026-08-24T22:43:12.089982+00:00 servidor sshd-session[4",
+        "compliance": "Ao verificar que o usuário \"servidor\" está logado como \"servidor\" como o usuário \"servidor\" está logado como \"servidor\", o usuário \"servidor\" está logado como \"servidor\" como o usuário \"servidor\" está logado como \"servidor\".\n\nAo verificar que o usuário \"servidor\" está logado como \"servidor\", o usuário \"servidor\" está logado como \"servidor\" como o usuá",
+        "remediacao": "Ao verificar o status do servidor, o usuário \"servidor\" está logado com acesza \"pam_unix(sshd:session): session closed for user servidor\".\n\nAo verificar o status do usuário, o usuário \"servidor\" está logado com acesza \"pam_unix(sshd:session): session closed for user serv",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 19:59:18",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "33.3%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The following logs are for the session 40 logged out:\n\n```\n2026-08-24T22:58:41.950867+00:00 servidor sshd-session[4957]: pam_unix(sshd:session): session closed for user servidor\n2026-08-24T22:58:41.954266+00:00 servidor sshd-session[4926]: pam_unix(sshd:session): session closed for user servidor\n2026-",
+        "compliance": "Ao verá, a sessão 40 está logado com uma falha de firewall. Se você for usuário, você pode ver o seu usuario e seu apoio e seu controle de usuário.\n\nAo verá, a sessão 40 está logado com uma falha de firewall. Se você for usuário, você pode ver o seu usuario e seu apoio e seu controle de usuário.\n\nAo verá, a sessão 40 está logado com uma falha de firewall. Se você",
+        "remediacao": "Aceso que aceso, aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 19:59:20",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "16.7%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The logs for the session 40 are as follows:\n\n```\n2026-08-24T22:58:41.950867+00:00 servidor sshd-session[4957]: Accepted password for servidor from 192.168.15.7 port 61470 ssh2\n2026-08-24T22:58:41.960596+00:00 servidor sshd-session[4926]: pam_unix(sshd:session): session opened",
+        "compliance": "Ajuda:\n\n- [NÓ CONFORME]: Se houver falhas críticas de login, portas desnecessárias ou falha de firewall.\n- [ALERTA]: Riscos médios ou alterações pendentes.\n- [CONFORME]: Controles ativos e seguros.\n- [SERVIDOR SSHD-SESSION]: Servidor SSHD-SESSION como servidor de acesso administrativo de servidor.\n- [SESSION]: Sessão como servidor de acesso administrativo de servidor.\n- [P",
+        "remediacao": "Acessei o logo como:\n\n```\n2026-08-24T22:58:41.950867+00:00 servidor sshd-session[4957]: Accepted password for servidor from 192.168.15.7 port 61470 ssh2\n2026-08-24",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 19:59:33",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "16.7%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The logs for the session 41 logged out indicate that the user was logged out and waiting for processes to exit. The log entry for the session 41 shows that the user was logged out and waiting for processes to exit. The log entry for the session 42 logged out indicates that the user was logged out and waiting for processes to exit. The log entry for the session 43 logged out indicates that the user was logged out and waiting for processes to exit. The log entry for the session 44 logged out indicates that the user was logged out and waiting for processes to exit. The log entry for the session 45 logged out indicates that the user was logged out and waiting for processes to exit. The log entry",
+        "compliance": "Ajudá-lo para ver o resumo de suas informações:\n\n- [NÁO CONFORME]: Se houver falhas críticas de login, portas de bancos de dados não devem ficar expostas publicamente sem firewall.\n- [ALERTA]: Riscos médios ou alterações pendentes.\n- [CONFORME]: Controles ativos e seguros.\n- [NÁO RESUMO]: Se houver falhas críticas de login, portas de bancos de dados não devem ficar",
+        "remediacao": "A user is logged out and waiting for processes to exit in the following logs:\n\nSession 41:\n- User logged out and waiting for processes to exit\n- User logged out and waiting for processes to exit\n\nSession 42:\n- User logged out and waiting for processes to exit\n- User logged out and waiting for processes to exit\n\nSession 43:\n- User logged out and waiting for processes to exit\n- User logged out and waiting for",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 19:59:46",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "10.5%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The logs for the session 42 logged out indicate that the user was logged out and waiting for processes to exit. The process that was waiting for the user to exit is the one that is currently logged out. The user is logged out because the process that was waiting for the user to exit is the one that is currently logged out.\n\nThe process that was waiting for the user to exit is the one that is currently logged out. The user is logged out because the process that was waiting for the user to exit is the one that is currently logged out.\n\nThe process that was waiting for the user to exit is the one that is currently logged out. The user is logged out because the process that was waiting for the user to",
+        "compliance": "The logs for the session 42 logged out indicate that the user was logged out and waiting for processes to exit. The process that was waiting for the user to exit is the one that is currently logged out. The user is logged out because the process that was waiting for the user to exit is the one that is currently logged out.\n\nThe process that was waiting for the user to exit is the one that is currently logged out. The user is logged out because the process that was waiting for the user to exit is the one that is currently logged out.\n\nThe process that was waiting for the user to exit is the one that is currently logged out. The user is logged out because the process that was waiting for the user to",
+        "remediacao": "A correct and grammatically correct sentence. The correct sentence is:\n\nThe process that was waiting for the user to exit is the one that is currently logged out.\n\nThe process that was waiting for the user to exit is the one that is currently logged out. The user is logged out because the process that was waiting for the user to exit is the one that is currently logged out.\n\nThe correct sentence is:\n\nThe process that was waiting for the user to exit is",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:00:14",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "5.3%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The following logs show the logs of the SSH session:\n\n1. 192.168.15.7:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:20",
+        "compliance": "Ao verá, a log de SSH seguinte é:\n\n```\n192.168.15.7:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:2048:204",
+        "remediacao": "Aceso, a verdadeiro comando de SSH comando comunicado com o UFW firewall como o \"ssh-keygen\" e \"ssh-keygen-ruby\" como o \"ssh-keygen-ruby-rails\" como o \"ssh-keygen-rails\" como o \"ssh-keygen-ruby-rails\" como o \"ssh-keygen-ruby\" como o \"ssh-",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:00:44",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "15.0%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The logs for the session 44 are as follows:\n\n```\n2026-08-24T22:59:19.472388+00:00 servidor sshd-session[5093]: pam_unix(sshd:session): session closed for user servidor\n2026-08-24T22:59:19.487782+00:00 servidor sshd-session[5150]: Accepted password for servidor from 192.168.15.7 port 11",
+        "compliance": "Ao verificar se uma sessão está disponível, gera um resumo direto:\n\n- [NÁO CONFORME]: Se há falhas críticas de login, portas de bancos de dados não devem ficar expostas publicamente sem firewall.\n- [ALERTA]: Riscos médios ou alterações pendentes.\n- [CONFORME]: Controles ativos e seguros.\n\nSe você deseja verificar se uma sessão está disponível, gera um resumo direto:\n\n",
+        "remediacao": "Ao verificar o status do servidor, você pode verificar se o usuario servidor está logado com o usuario da conta ou se não está logado.\n\nPara verificar se o usuario servidor está logado com o usuario da conta, você pode verificar se o usuario da conta está logado com o usuario",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:01:15",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "5.9%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The logs for the session '46' of user 'servidor' with class 'user' and type 'tty' are as follows:\n\n```\n2026-08-24T22:59:30.638782+00:00 servidor sshd-session[5208]: pam_unix(sshd:session): session closed for user servidor\n2026-08-24T22:59:30.668860+00:00 servidor sshd-session[5208]: pam_unix(",
+        "compliance": "Ajuda:\n\n- [NÓ CONFORME]: Se houver falhas críticas de login, portas desnecessárias ou falha de firewall.\n- [ALERTA]: Riscos médios ou alterações pendentes.\n- [CONFORME]: Controles ativos e seguros.\n- [2026-08-24T22:59:30.638782+00:00 servidor sshd-session[5208]: pam_unix(sshd:session): session closed for user servidor\n202",
+        "remediacao": "Aceso que aceso, aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:01:44",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "15.8%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The following logs show the logs of the SSH session:\n\n1. 192.168.15.7:1207:\n\nThe session was closed for user 'servidor' by the user 'servidor2' on port 1207.\n\n2. 192.168.15.7:1207:\n\nThe session was closed for user 'servidor2' by the user 'servidor3' on port 1207.\n\n3. 192.168.15.7:1207:\n\nThe session was closed for user 'servidor",
+        "compliance": "Ao verificar se uma entrada de sistema está disponível, seu sistema está disponível, ou seu sistema não está disponível.\n\nA entrada de sistema é disponível seu sistema está disponível, ou seu sistema não está disponível.\n\nSe uma entrada de sistema está disponível, a entrada de sistema é disponível, ou seu sistema não está disponível.\n\nSe uma entrada de sistema está dispon",
+        "remediacao": "O que fazê-se?\n\nAqui está uma documentação que explica o processo de corrigir o SSH para a firewall no Ubuntu.\n\nOcorreu que o SSH se encontrou como a sessão 'servidor' com o porto 1207.\n\nOcorreu que o SSH se encontrou como a sessão 'servidor2' com o porto 1",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:02:10",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "5.9%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The logs for the session 48 are as follows:\n\n```\n2026-08-24T23:00:31.052615+00:00 servidor sshd-session[5473]: Connection closed by 192.168.15.7 port 1230 ssh2\n2026-08-24T23:01:00.312847+00:00 servidor sshd-session[5392]: Accepted password for servidor from 192.168.15",
+        "compliance": "Ajuda:\n\n- [NÓ CONFORME]: Se houver falhas críticas de login, portas desnecessárias ou falha de firewall.\n- [ALERTA]: Riscos médios ou alterações pendentes.\n- [CONFORME]: Controles ativos e seguros.\n- [2026-08-24T23:00:31.052615+00:00] Servidor sshd-session[5473]: Connection closed by 192.168.15.7 port 123",
+        "remediacao": "Aceso que aceso, aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:02:23",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "11.8%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The logs for the session 48 are as follows:\n\n```\n2026-08-24T23:01:31.305933+00:00 servidor sshd-session[5458]: pam_unix(sshd:session): session opened for user servidor(uid=1000) by servidor(uid=0)\n2026-08-24T23:01:31.309940+00:00 servidor sshd-session[5458]: pam_unix(sshd",
+        "compliance": "Ao verificar se uma sessão está disponível com o servidor SSH, você pode verificar se a sessão está disponível com o servidor SSH ou se não está disponível.\n\nSe a sessão está disponível com o servidor SSH, você pode verificar se a sessão está disponível com o servidor SSH ou se não está disponível.\n\nSe a sessão está disponível com o servidor SSH, você pode verificar se a sessão está disponível com o servid",
+        "remediacao": "Ao verificar o status do servidor, o usuário seu ID e o usuário seu nome.\n\nAo verificar o status do servidor, o usuário seu ID e o usuário seu nome.\n\nAo verificar o status do servidor, o usuário seu ID e o usuário seu nome.\n\nA",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:02:54",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "11.8%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The logs for the session 50 are as follows:\n\n```\n2026-08-24T23:01:56.063022+00:00 servidor systemd-logind[770]: New session '50' of user 'servidor' with class 'user' and type 'tty'.\n2026-08-24T23:01:56.063696+00:00 servidor sshd-session[5515]: Read error from remote host 192.168.15.7 port",
+        "compliance": "Ao verificar o resumo direto, o servidor systemd-logind está com a sua contenagem de logs. O log de servidor systemd-logind é o resumo de uma lista de logs que está disponível com o servidor systemd-logind.\n\nAo verificar o resumo direto, o servidor systemd-logind está com a sua contenagem de logs. O log de servidor systemd-logind é o resumo de uma lista de logs que está disponível com o servidor systemd-log",
+        "remediacao": "Aceso que aceso, aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:03:24",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "15.8%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The following logs show the login attempts for the user 'servidor' from the remote host 192.168.15.7 port 50460:\n\n- 2026-08-24T23:02:40.462328+00:00 servidor sshd-session[5572]: Failed password for invalid user lin from 192.168.15.7 port 50460 ssh2\n- 2026-08-24T23:02:40.463851+0",
+        "compliance": "Ajudá-lo para verificar se a controle da Auditaria está disponível.\n\n- 2026-08-24T23:02:40.463851+0:00 servidor sshd-session[5572]: Failed password for invalid user lin from 192.168.15.7 port 50460 ssh2\n- 2026-08-24T23:02:40.463851+0:00 servidor sshd-session[5572]: F",
+        "remediacao": "Aceso que você deseja verificar o status do login, você pode verificar o status do login com o seguinte log:\n\n- 2026-08-24T23:02:40.463851+00:00 servidor sshd-session[5572]: Failed password for invalid user lin from 192.16",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:03:54",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "5.3%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The following logs are for the session 52:\n\n```\n2026-08-24T23:02:40.246299+00:00 servidor sshd-session[5640]: Read error from remote host 192.168.15.7 port 50460 ssh2\n2026-08-24T23:02:40.463851+00:00 servidor sshd-session[5574]: pam_unix(sshd:session): session closed for user servid",
+        "compliance": "Ao verificar se uma sessão está disponível, se alguiará o resumo direto, o usuario será excluído.\n\nAo verificar se uma sessão está disponível, se alguiará o resumo direto, o usuario será excluído.\n\nAo verificar se uma sessão está disponível, se alguiará o resumo direto, o usuario será excluído.\n\nAo verificar se uma sessão está disponível, se alguiar",
+        "remediacao": "Ao verificar o status do servidor, o usuário já estava ao servidor.\n\nAo verificar o status do servidor, o usuário já estava ao servidor.\n\nAo verificar o status do servidor, o usuário já estava ao servidor.\n\nAo verificar o status do servidor, o",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:04:24",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "6.2%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The logs for the session 53 are as follows:\n\n```\n2026-08-24T23:02:44.949389+00:00 servidor sshd-session[5572]: Failed password for invalid user lin from 192.168.15.7 port 50460 ssh2\n2026-08-24T23:02:44.952708+00:00 servidor sshd-session[5640]: Accepted password for servidor from 192.",
+        "compliance": "Ajuda:\n\n- [NÓ CONFORME]: Se houver falhas críticas de login, portas desnecessárias ou falha de firewall.\n- [ALERTA]: Riscos médios ou alterações pendentes.\n- [CONFORME]: Controles ativos e seguros.\n- [2026-08-24T23:02:44.949389+00:00]: Failed password for invalid user lin from 192.168.15.7 port 50460 ssh2\n\nAjud",
+        "remediacao": "Aceso que aceso, aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.\n\nAceso que aceso que aceso.",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:04:53",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "11.8%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The following logs contain information about the login session of the user 'servidor' on port 50512:\n\n1. The session started with the following command:\n\n```\npam_unix(sshd:session): session opened for user servidor(uid=1000) by servidor(uid=0)\n```\n\n2. The session was closed for user 'servidor' by the following command:\n\n```\npam_unix(sshd:session): session closed for user 'servidor' by user 'servidor'\n```\n\n3. The session was opened for user 'servidor' by the following command:\n",
+        "compliance": "O logo de Auditoria está disponível como seu modulo:\n\n```\npam_unix(sshd:session): session opened for user servidor(uid=1000) by servidor(uid=0)\n```\n\nO logo de Auditoria é disponível como seu modulo:\n\n```\npam_unix(sshd:session): session opened for user 'servidor' by user 'servidor'\n```\n\nO logo de Auditoria é disponível como seu modulo:\n\n```\npam_unix(sshd:session",
+        "remediacao": "Ocorreu que a sessao comunicada com servidor 'servidor' no port 50512 foi excluído como a sessao comunicada com servidor 'servidor' no port 50511.\n\nA sessao comunicada com servidor 'servidor' no port 50512 foi excluído como a sess",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:05:22",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "15.8%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The logs for the session 55 are as follows:\n\n```\n2026-08-24T23:03:40.304441+00:00 servidor sshd-session[5813]: Read error from remote host 192.168.15.7 port 50534: Connection reset by peer\n2026-08-24T23:03:40.313426+00:00 servidor sshd-session[5756]: pam_unix(sshd:session): session closed",
+        "compliance": "Ao verificar o resumo direto, o auditoria recebe uma informação de conexão de acesso ao servidor SSH.\n\nAo verificar o resumo direto, o auditoria recebe uma informação de conexão de acesso ao servidor SSH.\n\nAo verificar o resumo direto, o auditoria recebe uma informação de conexão de acesso ao servidor SSH.\n\nAo verificar o resumo direto, o auditoria recebe uma informação de conexão de acess",
+        "remediacao": "Acessei ocorreu um error com a conclução de uma sessão com o servidor SSH. Não escreva texto.",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:05:52",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "cpu": "11.8%",
+            "ram": "N/A",
+            "disk": "15%"
+        },
+        "auditoria": "The following logs show the logs of the SSH session:\n\n1. 11.8 us, 23.5 sy,  0.0 ni, 52.9 id,  0.0 wa,  0.0 hi, 11.8 si,  0.0 st\n2. 11.8 si, 11.8 si, 11.8 si, 11.8 si, 11.8 si, 11.8 si, 11.8 si, 11.8 si, 11.8 si, 11.8 si, 11.8 si, 11.8",
+        "compliance": "Ao verificar o resumo direto, o audito de Auditoria está disponível como:\n\n- [NÁO CONFORME]: Se há falhas críticas de login, portas de bancos de dados não devem ficar expostas publicamente sem firewall.\n- [ALERTA]: Riscos médios ou alterações pendentes.\n- [CONFORME]: Controles ativos e seguros.\n\nSe você quer que o resumo direto está disponível, você pode ver o resumo direto com",
+        "remediacao": "Aceseste comando bash para corrigir falhas de SSH e ativar o UFW firewall no Ubuntu. Nao escreva texto.",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:35:57",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "logins_falhos": "3",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "auditoria": "Erro ao comunicar com o agente auditor: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)",
+        "compliance": "Erro ao comunicar com o agente compliance: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)",
+        "remediacao": "sudo systemctl restart auditd",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:38:15",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "logins_falhos": "3",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "auditoria": "Erro ao comunicar com o agente auditor: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)",
+        "compliance": "Erro ao comunicar com o agente compliance: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)",
+        "remediacao": "sudo systemctl restart auditd\nsudo systemctl enable auditd\nsudo systemctl status auditd\nsudo netstat -tuln | grep 11434\nsudo systemctl restart auditd\nsudo systemctl status auditd",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:40:31",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "logins_falhos": "3",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "auditoria": "Erro ao comunicar com o agente auditor: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)",
+        "compliance": "Erro ao comunicar com o agente compliance: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)",
+        "remediacao": "sudo ufw deny from 185.220.101.5 to any\nsudo ufw limit ssh/tcp\nsudo ufw reload",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
+    },
+    {
+        "data": "2026-08-24 20:47:47",
+        "host": "192.168.15.2",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "logins_falhos": "3",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "auditoria": "Erro no Analista de SOC N1: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)",
+        "compliance": "Erro no Especialista N2: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)",
+        "remediacao": "sudo ufw deny from $(awk '/^X-Forwarded-For: / {print $2}' /var/log/nginx/access.log | awk -F: '{print $1}' | sort | uniq)\nsudo ufw limit 100/minute\nsudo ufw reload",
+        "caminho_pdf": "relatorios/Relatorio_SOC_192_168_15_2.pdf"
     }
 ]
