@@ -1,4 +1,3 @@
-Aqui está o **`README.md`** completo e atualizado, agora com a seção de autoria e os créditos do desenvolvedor **David Nonato (`@DavidNonato23`)**:
 
 ```markdown
 # 🛡️ VanguardSec AI — Global Command SOC & SOAR (v1.0)
@@ -12,54 +11,60 @@ Aqui está o **`README.md`** completo e atualizado, agora com a seção de autor
 
 * **Idealização, Arquitetura & Engenharia:** [David Nonato](https://github.com/DavidNonato23)
 * **GitHub:** [@DavidNonato23](https://github.com/DavidNonato23)
-* **Projeto:** VanguardSec AI — Global Command SOC & SOAR v1.0
+* **Projeto:** [VanguardSec AI — Global Command SOC & SOAR v1.0](https://github.com/DavidNonato23/vanguardsec-ai)
 
 ---
 
 ## 🗺️ Topologia e Arquitetura do Sistema
 
-A topologia do **VanguardSec AI** adota um modelo *agentless* (sem agentes instalados nos servidores monitorados). A comunicação ocorre de forma centralizada entre a engine de IA local, os coletores de telemetria remota, a interface executiva e os canais de resposta automática (SOAR / ChatOps).
+A topologia do **VanguardSec AI** adota um modelo *agentless* (sem agentes instalados nos servidores monitorados). 
+
+A comunicação ocorre de forma centralizada entre:
+* **Engine de IA Local:** Processamento inteligente das ameaças via Ollama.
+* **Coletores de Telemetria Remota:** Extração de dados de infraestrutura.
+* **Interface Executiva:** Painéis visuais para monitoramento.
+* **Canais de Resposta Automática (SOAR / ChatOps):** Mitigação de incidentes e interação via Telegram.
 
 ```text
                +-------------------------------------------------+
-               |            INFRAESTRUTURA ALVO                  |
+               |             INFRAESTRUTURA ALVO                 |
                |                                                 |
-               |  [ Servidor Linux / Windows ]                   |
-               |  • Auth Logs / Open Ports / TCP Connections     |
-               |  • UFW Firewall / Windows Firewall              |
+               |   [ Servidor Linux / Windows ]                  |
+               |   • Auth Logs / Open Ports / TCP Connections    |
+               |   • UFW Firewall / Windows Firewall             |
                +-----------------------+-------------------------+
                                        ^
                                        | (Coleta Agentless via SSH/WinRM
                                        |  e Injeção de Fixes SOAR)
                                        v
                +-----------------------+-------------------------+
-               |            VANGUARDSEC AI ENGINE                |
+               |             VANGUARDSEC AI ENGINE               |
                |                                                 |
-               |  +-------------------------------------------+  |
-               |  |        Coletores Telemétricos             |  |
-               |  |      (Paramiko / WinRM Modules)           |  |
-               |  +---------------------+---------------------+  |
-               |                        |                        |
-               |                        v                        |
-               |  +-------------------------------------------+  |
-               |  |   Pipeline Multi-Tier IA (Ollama Local)   |  |
-               |  |                                           |  |
-               |  |  • Tier 1: Analista (qwen2.5-coder:7b)   |  |
-               |  |  • Tier 2: Compliance (qwen2.5:3b)       |  |
-               |  |  • Tier 3: Engenheiro SOAR (qwen2.5-coder)|  |
-               |  +---------------------+---------------------+  |
+               |   +-------------------------------------------+ |
+               |   |            Coletores Telemétricos         | |
+               |   |          (Paramiko / WinRM Modules)       | |
+               |   +---------------------+---------------------+ |
+               |                         |                       |
+               |                         v                       |
+               |   +-------------------------------------------+ |
+               |   |    Pipeline Multi-Tier IA (Ollama Local)  | |
+               |   |                                           | |
+               |   | • Tier 1: Analista (qwen2.5-coder:7b)     | |
+               |   | • Tier 2: Compliance (qwen2.5:3b)         | |
+               |   | • Tier 3: Engenheiro SOAR (qwen2.5-coder) | |
+               |   +---------------------+---------------------+ |
                +-----------------------+-------------------------+
                                        |
-                   +-------------------+-------------------+
-                   |                                       |
-                   v                                       v
-+------------------+------------------+  +------------------+------------------+
-|      DASHBOARD EXECUTIVE (Streamlit) |  |   CHATOPS & NOTIFICADORES (External) |
-|                                     |  |                                     |
-| • Card de Status Visual (Red/Green) |  | • Telegram Bot (Ações Inline)       |
-| • Diagnóstico Simplificado LGPD     |  | • Webhooks (Slack / Discord / SIEM) |
-| • Botão de Bloqueio Instantâneo     |  | • Relatórios Executivos PDF         |
-+-------------------------------------+  +-------------------------------------+
+                    +------------------+------------------+
+                    |                                     |
+                    v                                     v
++-------------------------------------+   +-------------------------------------+
+|      DASHBOARD EXECUTIVE (Streamlit)|   |CHATOPS & NOTIFICADORES (External)   |
+|                                     |   |                                     |
+| • Card de Status Visual (Red/Green) |   | • Telegram Bot (Ações Inline)       |
+| • Diagnóstico Simplificado LGPD     |   | • Webhooks (Slack / Discord / SIEM) |
+| • Botão de Bloqueio Instantâneo     |   | • Relatórios Executivos PDF         |
++-------------------------------------+   +-------------------------------------+
 
 ```
 
@@ -102,21 +107,21 @@ O **VanguardSec AI** é uma solução completa de segurança cibernética criada
 ```text
 VanguardSec-AI/
 ├── agentes/
-│   ├── agente_auditor.py       # Tier 1: Analista de SOC (Triagem & IoCs)
-│   ├── agente_compliance.py    # Tier 2: Especialista em Riscos e Compliance
-│   └── agente_remediacao.py    # Tier 3: Engenheiro SOAR (Playbooks de Contenção)
+│   ├── agente_auditor.py         # Tier 1: Analista de SOC (Triagem & IoCs)
+│   ├── agente_compliance.py      # Tier 2: Especialista em Riscos e Compliance
+│   └── agente_remediacao.py      # Tier 3: Engenheiro SOAR (Playbooks de Contenção)
 ├── modulos/
-│   ├── coletor_ssh.py          # Coleta de telemetria remota Linux via Paramiko
-│   ├── coletor_winrm.py        # Coleta de telemetria remota Windows
-│   ├── gerador_pdf.py          # Geração de relatórios executivos em PDF
-│   ├── chatops_bot.py          # Bot do Telegram e callbacks de bloqueio
-│   ├── notificador.py          # Webhooks (Slack / Discord / SIEM)
-│   └── politicas.py            # Módulo de políticas ativas e normas
-├── relatorios/                 # Diretório de relatórios PDF gerados
-├── app.py                      # Aplicação principal Streamlit
-├── historico_scans.json        # Base de dados local em formato JSON
-├── requirements.txt            # Dependências Python
-└── README.md                   # Documentação do projeto
+│   ├── coletor_ssh.py            # Coleta de telemetria remota Linux via Paramiko
+│   ├── coletor_winrm.py          # Coleta de telemetria remota Windows
+│   ├── gerador_pdf.py            # Geração de relatórios executivos em PDF
+│   ├── chatops_bot.py            # Bot do Telegram e callbacks de bloqueio
+│   ├── notificador.py            # Webhooks (Slack / Discord / SIEM)
+│   └── politicas.py              # Módulo de políticas ativas e normas
+├── relatorios/                   # Diretório de relatórios PDF gerados
+├── app.py                        # Aplicação principal Streamlit
+├── historico_scans.json          # Base de dados local em formato JSON
+├── requirements.txt              # Dependências Python
+└── README.md                     # Documentação do projeto
 
 ```
 
@@ -197,8 +202,7 @@ Este projeto foi desenvolvido como uma solução de defesa cibernética enterpri
 
 ---
 
-*VanguardSec AI v1.0 — Developed by [David Nonato*](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/DavidNonato23)
+*VanguardSec AI v1.0 — Developed by [David Nonato*](https://github.com/DavidNonato23)
 
 ```
 
-```
