@@ -173,7 +173,6 @@ Webhooks → Discord/SIEM"]
 
 ## 🖥️ Dashboard em funcionamento
 
-> ⚠️ **Nota:** a imagem abaixo é uma **ilustração/mockup** do layout do painel (métricas, esteira de IA, incidentes e kill switch), montada a partir da descrição do projeto — **não é um screenshot real** da aplicação rodando. Recomendo substituí-la por um print autêntico do seu `app.py` em execução (`streamlit run app.py` → capturar tela) antes de publicar como "prova de funcionamento" no README.
 
 ![Mockup do Dashboard Executivo](docs/dashboard-mockup.svg)
 
