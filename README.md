@@ -17,9 +17,7 @@ Plataforma autônoma de SecOps, Threat Intelligence e Resposta a Incidentes alim
 
 ## 🗺️ Topologia e Arquitetura do Sistema
 
-<p align="center">
-  <img src="./topologia.svg" alt="Topologia de rede do VanguardSec AI" width="900"/>
-</p>
+![Topologia de rede do VanguardSec AI](docs/topologia.svg)
 
 A topologia do VanguardSec AI adota um modelo **agentless** (sem agentes instalados nos servidores monitorados).
 
