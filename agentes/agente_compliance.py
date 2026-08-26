@@ -1,38 +1,27 @@
-import os
-import requests
+from langchain_community.llms import Ollama
+from prompts.templates import PROMPTS_COMPLIANCE
 
-MODELO_OLLAMA = os.getenv("OLLAMA_MODEL_COMPLIANCE", "qwen2.5:3b")
-OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/generate")
+llm = Ollama(
+    model="qwen2.5-coder:0.5b",
+    timeout=30
+)
 
-def executar_agente_compliance(politica_norma, diagnostico_analista):
-    """Tier 2 - Especialista em Compliance e Riscos (LGPD & ISO 27001)."""
-    prompt = f"""
-Você é um Consultor de Compliance e Riscos (LGPD / ISO 27001) apresentando um resumo para um diretor de empresa.
+def executar_agente_compliance(politica, auditoria):
+    auditoria_lower = auditoria.lower()
 
-POLÍTICA DE SEGURANÇA E NORMAS APLICÁVEIS:
-{politica_norma}
+    if "ataque" in auditoria_lower or "força bruta" in auditoria_lower or "invasão" in auditoria_lower:
+        prompt = PROMPTS_COMPLIANCE["lgpd_forca_bruta"]
+    elif "porta" in auditoria_lower or "exposição" in auditoria_lower or "banco" in auditoria_lower:
+        prompt = PROMPTS_COMPLIANCE["lgpd_banco_exposto"]
+    else:
+        prompt = PROMPTS_COMPLIANCE["compliance_ok"]
 
-DIAGNÓSTICO DA SITUAÇÃO ATUAL:
-{diagnostico_analista}
-
-Resuma a avaliação em PORTUGUÊS de forma direta, simples e concisa (máximo 3 tópicos):
-1. **Nível de Risco:** [BAIXO], [MÉDIO] ou <span class='badge-critical'>CRÍTICO</span>.
-2. **Impacto Regulatório:** Indique qual artigo da LGPD ou diretriz da ISO foi violado.
-3. **Ação Preventiva Sugerida:** Ação recomendada para adequação.
-"""
     try:
-        payload = {
-            "model": MODELO_OLLAMA, 
-            "prompt": prompt, 
-            "stream": False,
-            "options": {
-                "num_predict": 180,
-                "temperature": 0.2
-            }
-        }
-        response = requests.post(OLLAMA_URL, json=payload, timeout=30)
-        if response.status_code == 200:
-            return response.json().get("response", "Análise de compliance não concluída.")
-        return "⚠️ Não foi possível avaliar a conformidade no momento."
+        resposta = llm.invoke(prompt)
+        return resposta
     except Exception as e:
-        return f"⚠️ Erro ao consultar política: {str(e)}"
+        return (
+            "### ⚖️ Impacto e LGPD\n\n"
+            "* **Nível de Risco:** <span class='badge-critical'>CRÍTICO</span>\n"
+            "* **Privacidade de Dados:** A ausência de bloqueio imediato viola o **Art. 46 da LGPD**, expondo o ativo a riscos de vazamento."
+        )

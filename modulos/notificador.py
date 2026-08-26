@@ -1,20 +1,42 @@
-import json
-import urllib.request
+import requests
+import os
 
-def enviar_alerta_webhook(webhook_url, host, so, compliance_info):
-    """Envia payload JSON para sistemas externos de monitoramento."""
-    if not webhook_url:
+def enviar_alerta_webhook(url_webhook: str, dados_incidente: dict) -> bool:
+    """
+    Envia um alerta genérico de incidente via Webhook (Discord/Slack/SIEM).
+    """
+    if not url_webhook:
         return False
 
     payload = {
-        "text": f"🚨 *ALERTA VANGUARDSEC AI SOC*\n\n*Target:* `{host}` ({so})\n*Status Compliance:* {compliance_info}"
+        "content": f"🚨 **ALERTA SOC** | Servidor: {dados_incidente.get('host', 'N/A')} | Incidente Detectado!"
     }
 
     try:
-        data = json.dumps(payload).encode('utf-8')
-        req = urllib.request.Request(webhook_url, data=data, headers={'Content-Type': 'application/json'})
-        with urllib.request.urlopen(req) as response:
-            return response.status == 200
+        response = requests.post(url_webhook, json=payload, timeout=10)
+        return response.status_code in [200, 204]
     except Exception as e:
-        print(f"Erro Webhook: {e}")
+        print(f"Erro ao enviar webhook: {e}")
+        return False
+
+
+def enviar_notificacao(mensagem: str, token: str, chat_id: str) -> bool:
+    """
+    Envia uma mensagem de notificação para o Telegram via Bot API.
+    """
+    if not token or not chat_id:
+        return False
+
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    payload = {
+        "chat_id": chat_id,
+        "text": mensagem,
+        "parse_mode": "Markdown"
+    }
+
+    try:
+        response = requests.post(url, json=payload, timeout=10)
+        return response.status_code == 200
+    except Exception as e:
+        print(f"Erro ao enviar notificação Telegram: {e}")
         return False
