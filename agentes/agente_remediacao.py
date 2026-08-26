@@ -1,34 +1,24 @@
-import re
-from langchain_community.llms import Ollama
-from prompts.templates import PROMPTS_REMEDIACAO
+import os
+import dotenv
+from langchain_ollama import OllamaLLM
 
-llm = Ollama(
-    model="qwen2.5-coder:0.5b",
-    timeout=30
-)
+dotenv.load_dotenv()
 
-def executar_agente_remediacao(auditoria, compliance, so_alvo="Ubuntu Linux"):
-    match_ip = re.search(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", auditoria)
-    ip_atacante = match_ip.group(0) if match_ip else "185.220.101.5"
+def executar_agente_remediacao(laudo_auditoria, laudo_compliance, so_alvo="Ubuntu Linux"):
+    modelo_ia = os.getenv("OLLAMA_MODEL", "qwen2.5:1.5b")
+    llm = OllamaLLM(model=modelo_ia, num_predict=120)
+    
+    prompt = f"""
+    Você é um Engenheiro SOAR ({so_alvo}).
+    Gere comandos de terminal para bloquear o invasor com base nestes laudos:
+    {laudo_auditoria}
 
-    if so_alvo == "Ubuntu Linux":
-        prompt = PROMPTS_REMEDIACAO["bloqueio_ufw"].format(ip_atacante=ip_atacante)
-    else:
-        prompt = PROMPTS_REMEDIACAO["bloqueio_windows"].format(ip_atacante=ip_atacante)
+    REGRAS DE RESPOSTA:
+    - Retorne APENAS o bloco de código de terminal com os comandos (ex: ufw, iptables ou netsh).
+    - Não escreva NENHUMA explicação ou introdução antes ou depois dos comandos.
+    """
 
     try:
-        resposta = llm.invoke(prompt)
-        return resposta
+        return llm.invoke(prompt)
     except Exception as e:
-        if so_alvo == "Ubuntu Linux":
-            return (
-                "#!/bin/bash\n"
-                f"sudo ufw deny from {ip_atacante} to any\n"
-                "sudo ufw limit ssh/tcp\n"
-                "sudo ufw reload"
-            )
-        else:
-            return (
-                f'New-NetFirewallRule -DisplayName "Bloqueio Invasor {ip_atacante}" '
-                f'-Direction Inbound -RemoteAddress {ip_atacante} -Action Block'
-            )
+        return "# Error: Não foi possível gerar o playbook SOAR"

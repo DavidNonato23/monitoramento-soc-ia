@@ -1,0 +1,149 @@
+<svg viewBox="0 0 1240 780" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bar1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00ff9d"/>
+      <stop offset="1" stop-color="#00d9ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1240" height="780" fill="#0d0d17"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="230" height="780" fill="#12121f" stroke="#26263f"/>
+  <text x="24" y="46" fill="#00ff9d" font-size="17" font-weight="700">🛡️ VanguardSec AI</text>
+  <text x="24" y="66" fill="#8a8aa3" font-size="11">Global Command SOC</text>
+
+  <g font-size="13" fill="#c9c9d6">
+    <rect x="14" y="96" width="202" height="34" rx="6" fill="#1c2c52"/>
+    <text x="28" y="118" fill="#f5f5f5">📈 Dashboard Executivo</text>
+    <text x="28" y="158">🔬 Esteira Multi-Tier</text>
+    <text x="28" y="198">🌐 Monitoramento Infra</text>
+    <text x="28" y="238">🛡️ Playbooks SOAR</text>
+    <text x="28" y="278">📂 Gestão de Incidentes</text>
+    <text x="28" y="318">📱 Painel ChatOps</text>
+    <text x="28" y="358">📄 Centro de Relatórios</text>
+  </g>
+
+  <rect x="14" y="700" width="202" height="56" rx="8" fill="#16213e" stroke="#00ff9d"/>
+  <circle cx="34" cy="722" r="5" fill="#00ff9d"/>
+  <text x="48" y="726" fill="#f5f5f5" font-size="11.5">Ollama: online</text>
+  <text x="48" y="742" fill="#8a8aa3" font-size="10">qwen2.5:1.5b · on-premise</text>
+
+  <!-- Top bar -->
+  <text x="256" y="40" fill="#f5f5f5" font-size="20" font-weight="700">Dashboard Executivo</text>
+  <text x="256" y="60" fill="#8a8aa3" font-size="12">Telemetria em tempo real · última varredura há 12s</text>
+  <rect x="1000" y="20" width="210" height="30" rx="15" fill="#0f3460" stroke="#e94560"/>
+  <circle cx="1018" cy="35" r="5" fill="#e94560"/>
+  <text x="1030" y="39" fill="#f5f5f5" font-size="11.5">2 incidentes em triagem</text>
+
+  <!-- Metric cards -->
+  <g>
+    <rect x="256" y="86" width="220" height="96" rx="10" fill="#16213e" stroke="#00d9ff"/>
+    <text x="276" y="112" fill="#8a8aa3" font-size="11.5">CPU</text>
+    <text x="276" y="150" fill="#f5f5f5" font-size="30" font-weight="700">37%</text>
+
+    <rect x="492" y="86" width="220" height="96" rx="10" fill="#16213e" stroke="#00d9ff"/>
+    <text x="512" y="112" fill="#8a8aa3" font-size="11.5">RAM</text>
+    <text x="512" y="150" fill="#f5f5f5" font-size="30" font-weight="700">61%</text>
+
+    <rect x="728" y="86" width="220" height="96" rx="10" fill="#16213e" stroke="#00d9ff"/>
+    <text x="748" y="112" fill="#8a8aa3" font-size="11.5">Disco</text>
+    <text x="748" y="150" fill="#f5f5f5" font-size="30" font-weight="700">44%</text>
+
+    <rect x="964" y="86" width="248" height="96" rx="10" fill="#16213e" stroke="#e94560"/>
+    <text x="984" y="112" fill="#8a8aa3" font-size="11.5">Tentativas brute-force (24h)</text>
+    <text x="984" y="150" fill="#ff6b81" font-size="30" font-weight="700">128</text>
+  </g>
+
+  <!-- Chart panel -->
+  <rect x="256" y="200" width="500" height="230" rx="10" fill="#16213e" stroke="#26263f"/>
+  <text x="276" y="226" fill="#f5f5f5" font-size="13" font-weight="700">Histórico de scans — últimas 24h</text>
+  <g>
+    <rect x="290" y="360" width="18" height="40" fill="url(#bar1)"/>
+    <rect x="320" y="330" width="18" height="70" fill="url(#bar1)"/>
+    <rect x="350" y="300" width="18" height="100" fill="url(#bar1)"/>
+    <rect x="380" y="340" width="18" height="60" fill="url(#bar1)"/>
+    <rect x="410" y="280" width="18" height="120" fill="url(#bar1)"/>
+    <rect x="440" y="320" width="18" height="80" fill="url(#bar1)"/>
+    <rect x="470" y="260" width="18" height="140" fill="url(#bar1)"/>
+    <rect x="500" y="310" width="18" height="90" fill="url(#bar1)"/>
+    <rect x="530" y="290" width="18" height="110" fill="url(#bar1)"/>
+    <rect x="560" y="350" width="18" height="50" fill="url(#bar1)"/>
+    <rect x="590" y="270" width="18" height="130" fill="url(#bar1)"/>
+    <rect x="620" y="330" width="18" height="70" fill="url(#bar1)"/>
+    <rect x="650" y="300" width="18" height="100" fill="url(#bar1)"/>
+    <rect x="680" y="345" width="18" height="55" fill="url(#bar1)"/>
+    <rect x="710" y="315" width="18" height="85" fill="url(#bar1)"/>
+  </g>
+  <line x1="276" y1="400" x2="736" y2="400" stroke="#26263f" stroke-width="1"/>
+
+  <!-- AI tiers panel -->
+  <rect x="772" y="200" width="440" height="230" rx="10" fill="#16213e" stroke="#26263f"/>
+  <text x="792" y="226" fill="#f5f5f5" font-size="13" font-weight="700">Esteira Multi-Tier — diagnóstico atual</text>
+
+  <rect x="792" y="242" width="400" height="52" rx="6" fill="#0f3460" stroke="#00ff9d"/>
+  <text x="806" y="262" fill="#00ff9d" font-size="11.5" font-weight="700">Tier 1 · Analista SOC</text>
+  <text x="806" y="280" fill="#c9c9d6" font-size="10.5">3 IPs suspeitos identificados na porta 22</text>
+
+  <rect x="792" y="302" width="400" height="52" rx="6" fill="#0f3460" stroke="#ffd166"/>
+  <text x="806" y="322" fill="#ffd166" font-size="11.5" font-weight="700">Tier 2 · Compliance LGPD</text>
+  <text x="806" y="340" fill="#c9c9d6" font-size="10.5">Risco médio — dados de acesso expostos em log</text>
+
+  <rect x="792" y="362" width="400" height="52" rx="6" fill="#0f3460" stroke="#00d9ff"/>
+  <text x="806" y="382" fill="#00d9ff" font-size="11.5" font-weight="700">Tier 3 · Engenheiro SOAR</text>
+  <text x="806" y="400" fill="#c9c9d6" font-size="10.5">Playbook pronto: sudo ufw deny from 203.0.113.4</text>
+
+  <!-- Incident table -->
+  <rect x="256" y="446" width="620" height="230" rx="10" fill="#16213e" stroke="#26263f"/>
+  <text x="276" y="472" fill="#f5f5f5" font-size="13" font-weight="700">Gestão de Incidentes</text>
+
+  <g font-size="10.5" fill="#8a8aa3">
+    <text x="276" y="498">HOST</text>
+    <text x="446" y="498">TIPO</text>
+    <text x="596" y="498">STATUS</text>
+    <text x="736" y="498">AÇÃO</text>
+  </g>
+  <line x1="276" y1="506" x2="856" y2="506" stroke="#26263f"/>
+
+  <g font-size="11.5" fill="#f5f5f5">
+    <text x="276" y="530">srv-linux-01</text>
+    <text x="446" y="530">SSH Brute-force</text>
+    <text x="736" y="530">Bloquear IP</text>
+    <rect x="596" y="516" width="90" height="20" rx="10" fill="#e94560" opacity="0.25" stroke="#e94560"/>
+    <text x="608" y="530" fill="#ff6b81" font-size="10.5">Em triagem</text>
+
+    <text x="276" y="566">srv-win-02</text>
+    <text x="446" y="566">Porta exposta</text>
+    <text x="736" y="566">Revisar regra</text>
+    <rect x="596" y="552" width="90" height="20" rx="10" fill="#ffd166" opacity="0.25" stroke="#ffd166"/>
+    <text x="608" y="566" fill="#ffd166" font-size="10.5">Monitorando</text>
+
+    <text x="276" y="602">host-local</text>
+    <text x="446" y="602">Processo suspeito</text>
+    <text x="736" y="602">Encerrado</text>
+    <rect x="596" y="588" width="90" height="20" rx="10" fill="#00ff9d" opacity="0.25" stroke="#00ff9d"/>
+    <text x="608" y="602" fill="#00ff9d" font-size="10.5">Resolvido</text>
+
+    <text x="276" y="638">srv-linux-01</text>
+    <text x="446" y="638">Login fora de horário</text>
+    <text x="736" y="638">Notificado</text>
+    <rect x="596" y="624" width="90" height="20" rx="10" fill="#00ff9d" opacity="0.25" stroke="#00ff9d"/>
+    <text x="608" y="638" fill="#00ff9d" font-size="10.5">Resolvido</text>
+  </g>
+
+  <!-- Kill switch panel -->
+  <rect x="892" y="446" width="320" height="230" rx="10" fill="#16213e" stroke="#e94560"/>
+  <text x="912" y="472" fill="#f5f5f5" font-size="13" font-weight="700">🛡️ Kill Switch</text>
+
+  <rect x="912" y="490" width="280" height="40" rx="8" fill="#e94560"/>
+  <text x="932" y="515" fill="#0d0d17" font-size="12" font-weight="700">Bloquear IP no UFW agora</text>
+
+  <rect x="912" y="540" width="280" height="40" rx="8" fill="#1c2c52" stroke="#00d9ff"/>
+  <text x="932" y="565" fill="#f5f5f5" font-size="12" font-weight="700">Reiniciar serviço SSH</text>
+
+  <rect x="912" y="590" width="280" height="40" rx="8" fill="#1c2c52" stroke="#a06cd5"/>
+  <text x="932" y="615" fill="#f5f5f5" font-size="12" font-weight="700">Enviar alerta ao Telegram</text>
+
+  <text x="912" y="656" fill="#8a8aa3" font-size="10">Playbook gerado por agente_remediacao.py</text>
+  <text x="912" y="670" fill="#8a8aa3" font-size="10">e executado via SSH/WinRM na infraestrutura alvo.</text>
+</svg>
