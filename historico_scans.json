@@ -328,5 +328,248 @@
         "compliance": "* **Nível de Risco:** CRÍTICO\n* **Impacto LGPD:** Violação do Art. 48 e Art. 46 (Exposição de dados sensíveis).\n* **Ação Exigida:** Fechamento da porta externa e uso obrigatório de VPN.",
         "remediacao": "Ação recomendada para conter o invasor 185.220.101.5:\nAção: Bloquear UFW\nComando: sudo ufw deny from 185.220.101.5 to any\n\nEste comando cria uma nova entrada na regra do firewall para bloquear todas as conexões entrantes de 185.220.101.5 para qualquer IP público. Isso evita que a conexão possa ser aceita de forma ilegal, evitando que o invasor possa acessar qualquer dispositivo ou serviço do seu redor.\n\nSe o usuário que executou este comando não estiver autenticado como root, você pode precisar fornecer a senha para adicionar a regra.",
         "caminho_pdf": "Relatorio_Executivo_VanguardSec.pdf"
+    },
+    {
+        "data": "2026-08-26 18:35:41",
+        "host": "192.168.15.10",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "logins_falhos": "5",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "info_rede": {
+            "ip": "192.168.15.10",
+            "tipo_rede": "Privado (Rede Interna)",
+            "nivel_risco_origem": "Médio",
+            "proprietario_vinculado": "Desconhecido / Externo"
+        },
+        "analise_trafego_ia": "⚠️ Erro no processamento dinâmico do Agente de Tráfego: model 'qwen2.5:1.5b' not found (status code: 404)",
+        "auditoria": "* **Status:** ATAQUE EM ANDAMENTO\n* **Ameaça:** Força Bruta via SSH detectada do IP 127.0.0.54.\n* **Risco:** Alto risco de comprometimento de credenciais.",
+        "compliance": "* **Nível de Risco:** CRÍTICO\n* **Impacto LGPD:** Violação do Art. 46 (Falta de medidas técnicas para proteger dados pessoais).\n* **Ação Exigida:** Bloqueio imediato da origem.",
+        "remediacao": "Ação recomendada para conter o invasor 127.0.0.54:\n\nAção: BLOQUEAR_UFW\nComando: sudo ufw deny from 127.0.0.54 to any",
+        "caminho_pdf": "Relatorio_Executivo_VanguardSec.pdf"
+    },
+    {
+        "data": "2026-08-26 18:48:47",
+        "host": "192.168.15.10",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "logins_falhos": "5",
+            "conexoes_estab": "0",
+            "portas_abertas": "4"
+        },
+        "info_rede": {
+            "ip": "192.168.15.10",
+            "tipo_rede": "Privado (Rede Interna)",
+            "nivel_risco_origem": "Médio",
+            "proprietario_vinculado": "Desconhecido / Externo"
+        },
+        "analise_trafego_ia": "⚠️ Erro no Agente de Tráfego: model 'qwen2.5:1.5b' not found (status code: 404)",
+        "auditoria": "### 🚨 Diagnóstico de Incidentes\n\n* **Tentativa de Invasão Identificada:** O IP `127.0.0.54` realizou tentativas invasivas de acesso no servidor.\n* **Exposição de Porta:** Anomalia detectada na superfície de acesso SSH/DB.",
+        "compliance": "### ⚖️ Impacto e LGPD\n\n* **Nível de Risco:** <span class='badge-critical'>CRÍTICO</span>\n* **Privacidade de Dados:** A ausência de bloqueio imediato viola o **Art. 46 da LGPD**, expondo o ativo a riscos de vazamento.",
+        "remediacao": "#!/bin/bash\nsudo ufw deny from 127.0.0.54 to any\nsudo ufw limit ssh/tcp\nsudo ufw reload",
+        "caminho_pdf": "Relatorio_Executivo_VanguardSec.pdf"
+    },
+    {
+        "data": "2026-08-26 19:24:07",
+        "host": "192.168.15.10",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "logins_falhos": "5",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "info_rede": {
+            "ip": "192.168.15.10",
+            "tipo_rede": "Privado (Rede Interna)",
+            "nivel_risco_origem": "Médio",
+            "proprietario_vinculado": "Cliente Não Cadastrado"
+        },
+        "analise_trafego_ia": "- Tráfego de origem privado e não-cadastrado, com risco médio e senso de exposição baixo.\n- Infraestrutura aberta em 4 portas, com 5 tentativas falhas de acesso.",
+        "auditoria": "1. **Riscos Críticos**:\n   - **Logs de Acesso Inicial**: Inicialmente, vários registros de login falhos aparecem, indicando tentativas de acesso sem sucesso.\n   - **Rejeição de Conexões**: Conexões estão sendo rejeitadas, especialmente por um IP inválido.\n   - **Operações Inacessíveis**: Acesso a portas ssh é bloqueado ou rejeitado, tornando sistemas inacessíveis para usuários autorizados.",
+        "compliance": "### Laudo Analisado\n\n**Nível de Risco: Crítico**\n\n**Violações:**\n\n- **Risco de Conexões Rejeitadas (A.8.2.1)**: Violação do artigo **Art. 46** da LGPD, que se refere a medidas de segurança para proteger acesso não autorizado a portas de sistema.\n- **Risco de Acesso Inacessível a Sistemas (A.12.6.1)**: Violação do artigo **Art. 46** da LGPD, que se refere a proteção de portas de bancos de dados que ficam expostas sem firewall.\n\n### Respostas",
+        "remediacao": "```bash\nsudo ufw deny from any to any via ssh\nsudo ufw deny from any to any via http\nsudo ufw deny from any to any via https\nsudo ufw deny from any to any via ping\nsudo ufw deny from any to any via anyport\n```",
+        "caminho_pdf": "Relatorio_Executivo_VanguardSec.pdf"
+    },
+    {
+        "data": "2026-08-26 19:25:46",
+        "host": "192.168.15.10",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "logins_falhos": "5",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "info_rede": {
+            "ip": "192.168.15.10",
+            "tipo_rede": "Privado (Rede Interna)",
+            "nivel_risco_origem": "Médio",
+            "proprietario_vinculado": "Cliente Não Cadastrado"
+        },
+        "analise_trafego_ia": "Origem do tráfego: Cliente Não Cadastrado.\nExposição: Extremamente Grave, com 4 portas abertas e 5 tentativas falhas de acesso.",
+        "auditoria": "1. **Redirecionamento de Serviços**:\n   - Logs de sessões inativas e tentativas de acesso inválidas não são monitorados.\n   - Este comportamento pode indicar vazamento de credenciais ou ataques passivos.\n\n2. **Redução de Segurança**:\n   - Aplicação de políticas restritivas desnecessárias para interfaces abertas.\n   - Aumento do risco de penetração através de vulnerabilidades conhecidas.\n\n3. **Fraude de Conexões**:\n   - Exclusão automática de sessões inativas pode ocultar fraudes de acesso.\n   - Isso pode levar a complicações administrativas desnecess",
+        "compliance": "**Nível de Risco: Baixo** (Comprovado)\n\n**Normas Violadas:**\n\n1. **Política ISO/IEC 17021**: Não aplicável.\n   \n2. **Política LGPD Art. 46**: **Não aplicável**.\n\n3. **Controle A.8.2.1**: **Não aplicável**.\n\n4. **Controle A.12.6.1**: **Não aplicável**.\n\n**Comprovada Violação:**\n\n1. **Redirecionamento de Serviços**: Logs de sessões inativas e tentativas de acesso inválidas não são monitorados. Este comportamento pode indicar vazamento de cred",
+        "remediacao": "```bash\nsudo ufw deny all\nsudo iptables -P INPUT DROP\nsudo iptables -P FORWARD DROP\nsudo iptables -P OUTPUT DROP\nsudo netfilter-persistent save\n```\n\n```bash\nsudo ufw enable\n```",
+        "caminho_pdf": "Relatorio_Executivo_VanguardSec.pdf"
+    },
+    {
+        "data": "2026-08-26 19:28:50",
+        "host": "192.168.15.10",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "logins_falhos": "5",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "info_rede": {
+            "ip": "192.168.15.10",
+            "tipo_rede": "Privado (Rede Interna)",
+            "nivel_risco_origem": "Médio",
+            "proprietario_vinculado": "Cliente Não Cadastrado"
+        },
+        "analise_trafego_ia": "### Origem do Tráfego:\n- **Cliente/Proprietário Vinculado:** Cliente Não Cadastrado\n\n### Severidade da Exposição:\n- **Superfície Exposta (Portas Abertas):** 4\n- **Tentativas Falhas de Acesso:** 5\n- **Nível de Risco do Segmento:** Médio\n- **Conexões Ativas Registradas:** 0\n- **Classificação da Origem:** Privado (Rede Interna)",
+        "auditoria": "- **Risco crítico:** Logs de conexões SSH não são atualizados.\n\n- **Risco crítico:** Sessões SSH são mantidas sem encerrar, o que pode ser desnecessário e potencialmente perigoso.\n\n- **Risco crítico:** Logs de autenticação SSH estão ausentes, o que impede a verificação de tentativas de acesso não autorizadas.",
+        "compliance": "**Nível de Risco:** Crítico\n\n**Artigos/Normas Violadas:**\n\n- **Controle A.8.2.1: Toda senha de acesso administrativo deve ser forte e protegida contra força bruta.**  \n- **LGPD Art. 46: Adotar medidas de segurança técnicas para proteger dados pessoais de acessos não autorizados.**\n\n**Resolução:**\n\n1. **Implemente políticas rigorosas para o gerenciamento das senhas de acesso administrativo.** \n   - Inclua um plano de gerenciamento seguro de senhas que inclui a definição de políticas robustas, a validação automática de",
+        "remediacao": "```bash\nsudo ufw block\nsudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT\nsudo iptables -A OUTPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT\nsudo iptables -A FORWARD -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT\nsudo iptables -A INPUT -p tcp --dport 22 -j DROP\n```",
+        "caminho_grafico": "relatorios\\grafico_volumetria.png"
+    },
+    {
+        "data": "2026-08-26 19:32:21",
+        "host": "192.168.15.10",
+        "so": "Ubuntu Linux",
+        "metricas": {
+            "logins_falhos": "5",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "info_rede": {
+            "ip": "192.168.15.10",
+            "tipo_rede": "Privado (Rede Interna)",
+            "nivel_risco_origem": "Médio",
+            "proprietario_vinculado": "Cliente Não Cadastrado"
+        },
+        "analise_trafego_ia": "Tráfego proveniente de uma rede privada interna. Exposição severa, com 4 portas abertas e 5 tentativas falhas de acesso.",
+        "auditoria": "1. **Perda de conexões SSH**: Riscos graves: Perda de conexões SSH compromete a segurança e o desempenho do servidor.\n2. **Sessões inativas removidas**: Riscos graves: Remoção de sessões inativas pode resultar em privilégios não-suspeitos sendo liberados.\n3. **Logs de autenticação falhos**: Riscos graves: Logs de autenticação falhos indicam intrusos comprometendo a integridade dos dados.",
+        "compliance": "**Regra de Resposta (Muito Importante):**\n\n**Nível de Risco: Crítico**\n\n**Artigos/Normas Violadas:**\n- **ISO/IEC 17021: Controle A.8.2.1 - Senhas de acesso administrativo: A senha deve ser forte e protegida contra força bruta.**\n- **LGPD Art. 46 - Proteção dos Dados: Adotar medidas de segurança técnicas para proteger os dados, incluindo acesso não autorizado.**\n\n**Explicação:**\n- **Nível de Risco Crítico**: A política de segurança não se enquadra em nenhuma das norm",
+        "remediacao": "```bash\n# Bloqueio de conexões SSH\nsudo ufw block ssh\n\n# Bloqueio de sessões inativas\nsudo netfilter-persistent flush\nsudo netfilter-persistent save\n\n# Removendo sessões inativas\nsudo iptables -F\nsudo iptables -X\nsudo iptables -t nat -F\nsudo iptables -t nat -X\nsudo iptables -t mangle -F\nsudo iptables -t mangle -X\n\n# Bloqueio de logs de autenticação falhos\nsudo ufw logging off\n",
+        "caminho_grafico": "relatorios\\grafico_volumetria.png"
+    },
+    {
+        "data": "2026-08-26 19:37:32",
+        "host": "192.168.15.10",
+        "so": "Ubuntu Linux",
+        "mttd": 48.06,
+        "metricas": {
+            "logins_falhos": "5",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "info_rede": {
+            "ip": "192.168.15.10",
+            "tipo_rede": "Privado (Rede Interna)",
+            "nivel_risco_origem": "Médio",
+            "proprietario_vinculado": "Cliente Não Cadastrado"
+        },
+        "analise_trafego_ia": "O tráfego é de origem privada (Rede Interna) e está sujeito a exposição à superfície externa, com 4 portas abertas e 5 tentativas de acesso falhas.",
+        "auditoria": "**Riscos Críticos:**\n\n1. **Portas Abertas a Situações Maliciosas**:\n   - Netid: 53\n     - Porta 53 é aberta para tráfego DNS.\n     - Riscos: Perigo de ser atacado por DNS-DoS ou de ser utilizado para distribuir malware DNS.\n\n2. **Conexões SSH Falhas (5 Falhou)**\n   - Riscos: Problemas de autenticação SSH (Falha de login) podem levar a exposição do sistema.\n     - Possível causa: Falha na validação de senha ou uso de métodos de acesso sem autenticação.\n\n3. **Logs",
+        "compliance": "**Riscos Críticos:**\n\n1. **Portas Abertas a Situações Maliciosas**\n   - **Risco**: **Crítico**\n   - **Riscos**: Netid: 53\n     - **Porta 53 é aberta para tráfego DNS**.\n     - **Riscos**: Perigo de ser atacado por DNS-DoS ou de ser utilizado para distribuir malware DNS.\n\n2. **Conexões SSH Falhas (5 Falhou)**\n   - **Risco**: **Alto**\n   - **Riscos**: Problemas de autenticação SSH (Falha de login) podem levar a exposição do sistema.\n",
+        "remediacao": "```bash\n# Bloqueio de conexões SSH falhas\n\n# Certifique-se de que o firewall está configurado para permitir conexões\nsudo ufw allow ssh/tcp\n\n# Bloqueio de conexões SSH falhas\nsudo ufw block ssh/tcp\n\n# Reinicialize o firewall\nsudo ufw reload\n\n# Atualize os logs\nsudo journalctl --lines=1000\n```",
+        "caminho_grafico": "relatorios\\grafico_volumetria.png"
+    },
+    {
+        "data": "2026-08-26 19:46:44",
+        "host": "192.168.15.10",
+        "so": "Ubuntu Linux",
+        "mttd": 46.09,
+        "metricas": {
+            "logins_falhos": "5",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "info_rede": {
+            "ip": "192.168.15.10",
+            "tipo_rede": "Privado (Rede Interna)",
+            "nivel_risco_origem": "Médio",
+            "proprietario_vinculado": "Cliente Não Cadastrado"
+        },
+        "analise_trafego_ia": "- Tráfego de rede de IP `192.168.15.10` na rede privada, classificado como médio risco.\n- Exposição significativa (4 portas abertas) e falhas de acesso notáveis (5 tentativas falhas).",
+        "auditoria": "1. **Redes Internas (192.168.15.x)**: Possível acesso sem autorização.\n2. **Logins Falhos**: Usuarios não estão conseguindo efetivamente se logar.\n3. **Sessões Expirando**: Conexões não são sendo fechadas corretamente.",
+        "compliance": "**Nível de Risco: Médio**\n\n**Violações:**\n- **LGPD Art. 46**: Adotar medidas de segurança técnicas para proteger dados pessoais de acessos não autorizados.\n- **Controle A.12.6.1**: Portas de bancos de dados não devem ficar expostas publicamente sem firewall.",
+        "remediacao": "```bash\n# Bloquear acesso sem autorização em Redes Internas (192.168.15.x)\nsudo ufw deny 192.168.15.0/24\n\n# Ativar ação para bloquear sessões não fechadas de conexões\nsudo systemctl enable sshd\n\n# Atualizar firewall para evitar tentativas de login falhados\nsudo ufw disable\nsudo ufw enable\n\n# Ativar firewall automaticamente durante o boot\nsudo ufw logging on\n```",
+        "caminho_grafico": "relatorios\\grafico_volumetria.png"
+    },
+    {
+        "data": "2026-08-26 20:15:48",
+        "host": "192.168.15.10",
+        "so": "Ubuntu Linux",
+        "mttd": 51.32,
+        "metricas": {
+            "logins_falhos": "5",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "info_rede": {
+            "ip": "192.168.15.10",
+            "tipo_rede": "Privado (Rede Interna)",
+            "nivel_risco_origem": "Médio",
+            "proprietario_vinculado": "Cliente Não Cadastrado"
+        },
+        "analise_trafego_ia": "**Origen do Tráfego:** Tráfico de origem privada (rede interna).\n\n**Severidade da Exposição:** Superfície exposta (portas abertas: 4) e tentativas falhas de acesso: 5, indicando uma situação de alto risco de exposição na rede.",
+        "auditoria": "**Riscos Críticos Identificados:**\n\n1. **Conexões Sinais de Desligamento:**\n   - Vários sessões SSH estão em estado de desligamento (`session closed for user`).\n   - Esta indica problemas de segurança e manutenção, podendo levar a informações sensíveis sendo compartilhadas.\n\n2. **Portas Abertas / Listening:**\n   - Existem portas abertas para serviços com vulnerabilidades conhecidas.\n   - Estas devem ser verificadas e bloqueadas ou atualizadas para mitigar riscos de ataque.\n\n3. **Logs do Auth Log:**\n   - Há tentativa de login falha.\n   - Is",
+        "compliance": "**Nível de Risco: Crítico**\n\n**Violação de Norma:**\n\n**Controle A.8.2.1: Toda senha de acesso administrativo deve ser forte e protegida contra força bruta.**\n- Esta norma foi **violada**.\n- Há **tentativas de login falha** que indicam riscos de acesso não autorizado.\n\n**Controle A.12.6.1: Portas de bancos de dados não devem ficar expostas publicamente sem firewall.**\n- Esta norma foi **violada**.\n- Há **portas abertas / listening** para serviços com vulnerabilidades conhecidas, indicando riscos de",
+        "remediacao": "```bash\n# Bloquear conexões com sessão em estado de desligamento\nsudo ufw enable\nsudo ufw rule add deny tcp 22 from any to any\n\n# Bloquear portas abertas para serviços com vulnerabilidades\nsudo ufw rule add deny tcp 2222 to any\nsudo ufw rule add deny tcp 2223 to any\nsudo ufw rule add deny tcp 2224 to any\nsudo ufw rule add deny tcp 2225 to any\nsudo ufw rule add deny"
+    },
+    {
+        "data": "2026-08-26 20:20:21",
+        "host": "192.168.15.10",
+        "so": "Ubuntu Linux",
+        "mttd": 51.3,
+        "metricas": {
+            "logins_falhos": "8",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "info_rede": {
+            "ip": "192.168.15.10",
+            "tipo_rede": "Privado (Rede Interna)",
+            "nivel_risco_origem": "Médio",
+            "proprietario_vinculado": "Cliente Não Cadastrado"
+        },
+        "analise_trafego_ia": "Tráfego é proveniente de uma rede privada, indicando uma possível invasão ou tentativa de acesso não autorizado. Esta exposição está muito aberta com 4 portas abertas e 8 tentativas falhas de acesso, indicando alto risco de ataque.",
+        "auditoria": "1. **Riscos Críticos:**\n   - **Portas abertas sem proteção:** Netid \"udp\" com portas abertas em `0.0.0.0:*` e `127.0.0.1:323`, não configuradas.\n   - **Logins falhos:** 8 tentativas de login falhas registradas.\n   - **Portas sem firewall:** Portas TCP/UDP abertas (22, 53, 546) sem firewall ou proteção.\n   - **Logs de auth log:** Existem registros de tentativas de login falhas, indicando vulnerabilidade.\n   - **Sessões SSH:** Estabe",
+        "compliance": "### **LAUDO TÉCNICO**  \n### **1. Riscos Críticos:**\n\n- **Portas abertas sem proteção:** Netid \"udp\" com portas abertas em `0.0.0.0:*` e `127.0.0.1:323`, não configuradas.\n\n### **Controle A.8.2.1:**  \n**Nível de Risco: Crítico**  \n**Artigo/Norma Violada:** LGPD Art. 46  \n**Justificativa:** As portas abertas sem proteção são um risco crítico conforme solicitado na LGPD Art. 46.  \n**Re",
+        "remediacao": "```bash\nsudo ufw deny 22/tcp  # Deny SSH port (22) on TCP\nsudo ufw deny 53/udp  # Deny DNS port (53) on UDP\nsudo ufw deny 546/udp # Deny LDAP port (546) on UDP\nsudo ufw deny 53/udp  # Repeat for DNS port (53) on UDP\nsudo ufw deny 53/tcp  # Deny DNS port (53) on TCP\nsudo ufw allow 323"
+    },
+    {
+        "data": "2026-08-26 20:30:17",
+        "host": "192.168.15.10",
+        "so": "Ubuntu Linux",
+        "mttd": 41.94,
+        "metricas": {
+            "logins_falhos": "8",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "info_rede": {
+            "ip": "192.168.15.10",
+            "tipo_rede": "Privado (Rede Interna)",
+            "nivel_risco_origem": "Médio",
+            "proprietario_vinculado": "Cliente Não Cadastrado"
+        },
+        "analise_trafego_ia": "Origem: Tráfego proveniente de um IP privado (192.168.15.10) na rede interna. Exposição: Infinitamente exposta.\n\nSeja EXTREMAMENTE CONCISO e DIRETO.",
+        "auditoria": "1. **Risco CRítico:** [Sinal de quebra no sistema de firewall SSH](sshd session closed)\n\n2. **Risco CRítico:** [Excesso de conexões SSH](total de logs SSH)\n\n3. **Risco CRítico:** [Sessão SSH inválida ou temporária](ssh session closed)",
+        "compliance": "**Laudo Tecnico e Políticas**\n\n1. **Risco CRítico:** [Sinal de quebra no sistema de firewall SSH](sshd session closed)\n   - **Nível de Risco:** Crítico\n   - **Norma Violada:** LGPD Art. 46\n   - **Resposta:** Verifique e forneça uma solução para garantir a segurança do SSH. Isso pode incluir atualizações na política de acesso SSH, implementação de autenticação multifator, ou adoção de uma política de bloqueio de tentativas de força bruta. Além disso, recomendar a utilização de uma política de firewall que mantenha o SSH seguro.\n\n2",
+        "remediacao": "```bash\nsudo ufw block\nsudo iptables -A INPUT -m state --state NEW,RELATED,ESTABLISHED -j DROP\nsudo netsh iptable save\n```"
     }
 ]

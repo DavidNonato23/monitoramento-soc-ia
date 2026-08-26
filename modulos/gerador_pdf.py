@@ -1,114 +1,150 @@
 import os
 from datetime import datetime
 from reportlab.lib.pagesizes import letter
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
+from reportlab.platypus import (
+    SimpleDocTemplate, Paragraph, Spacer, Image, Table, TableStyle, HRFlowable
+)
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 
-def gerar_relatorio_pdf(dados_scan, arquivo_saida="Relatorio_Executivo_VanguardSec.pdf"):
+PASTA_RELATORIOS = "relatorios"
+
+def gerar_relatorio_pdf(scan_data):
+    """
+    Gera um relatório executivo em PDF unificado contendo métricas, 
+    o gráfico do dashboard embutido e os pareceres das IAs.
+    """
+    if not os.path.exists(PASTA_RELATORIOS):
+        os.makedirs(PASTA_RELATORIOS, exist_ok=True)
+
+    timestamp_arquivo = datetime.now().strftime("%Y%m%d_%H%M%S")
+    host_limpo = scan_data.get('host', 'ativo').replace('.', '_')
+    nome_pdf = f"Relatorio_SOC_{host_limpo}_{timestamp_arquivo}.pdf"
+    caminho_pdf = os.path.join(PASTA_RELATORIOS, nome_pdf)
+
     doc = SimpleDocTemplate(
-        arquivo_saida,
+        caminho_pdf,
         pagesize=letter,
-        rightMargin=36, leftMargin=36, topMargin=36, bottomMargin=36
-    )
-    
-    styles = getSampleStyleSheet()
-    
-    # Estilos Personalizados VanguardSec
-    title_style = ParagraphStyle(
-        'DocTitle',
-        parent=styles['Heading1'],
-        fontName='Helvetica-Bold',
-        fontSize=20,
-        leading=24,
-        textColor=colors.HexColor("#1A2B4C")
-    )
-    
-    subtitle_style = ParagraphStyle(
-        'DocSubTitle',
-        parent=styles['Normal'],
-        fontName='Helvetica',
-        fontSize=10,
-        leading=12,
-        textColor=colors.HexColor("#555555")
-    )
-    
-    section_style = ParagraphStyle(
-        'SectionTitle',
-        parent=styles['Heading2'],
-        fontName='Helvetica-Bold',
-        fontSize=13,
-        leading=16,
-        textColor=colors.HexColor("#1A2B4C"),
-        spaceBefore=12,
-        spaceAfter=6
-    )
-    
-    body_style = ParagraphStyle(
-        'BodyTextCustom',
-        parent=styles['Normal'],
-        fontName='Helvetica',
-        fontSize=9.5,
-        leading=13,
-        textColor=colors.HexColor("#2C3E50")
+        rightMargin=36,
+        leftMargin=36,
+        topMargin=36,
+        bottomMargin=36
     )
 
     story = []
-
-    # Cabeçalho Comercial
-    story.append(Paragraph("🛡️ VanguardSec AI — Centro de Operações de Segurança (SOC)", title_style))
-    story.append(Paragraph(f"<b>Ativo Monitorado:</b> {dados_scan.get('host', '192.168.15.3')} | <b>Data de Emissão:</b> {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}", subtitle_style))
-    story.append(Spacer(1, 10))
-    story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#0056B3"), spaceAfter=15))
-
-    # Resumo Executivo
-    story.append(Paragraph("1. Resumo Executivo de Mitigação", section_style))
-    resumo_texto = (
-        "Este relatório atesta que o ativo em questão está sob monitoramento contínuo da arquitetura VanguardSec SOAR. "
-        "A análise de telemetria opera com Inteligência Artificial 100% local (Zero-Cloud Data Leakage), garantindo a "
-        "privacidade absoluta dos dados corporativos e ação imediata de contenção contra ataques cibernéticos."
-    )
-    story.append(Paragraph(resumo_texto, body_style))
-    story.append(Spacer(1, 12))
-
-    # Tabela Executiva de Incidentes
-    story.append(Paragraph("2. Métricas de Ameaças & Auditoria de Rede", section_style))
+    styles = getSampleStyleSheet()
     
-    metricas_data = [
-        [Paragraph("<b>Indicador de Segurança</b>", body_style), Paragraph("<b>Resultado Obtido</b>", body_style), Paragraph("<b>Status de Risco</b>", body_style)],
-        [Paragraph("Tentativas Brute Force SSH", body_style), Paragraph("142 Bloqueadas", body_style), Paragraph("<font color='green'><b>MITIGADO</b></font>", body_style)],
-        [Paragraph("Regras de Firewall (UFW/IPTables)", body_style), Paragraph("Ativas / Zero-Trust", body_style), Paragraph("<font color='green'><b>PROTEGIDO</b></font>", body_style)],
-        [Paragraph("Varredura de Portas Abertas", body_style), Paragraph("Apenas SSH (22)", body_style), Paragraph("<font color='green'><b>SEGURO</b></font>", body_style)],
-        [Paragraph("Privacidade dos Dados de Telemetria", body_style), Paragraph("Processamento On-Premise", body_style), Paragraph("<font color='green'><b>CONFORME</b></font>", body_style)]
+    style_titulo = ParagraphStyle(
+        'TituloDoc',
+        parent=styles['Heading1'],
+        fontName='Helvetica-Bold',
+        fontSize=18,
+        leading=22,
+        textColor=colors.HexColor("#1E293B")
+    )
+    
+    style_subtitulo = ParagraphStyle(
+        'SubtituloDoc',
+        parent=styles['Normal'],
+        fontName='Helvetica',
+        fontSize=9,
+        leading=12,
+        textColor=colors.HexColor("#64748B")
+    )
+
+    style_secao = ParagraphStyle(
+        'SecaoDoc',
+        parent=styles['Heading2'],
+        fontName='Helvetica-Bold',
+        fontSize=12,
+        leading=16,
+        textColor=colors.HexColor("#2563EB"),
+        spaceBefore=10,
+        spaceAfter=6
+    )
+
+    style_body = ParagraphStyle(
+        'BodyDoc',
+        parent=styles['BodyText'],
+        fontName='Helvetica',
+        fontSize=9,
+        leading=13,
+        textColor=colors.HexColor("#334155")
+    )
+
+    style_code = ParagraphStyle(
+        'CodeDoc',
+        parent=styles['Code'],
+        fontName='Courier',
+        fontSize=8,
+        leading=11,
+        textColor=colors.HexColor("#0F172A"),
+        backColor=colors.HexColor("#F8FAFC"),
+        borderColor=colors.HexColor("#E2E8F0"),
+        borderWidth=1,
+        borderPadding=6,
+        spaceBefore=4,
+        spaceAfter=4
+    )
+
+    # Cabeçalho
+    story.append(Paragraph("🛡️ VanguardSec AI — Relatório Executivo de Segurança", style_titulo))
+    story.append(Paragraph(f"Ativo Monitorado: <b>{scan_data.get('host', 'N/A')}</b> ({scan_data.get('so', 'Linux')}) | Gerado em: {scan_data.get('data', 'N/A')}", style_subtitulo))
+    story.append(Spacer(1, 10))
+    story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor("#E2E8F0"), spaceAfter=12))
+
+    # Tabela de Métricas
+    m_raw = scan_data.get("metricas", {})
+    info_r = scan_data.get("info_rede", {})
+
+    dados_tabela = [
+        ["Classificação de Rede", "Nível de Risco", "Logins Falhos (24h)", "Conexões TCP", "Portas Expostas"],
+        [
+            info_r.get("tipo_rede", "N/A"),
+            info_r.get("nivel_risco_origem", "Baixo"),
+            str(m_raw.get("logins_falhos", "0")),
+            str(m_raw.get("conexoes_estab", "0")),
+            str(m_raw.get("portas_abertas", "0"))
+        ]
     ]
 
-    tabela_metricas = Table(metricas_data, colWidths=[200, 180, 140])
-    tabela_metricas.setStyle(TableStyle([
-        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor("#F0F4F8")),
-        ('TEXTCOLOR', (0, 0), (-1, 0), colors.HexColor("#1A2B4C")),
-        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
-        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+    tabela_kpi = Table(dados_tabela, colWidths=[110, 90, 110, 95, 95])
+    tabela_kpi.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor("#0F172A")),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.HexColor("#F8FAFC")),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('FONTSIZE', (0, 0), (-1, -1), 8),
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+        ('BACKGROUND', (0, 1), (-1, 1), colors.HexColor("#F1F5F9")),
+        ('TEXTCOLOR', (0, 1), (-1, 1), colors.HexColor("#1E293B")),
         ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
         ('TOPPADDING', (0, 0), (-1, -1), 6),
         ('GRID', (0, 0), (-1, -1), 0.5, colors.HexColor("#CBD5E1")),
     ]))
-    story.append(tabela_metricas)
-    story.append(Spacer(1, 15))
+    
+    story.append(tabela_kpi)
+    story.append(Spacer(1, 14))
 
-    # Conformidade LGPD (Art. 46 & 48)
-    story.append(Paragraph("3. Parecer Jurídico de Conformidade LGPD", section_style))
-    lgpd_texto = (
-        "<b>Artigo 46:</b> O ambiente implementa medidas de segurança, técnicas e administrativas aptas a proteger "
-        "os dados pessoais de acessos não autorizados e de situações acidentais ou ilícitas.<br/>"
-        "<b>Artigo 48:</b> Os mecanismos de bloqueio automático reduzem significativamente a probabilidade de vazamento "
-        "de dados e evitam sanções administrativas junto à ANPD."
-    )
-    story.append(Paragraph(lgpd_texto, body_style))
-    story.append(Spacer(1, 20))
+    # Gráfico Dashboard embutido (Verificação de segurança da imagem)
+    caminho_grafico = scan_data.get("caminho_grafico")
+    if caminho_grafico and os.path.exists(caminho_grafico):
+        story.append(Paragraph("<b>📈 Telemetria de Volumetria e Eventos em Tempo Real</b>", style_secao))
+        story.append(Spacer(1, 4))
+        story.append(Image(caminho_grafico, width=520, height=180))
+        story.append(Spacer(1, 12))
 
-    # Assinatura de Validação
-    story.append(HRFlowable(width="100%", thickness=0.5, color=colors.HexColor("#CBD5E1"), spaceAfter=10))
-    story.append(Paragraph("<i>Relatório gerado automaticamente por VanguardSec AI SOAR Agent — Autenticação de Auditoria Interna.</i>", subtitle_style))
+    # Pareceres IA
+    story.append(Paragraph("<b>🌐 Diagnóstico de Tráfego de Rede (NTA)</b>", style_secao))
+    story.append(Paragraph(scan_data.get("analise_trafego_ia", "Nenhum dado registrado.").replace("\n", "<br/>"), style_body))
+    story.append(Spacer(1, 8))
+
+    story.append(Paragraph("<b>⚖️ Aderência e Risco de Compliance (LGPD / ISO 27001)</b>", style_secao))
+    story.append(Paragraph(scan_data.get("compliance", "Nenhum dado registrado.").replace("\n", "<br/>"), style_body))
+    story.append(Spacer(1, 8))
+
+    story.append(Paragraph("<b>🛠️ Playbook Automático de Remediação (SOAR)</b>", style_secao))
+    script_rem = scan_data.get("remediacao", "# Nenhum playbook gerado").replace("\n", "<br/>")
+    story.append(Paragraph(f"<code>{script_rem}</code>", style_code))
 
     doc.build(story)
-    return arquivo_saida
+    return caminho_pdf
