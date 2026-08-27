@@ -232,7 +232,6 @@ Laudo em PDF gerado automaticamente pelo sistema para o ativo `192.168.15.10`, c
 
 ![Gráfico de volumetria do relatório](docs/grafico_volumetria.png)
 
-> 💡 Se algum desses nomes de arquivo estiver diferente do que você enviou para o `docs/` do repositório (ex.: renomeou algum print), me avise o nome exato que eu ajusto o link correspondente.
 
 ---
 
