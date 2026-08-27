@@ -4,29 +4,12 @@
 
 Plataforma autônoma de SecOps, Threat Intelligence e Resposta a Incidentes alimentada por Inteligência Artificial local via **Ollama**.
 
-<<<<<<< HEAD
----
-
-## 👨‍💻 Autor e Desenvolvedor
-
-**Idealização, Arquitetura & Engenharia:** David Nonato
-
-- GitHub: [@DavidNonato23](https://github.com/DavidNonato23)
-- Projeto: VanguardSec AI — Global Command SOC & SOAR v1.0
-
----
-
-## 🗺️ Topologia e Arquitetura do Sistema
-
-![Topologia de rede do VanguardSec AI](docs/topologia.svg)
-=======
 <p align="left">
   <img alt="status" src="https://img.shields.io/badge/status-v1.0-00ff9d?style=flat-square">
   <img alt="python" src="https://img.shields.io/badge/python-3.10%2B-00d9ff?style=flat-square">
   <img alt="llm" src="https://img.shields.io/badge/LLM-qwen2.5%3A1.5b%20(Ollama)-e94560?style=flat-square">
   <img alt="license" src="https://img.shields.io/badge/uso-arquitetura%20aberta-ffd166?style=flat-square">
 </p>
->>>>>>> cd1f0fd (feat: upgrade to v1.1 - War Room UI, NTA traffic agent, incident management & auto-polling)
 
 ---
 
@@ -34,7 +17,7 @@ Plataforma autônoma de SecOps, Threat Intelligence e Resposta a Incidentes alim
 
 - [Visão geral](#-visão-geral)
 - [Arquitetura do sistema](#️-arquitetura-do-sistema)
-- [Dashboard em funcionamento](#-dashboard-em-funcionamento)
+- [Evidências de funcionamento](#-evidências-de-funcionamento)
 - [Fluxo de engenharia](#-detalhamento-da-engenharia-de-fluxo)
 - [Principais destaques](#-principais-destaques)
 - [Estrutura do repositório](#-estrutura-do-repositório)
@@ -171,10 +154,85 @@ Webhooks → Discord/SIEM"]
 
 ---
 
-## 🖥️ Dashboard em funcionamento
+## 📸 Evidências de funcionamento
 
+Prints reais do sistema em execução, monitorando um servidor Ubuntu alvo (`192.168.15.10`) rodando em uma VM VirtualBox.
 
-![Mockup do Dashboard Executivo](docs/dashboard-mockup.svg)
+### 1. Infraestrutura alvo online
+
+VM Ubuntu 26.04 LTS ligada e acessível na rede interna — o ativo que o VanguardSec AI monitora via SSH.
+
+![VM Ubuntu do servidor alvo rodando](docs/Captura%20de%20tela%202026-08-26%20212303.png)
+
+### 2. Varredura em execução
+
+Agente consultando o servidor alvo em tempo real durante o polling.
+
+![Scan em execução](docs/Captura%20de%20tela%202026-08-26%20211857.png)
+
+### 3. Configuração do ativo monitorado
+
+IP, usuário e autenticação do servidor Linux configurados no painel antes do polling.
+
+![Configuração do ativo alvo](docs/Captura%20de%20tela%202026-08-26%20211838.png)
+
+### 4. Dashboard Executivo
+
+Métricas de CPU, RAM, disco, tentativas de brute-force e histórico de scans das últimas 24h, populados com dados reais coletados do servidor.
+
+![Dashboard Executivo](docs/Captura%20de%20tela%202026-08-26%20211109.png)
+
+### 5. Esteira Multi-Tier de IA
+
+Diagnóstico completo gerado pelos 3 agentes (Analista SOC, Compliance LGPD e Engenheiro SOAR) rodando localmente via Ollama sobre a telemetria coletada.
+
+![Esteira Multi-Tier de IA](docs/Captura%20de%20tela%202026-08-26%20212047.png)
+
+### 6. Monitoramento de Infraestrutura
+
+Classificação de rede, nível de risco e análise de tráfego (NTA) do host monitorado.
+
+![Monitoramento de Infraestrutura](docs/Captura%20de%20tela%202026-08-26%20212110.png)
+
+### 7. Playbooks SOAR
+
+Script de contenção gerado automaticamente pelo Tier 3 (Engenheiro SOAR), pronto para execução via SSH.
+
+![Playbooks SOAR](docs/Captura%20de%20tela%202026-08-26%20212128.png)
+
+### 8. Gestão e triagem de incidentes
+
+Incidentes reais de brute-force detectados no host `192.168.15.10`, com severidade e status de triagem.
+
+![Gestão de Incidentes](docs/Captura%20de%20tela%202026-08-26%20212151.png)
+
+### 9. Kill Switch
+
+Botões de contenção imediata (bloqueio de IP no UFW, reinício do SSH, alerta via Telegram) associados aos incidentes em triagem.
+
+![Kill Switch](docs/Captura%20de%20tela%202026-08-26%20211602.png)
+
+### 10. ChatOps via Telegram
+
+Painel de configuração e disparo de alertas via webhook para o bot do Telegram.
+
+![Painel ChatOps](docs/Captura%20de%20tela%202026-08-26%20212211.png)
+
+### 11. Centro de Relatórios (PDF)
+
+Emissão do laudo executivo em PDF diretamente pelo painel.
+
+![Centro de Relatórios](docs/Captura%20de%20tela%202026-08-26%20212230.png)
+
+### 12. Relatório executivo gerado (exemplo real)
+
+Laudo em PDF gerado automaticamente pelo sistema para o ativo `192.168.15.10`, com classificação de rede, volumetria de eventos, diagnóstico de compliance (LGPD/ISO 27001) e o playbook SOAR sugerido.
+
+📄 [Ver exemplo de laudo em PDF](docs/Relatorio_SOC_192_168_15_10_20260826_211935.pdf)
+
+![Gráfico de volumetria do relatório](docs/grafico_volumetria.png)
+
+> 💡 Se algum desses nomes de arquivo estiver diferente do que você enviou para o `docs/` do repositório (ex.: renomeou algum print), me avise o nome exato que eu ajusto o link correspondente.
 
 ---
 
@@ -225,8 +283,10 @@ VanguardSec-AI/
 │   ├── notificador.py            # Disparo de Webhooks (Discord / SIEM)
 │   └── politicas.py              # Engine de regras e conformidade legal
 ├── docs/
-│   ├── arquitetura.svg           # Diagrama de arquitetura do sistema
-│   └── dashboard-mockup.svg      # Mockup ilustrativo do painel
+│   ├── arquitetura.svg                              # Diagrama de arquitetura do sistema
+│   ├── Captura de tela 2026-08-26 *.png              # Prints reais do sistema em execução
+│   ├── grafico_volumetria.png                        # Gráfico de volumetria de eventos
+│   └── Relatorio_SOC_192_168_15_10_20260826_211935.pdf  # Laudo executivo real gerado pelo sistema
 ├── start.bat                     # Script unificado de instalação e auto-boot
 ├── app.py                        # Aplicação principal (Dashboard Streamlit + Kill Switch)
 ├── historico_scans.json          # Base de dados local do histórico de exames
