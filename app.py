@@ -41,7 +41,7 @@ st.markdown("""
     
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {visibility: hidden;}
+    /* header {visibility: hidden;} <-- Liberado para mostrar o botão da setinha (>) no topo */
 
     [data-testid="stSidebar"] {
         background-color: #0B0D12;
@@ -295,7 +295,6 @@ status_servidor_online = checar_status_servidor(target_ip) if target_ip else Fal
 st.sidebar.divider()
 btn_executar = st.sidebar.button("🔄 Executar Polling Geral", type="primary", use_container_width=True)
 
-# Botão para ativar varredura automática a cada 1 minuto (60000ms)
 auto_polling_1min = st.sidebar.checkbox("⏱️ Auto-Polling Agentes (1 min)", value=False)
 if auto_polling_1min:
     st_autorefresh(interval=60000, key="auto_polling_60s")
@@ -377,7 +376,6 @@ def rodar_varredura_completa():
     return True
 
 if btn_executar or auto_polling_1min:
-    # Se auto_polling estiver ativo, executa periodicamente
     if auto_polling_1min and ssh_host:
         rodar_varredura_completa()
     elif btn_executar:

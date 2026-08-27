@@ -571,5 +571,28 @@
         "auditoria": "1. **Risco CRítico:** [Sinal de quebra no sistema de firewall SSH](sshd session closed)\n\n2. **Risco CRítico:** [Excesso de conexões SSH](total de logs SSH)\n\n3. **Risco CRítico:** [Sessão SSH inválida ou temporária](ssh session closed)",
         "compliance": "**Laudo Tecnico e Políticas**\n\n1. **Risco CRítico:** [Sinal de quebra no sistema de firewall SSH](sshd session closed)\n   - **Nível de Risco:** Crítico\n   - **Norma Violada:** LGPD Art. 46\n   - **Resposta:** Verifique e forneça uma solução para garantir a segurança do SSH. Isso pode incluir atualizações na política de acesso SSH, implementação de autenticação multifator, ou adoção de uma política de bloqueio de tentativas de força bruta. Além disso, recomendar a utilização de uma política de firewall que mantenha o SSH seguro.\n\n2",
         "remediacao": "```bash\nsudo ufw block\nsudo iptables -A INPUT -m state --state NEW,RELATED,ESTABLISHED -j DROP\nsudo netsh iptable save\n```"
+    },
+    {
+        "data": "2026-08-26 21:19:35",
+        "host": "192.168.15.10",
+        "so": "Ubuntu Linux",
+        "mttd": 46.8,
+        "metricas": {
+            "logins_falhos": "9",
+            "conexoes_estab": "0",
+            "portas_abertas": "4",
+            "sessoes_ativas": "0"
+        },
+        "info_rede": {
+            "ip": "192.168.15.10",
+            "tipo_rede": "Privado (Rede Interna)",
+            "nivel_risco_origem": "Médio",
+            "proprietario_vinculado": "Cliente Não Cadastrado"
+        },
+        "analise_trafego_ia": "**Origem do Tráfego:**\n\nO tráfego é proveniente de um IP Privado (192.168.15.10) que pertence à uma rede interna.\n\n**Severidade da Exposição:**\n\nAs tentativas falhas de acesso (9) em 4 portas expostas são consideradas de alto risco, indicando uma exposição significativa.",
+        "auditoria": "1. **Riscos de Segurança:**\n   - **Acesso sem autorização:**\n     - Atividade suspeita com falhas na autenticação, como sessões fechadas, tentativas de acesso inválidas e sessões vadias.\n\n   - **Invasão de Privacidade:**\n     - Conexões desconhecidas e sessões com falhas na autenticação, que podem levar a rastreamentos do usuário.\n\n   - **Exposição do Sistema:**\n     - Portas abertas e sessões não afastadas, o que coloca o sistema em risco de invasão.\n\n   - **Uso de Portas Não Vál",
+        "compliance": "**Avaliação da Política em relação ao Laudo Técnico:**\n\n**Riscos de Segurança:**\n- **Acesso sem autorização:**\n  - **Nível de Risco: Alto**\n  - Artigo/norma violado: Controle A.8.2.1 (Toda senha de acesso administrativo deve ser forte e protegida contra força bruta).\n\n- **Invasão de Privacidade:**\n  - **Nível de Risco: Médio**\n  - Artigo/norma violado: Controle A.12.6.1 (Portas de bancos de dados não devem ficar expostas publicamente sem firewall",
+        "remediacao": "```bash\nsudo ufw deny out\nsudo ufw deny in\nsudo ufw enable\n```",
+        "caminho_grafico": "relatorios\\grafico_volumetria.png"
     }
 ]
