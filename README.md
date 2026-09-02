@@ -1,11 +1,3 @@
-O `README.md` acima foi resumido ao máximo para atender estritamente ao pedido do seu gestor de **"tirar palavras difíceis e ser bastante objetivo"**.
-
-No entanto, em um projeto completo do porte da **versão v1.4 do VanguardSec AI**, simplificar demais pode acabar escondendo funcionalidades importantes que enriquecem o produto.
-
-Se você acha que ficou enxuto demais, aqui está a **versão intermediária perfeita**: ela mantém a linguagem direta, limpa e sem palavras difíceis, mas reintroduz as seções técnicas cruciais (como as imagens de evidência, a tabela do painel web, a arquitetura visual e os destaques do produto):
-
----
-
 # 🛡️ VanguardSec AI — Plataforma Autônoma SOC, SOAR & Active Defense
 
 Plataforma de segurança cibernética que monitora servidores Linux e Windows Server em tempo real, analisa ataques de invasão usando Inteligência Artificial local (**Ollama / `qwen2.5:3b**`), bloqueia os atacantes automaticamente no firewall e gera laudos executivos em PDF para auditoria (LGPD e ISO 27001).
