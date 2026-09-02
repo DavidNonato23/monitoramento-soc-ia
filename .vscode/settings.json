@@ -1,3 +1,8 @@
 {
-    "mayank1513.trello-kanban.Workspace.filePath": ".tkb"
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}"
+  ],
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}"
+  ]
 }
